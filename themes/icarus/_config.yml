@@ -95,12 +95,12 @@ widgets:
     -
         type: toc
         position: left
-    -
-        type: links
-        position: left
-        links:
-            Hexo: 'https://hexo.io'
-            Thanks: ''
+#    -
+#        type: links
+#        position: left
+#        links:
+#            Hexo: 'https://hexo.io'
+#            Thanks: ''
 #            PPOffice: 'https://github.com/ppoffice'
     -
         type: category

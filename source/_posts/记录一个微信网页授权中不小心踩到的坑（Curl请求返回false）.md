@@ -2,6 +2,8 @@
 title: 记录一个微信网页授权中不小心踩到的坑（Curl请求返回false）
 date: 2018-03-29 09:47:40
 tags: 微信开发
+category: 爬坑日常 
+thumbnail: https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=436013150,3405885141&fm=26&gp=0.jpg
 ---
 
 * 这个问题是file_get_contents不能获取https的内容引起的。这样的情况下，我们一般会采用curl拓展来模拟请求。

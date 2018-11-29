@@ -1,9 +1,11 @@
 ---
 title: 本地服务CURL请求本地另一个服务API返回超时/或无返回
-date: 2018-07-23 14:27:06
 tags: Curl
 category: 爬坑日常
-thumbnail: https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2822188571,1792558379&fm=58&bpow=600&bpoh=600
+thumbnail: >-
+  https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2822188571,1792558379&fm=58&bpow=600&bpoh=600
+abbrlink: 49088
+date: 2018-07-23 14:27:06
 ---
 
 ##### 入职之后一直在忙，终于有时间整理一波最近踩到的坑。

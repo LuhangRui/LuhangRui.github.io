@@ -1,9 +1,10 @@
 ---
 title: CI框架对HTML输入的处理/CI框架引用ueditor时对提交内容的默认处理
-date: 2018-07-30 15:01:57
 tags: CI
 category: 爬坑日常
-thumbnail: http://codeigniter.org.cn/assets/images/ci-logo-big.png
+thumbnail: 'http://codeigniter.org.cn/assets/images/ci-logo-big.png'
+abbrlink: 23321
+date: 2018-07-30 15:01:57
 ---
 
 项目里近期用到了富文本编辑器，可是写入数据的时候总是写入，

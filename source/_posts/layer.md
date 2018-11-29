@@ -1,9 +1,10 @@
 ---
 title: 'layer.js错误Uncaught TypeError: i is not a function'
-date: 2018-07-24 14:44:08
 tags: layui
 category: 爬坑日常
 thumbnail: /images/postsimages/layui.png
+abbrlink: 32812
+date: 2018-07-24 14:44:08
 ---
 
 ##### 最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。

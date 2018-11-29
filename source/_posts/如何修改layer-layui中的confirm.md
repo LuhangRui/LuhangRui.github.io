@@ -1,9 +1,10 @@
 ---
 title: 如何修改layer/layui中的confirm
-date: 2018-11-29 13:12:16
 tags: layui
 category: 厚积薄发
 thumbnail: /images/postsimages/layui.png
+abbrlink: 45548
+date: 2018-11-29 13:12:16
 ---
 
 > 需求：

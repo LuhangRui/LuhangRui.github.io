@@ -1,9 +1,11 @@
 ---
 title: 使用vagrant一键部署本地php开发环境（二）制作自己的vagrant box
-date: 2018-09-14 16:00:43
 tags: vagrant
 category: 厚积薄发
-thumbnail: https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=b7c0b9d9fc36afc30e0c38638b228cf9/203fb80e7bec54e7825eee07b2389b504fc26a7d.jpg
+thumbnail: >-
+  https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=b7c0b9d9fc36afc30e0c38638b228cf9/203fb80e7bec54e7825eee07b2389b504fc26a7d.jpg
+abbrlink: 11255
+date: 2018-09-14 16:00:43
 ---
 在上篇的基础上 ，我们已经安装好了virtualbox和vagrant，没有安装的话，参照上篇
 

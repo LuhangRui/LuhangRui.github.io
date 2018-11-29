@@ -1,9 +1,11 @@
 ---
 title: 使用vagrant一键部署本地php开发环境（一）
-date: 2018-09-14 15:46:31
 tags: vagrant
 category: 厚积薄发
-thumbnail: https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=b7c0b9d9fc36afc30e0c38638b228cf9/203fb80e7bec54e7825eee07b2389b504fc26a7d.jpg
+thumbnail: >-
+  https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=b7c0b9d9fc36afc30e0c38638b228cf9/203fb80e7bec54e7825eee07b2389b504fc26a7d.jpg
+abbrlink: 2021
+date: 2018-09-14 15:46:31
 ---
 
 #### 一：我们为什么需要用这玩意

@@ -3,7 +3,7 @@ title: cmder的segmentation fault错误修复
 date: 2018-11-29 10:54:10
 tags: cmder
 category: 爬坑日常
-thumbnail: http://cmder.net/img/main.png
+thumbnail: /images/postsimages/cmder.png
 ---
 
 ### Segmentation fault

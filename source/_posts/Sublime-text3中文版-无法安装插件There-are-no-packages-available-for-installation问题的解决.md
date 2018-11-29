@@ -1,9 +1,9 @@
 ---
 title: 'Sublime text3中文版 无法安装插件There are no packages available for installation问题的解决'
-date: 2018-18-01 15:16:11
+date: 2018-08-01 15:16:11
 tags: Sublime text3
 category: 爬坑日常
-thumbnail: /images/postsimages/sublime.svg
+thumbnail: http://www.mt30.com/Soft/UploadSoftPic/201711/2017110909245152.png
 ---
 
 说起来差点没被气死，我当时的情况已经是要疯了，连他们的域名都ping不通，我还想着，咋地，要倒闭了？

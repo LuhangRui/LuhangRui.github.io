@@ -1,5 +1,5 @@
 ---
-title: laydate V5.0.8动态设置min值'
+title: laydate V5.0.8动态设置min值
 tags: laydate
 category: 爬坑日常
 thumbnail: /images/postsimages/20181205.jpg

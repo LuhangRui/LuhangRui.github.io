@@ -2,7 +2,7 @@
 title: 关于hexo-abbrlink链接undefined
 tags: abbrlink
 category: 爬坑日常
-thumbnail: 'http://img0.imgtn.bdimg.com/it/u=2314092782,3784320398&fm=26&gp=0.jpg'
+thumbnail: /images/postsimages/201812051407.jpg
 abbrlink: 733
 date: 2018-11-30 10:01:44
 ---

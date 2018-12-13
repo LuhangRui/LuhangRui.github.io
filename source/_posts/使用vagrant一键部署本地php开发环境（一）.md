@@ -34,7 +34,7 @@ https://www.vagrantup.com/downloads.html
 
 http://www.vagrantbox.es/
 
-（备注：这个地址实际上是失效的，很多box文件都找不到资源了，不过不要紧，因为我们可以自己做一个box，这个在下一篇文章我会讲如何定制一个自己的box，顺道放一个我制作好的基于centos7且安装好lnmp1.5的box）链接: Centos-lnmp.box密码: tssp
+（备注：这个地址实际上是失效的，很多box文件都找不到资源了，不过不要紧，因为我们可以自己做一个box，这个在下一篇文章我会讲如何定制一个自己的box，顺道放一个我制作好的基于centos7且安装好lnmp1.5的box）链接: [Centos-lnmp.box](https://pan.baidu.com/s/1LEN9dNZf2LWNhCCrBBregg)密码: tssp
 
 #### 四：工作流程
 ![工作流程](/images/postsimages/20180914115249464.png)

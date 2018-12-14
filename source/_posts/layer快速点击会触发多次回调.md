@@ -1,5 +1,5 @@
 ---
-title: laye快速点击会触发多次回调
+title: layer快速点击会触发多次回调
 tags: layer
 category: 爬坑日常
 thumbnail: /images/postsimages/layui.png

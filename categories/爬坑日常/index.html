@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>分类: 爬坑日常 - 一个PHPer的成长之旅</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="一个php开发的踩坑经历与总结">
+<meta name="keywords" content="php mysql linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一个PHPer的成长之旅">
+<meta property="og:url" content="http://yoursite.com/categories/爬坑日常/index.html">
+<meta property="og:site_name" content="一个PHPer的成长之旅">
+<meta property="og:description" content="一个php开发的踩坑经历与总结">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个PHPer的成长之旅">
+<meta name="twitter:description" content="一个php开发的踩坑经历与总结">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="一个PHPer的成长之旅" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">首页</a>
+                
+                <a class="navbar-item" href="/archives">归档</a>
+                
+                <a class="navbar-item" href="/categories">分类</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+                <a class="navbar-item" href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">分类</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">爬坑日常</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/23580.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/layui.png" alt="layer快速点击会触发多次回调">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-14T06:16:53.000Z">2018-12-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 162 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/23580.html">layer快速点击会触发多次回调</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>场景还原</p>
+</blockquote>
+<p>测试同学反馈点击了一次操作，为什么会有两条操作记录？</p>
+<p>我：？？？？</p>
+<blockquote>
+<p>排查思路</p>
+</blockquote>
+<p>查看日志，看一下是不是发了两次请求，果不其然啊：</p>
+<p><img src="/images/postsimages/20181214142322.png" alt="日志截图"></p>
+<p>并发了，同一时间发送了两次请求，出现了脏写。</p>
+<blockquote>
+<p>原因  </p>
+</blockquote>
+<p>系统的confirm是线程阻塞的，而layer.confirm是非阻塞的，这一点在官方的API文档中有提到。</p>
+<blockquote>
+<p>解决方案</p>
+</blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> lock = <span class="hljs-literal">false</span>;</span><br><span class="line">layer.confirm(<span class="hljs-string">'is not?'</span>,&#123;<span class="hljs-attr">btn</span>:[<span class="hljs-string">'确定'</span>,<span class="hljs-string">'取消'</span>]&#125;,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index</span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span>(!lock) &#123;</span><br><span class="line">        <span class="hljs-comment">//加锁防止多次回调</span></span><br><span class="line">        lock =<span class="hljs-literal">true</span>;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            <span class="hljs-comment">// .....</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/55229.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 275 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/55229.html">laydate V5.0.8动态设置min值</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="laydate通过设置min-max值来对用户输入的时间做约束"><a href="#laydate通过设置min-max值来对用户输入的时间做约束" class="headerlink" title="laydate通过设置min,max值来对用户输入的时间做约束"></a>laydate通过设置min,max值来对用户输入的时间做约束</h3><blockquote>
+<p>laydate v1.0版本</p>
+</blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">//日期插件</span></span><br><span class="line">    <span class="hljs-keyword">var</span> start=&#123;</span><br><span class="line">        elem:<span class="hljs-string">"#start"</span>,</span><br><span class="line">        format:<span class="hljs-string">"YYYY-MM-DD hh:mm:ss"</span>,</span><br><span class="line">        min:<span class="hljs-string">"2013-08-18 00:00:00"</span>,</span><br><span class="line">        max:<span class="hljs-string">"2099-06-16 23:59:59"</span>,</span><br><span class="line">        istime:<span class="hljs-literal">true</span>,</span><br><span class="line">        istoday:<span class="hljs-literal">true</span>,</span><br><span class="line">        choose:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">            end.min=a;</span><br><span class="line">            end.start=a</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="hljs-keyword">var</span> end=&#123;</span><br><span class="line">        elem:<span class="hljs-string">"#end"</span>,</span><br><span class="line">        format:<span class="hljs-string">"YYYY-MM-DD hh:mm:ss"</span>,</span><br><span class="line">        min:<span class="hljs-string">"2013-08-18 00:00:00"</span>,</span><br><span class="line">        max:<span class="hljs-string">"2099-06-16 23:59:59"</span>,</span><br><span class="line">        istime:<span class="hljs-literal">true</span>,</span><br><span class="line">        istoday:<span class="hljs-literal">true</span>,</span><br><span class="line">        choose:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">            start.max=a</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    laydate(start);</span><br><span class="line">    laydate(end);</span><br><span class="line"><span class="hljs-comment">//只要在回调函数choose中赋值就行了</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>laydate v5.0版本</p>
+</blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//日期插件</span></span><br><span class="line">        <span class="hljs-keyword">var</span> start=laydate.render(&#123;</span><br><span class="line">            elem:<span class="hljs-string">"#start_time"</span>,</span><br><span class="line">            type:<span class="hljs-string">"datetime"</span>,</span><br><span class="line">            format:<span class="hljs-string">"yyyy-MM-dd HH:mm:ss"</span>,</span><br><span class="line">            min:<span class="hljs-string">"2013-08-18"</span>,</span><br><span class="line">            max:<span class="hljs-string">"2099-06-16"</span>,</span><br><span class="line">            done:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value,date</span>)</span>&#123;</span><br><span class="line">                end.config.min=&#123;</span><br><span class="line">                    year: date.year,</span><br><span class="line">                    month: date.month<span class="hljs-number">-1</span>,</span><br><span class="line">                    date: date.date,</span><br><span class="line">                    hours: date.hours,</span><br><span class="line">                    minutes: date.minutes,</span><br><span class="line">                    seconds: date.seconds</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="hljs-keyword">var</span> end =laydate.render(&#123;</span><br><span class="line">            elem:<span class="hljs-string">"#end_time"</span>,</span><br><span class="line">            type:<span class="hljs-string">"datetime"</span>,</span><br><span class="line">            format:<span class="hljs-string">"yyyy-MM-dd HH:mm:ss"</span>,</span><br><span class="line">            min:<span class="hljs-string">"2013-08-18"</span>,</span><br><span class="line">            max:<span class="hljs-string">"2099-06-16"</span>,</span><br><span class="line">            done:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">                <span class="hljs-comment">// start.max=a</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<p>在v5.0版本中，min值变成了一个对象，并不会重新渲染，所以直接对min设置值是没有用的，得单独对每个min的子元素赋值</p>
+<p><strong>特别要注意的是month要减1</strong></p>
+<p>虽然我也并不清楚为什么要这么做，但是It works. 我已经去layui的社区问了，希望能有人帮我解惑。    </p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/733.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 250 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/733.html">关于hexo-abbrlink链接undefined</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>关于hexo-abbrlink</p>
+</blockquote>
+<p><code>hexo-abbrlink</code>是一个hexo博客链接永久化的解决方案</p>
+<ul>
+<li>支持使用不同的算法和进制对文章链接进行转换</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>进制</th>
+<th>生成链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>crc16</td>
+<td>hex</td>
+<td><a href="https://post.zz173.com/posts/3ab2.html" target="_blank" rel="noopener">https://post.zz173.com/posts/3ab2.html</a></td>
+</tr>
+<tr>
+<td>crc16</td>
+<td>dec</td>
+<td><a href="https://post.zz173.com/posts/12345.html" target="_blank" rel="noopener">https://post.zz173.com/posts/12345.html</a></td>
+</tr>
+<tr>
+<td>crc32</td>
+<td>hex</td>
+<td><a href="https://post.zz173.com/posts/9a8b6c4d.html" target="_blank" rel="noopener">https://post.zz173.com/posts/9a8b6c4d.html</a></td>
+</tr>
+<tr>
+<td>crc32</td>
+<td>dec</td>
+<td><a href="https://post.zz173.com/posts/1690090958.html" target="_blank" rel="noopener">https://post.zz173.com/posts/1690090958.html</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安装</p>
+</blockquote>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用</p>
+</blockquote>
+<p>打开config.yml，修改permalink中类似这样</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink.html</span><br></pre></td></tr></table></figure>
+<p>具体说明参照作者的github说明</p>
+<p><a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">项目地址在这里</a></p>
+<blockquote>
+<p>可能出现的问题：</p>
+</blockquote>
+<p>终于回到标题上来，有的同学说，这个配置完成之后，文章的链接都变成了undefined,新的文章没问题，老的文章就不行了。这个问题其实我们仔细想一下就能明白，我们首先要执行<code>hexo clean</code> 清楚掉以前生成的文章缓存，然后<code>hexo g</code>重新渲染就ok了。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/57887.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/cmder.png" alt="cmder的segmentation fault错误修复">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-11-29T02:54:10.000Z">2018-11-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 575 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/57887.html">cmder的segmentation fault错误修复</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="Segmentation-fault"><a href="#Segmentation-fault" class="headerlink" title="Segmentation fault"></a>Segmentation fault</h3><blockquote>
+<p>现场还原</p>
+</blockquote>
+<ul>
+<li>问题出现的原因是我在 cmder的命令行里执行了<code>cmder /register ALL</code>命令，本意是把cmder放到右键菜单里去的<br>但我没想到的是，各种不成功，提示cmder lanchun什么的，之后，我换在了windows自带的cmd中执行这个命令，成功了。<br>但是令人疑惑的是cmder的bash窗口就此开始抽疯，<code>cd</code> 命令可以使用 <code>ll</code>、<code>ls</code>之类的命令直接抛出<code>Segmentation fault</code><br>错误。</li>
+</ul>
+<blockquote>
+<p>实验过程&amp;&amp;猜想</p>
+</blockquote>
+<ul>
+<li>百度搜了很久并没有找到解决方案，百度提到可能的原因：</li>
+</ul>
+<ol>
+<li>git bash 版本过旧，有概率出现这个问题，但是升级之后并没有解决这个问题</li>
+</ol>
+<ul>
+<li>猜想可能的原因：</li>
+</ul>
+<ol>
+<li><p>Cmder full这个版本是有BUG的，我们看Cmder的设置的时候，可以发现他的GUI其实是<code>ConEmu</code><br>，然后又拿这个调用了git bash ，那我们直接拿ConEmu调用git bash会不会有问题呢，所以我们打开ConEmu执行<br>命令<code>cd git/bin</code> &amp;&amp; <code>bash --login -i</code> 我们发现我们这时候进入bash 界面了，我们使用一下<code>ll</code>命令，哎，这次没有报错了。</p>
+</li>
+<li><p>我们换Cmder mini 试一下，打开bash:bash窗口，卧槽，啥玩意，居然说系统找不到制定路径，好的，我们从设置里看一下，执行bash窗口之后<br>执行的哪个命令，可以看到是<code>cmd /c &quot;&quot;%ConEmuDir%\..\git-for-windows\bin\bash&quot; --login -i&quot;</code> ,我们打开安装目录，看一下，我去！<br><code>ConEmuDir</code> 的上级根本没有<code>git-for-windows</code>目录，好吧，你赢了，而在full版本中是有的！！！ 我后来找到我git-bash的安装目录，复制整个文件夹<br>到cmder的<code>Vender</code> 目录，改名成<code>git-for-windows</code>,打开bash:bash窗口，哎，进来了，运行命令试试，好的，Surprise ! 这次没有报错。<br>问题成功解决。</p>
+</li>
+</ol>
+<blockquote>
+<p>结论 </p>
+</blockquote>
+<h4 id="结论就是-Cmder-full-的版本在Windows10下，可能有某种未知的Bug-我们可以通过尝试使用给-Cmder-mini-添加git-bash的办法，来代替它。"><a href="#结论就是-Cmder-full-的版本在Windows10下，可能有某种未知的Bug-我们可以通过尝试使用给-Cmder-mini-添加git-bash的办法，来代替它。" class="headerlink" title="结论就是 Cmder full 的版本在Windows10下，可能有某种未知的Bug , 我们可以通过尝试使用给 Cmder mini 添加git-bash的办法，来代替它。"></a>结论就是 Cmder full 的版本在Windows10下，可能有某种未知的Bug , 我们可以通过尝试使用给 Cmder mini 添加git-bash的办法，来代替它。</h4>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/43176.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/20181129.jpg" alt="慎用array_filter函数">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-26T08:22:21.000Z">2018-09-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 389 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/43176.html">慎用array_filter函数</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="array-filter"><a href="#array-filter" class="headerlink" title="array_filter"></a>array_filter</h3><p>(PHP 4 &gt;= 4.0.6, PHP 5, PHP 7)</p>
+<p>array_filter — 用回调函数过滤数组中的单元</p>
+<blockquote>
+<p>说明</p>
+</blockquote>
+<p>array array_filter ( array $array [, callable $callback [, int $flag = 0 ]] )</p>
+<p>依次将 array 数组中的每个值传递到 callback 函数。如果 callback 函数返回 true，则 array 数组的当前值会被包含在返回的结果数组中。数组的键名保留不变。</p>
+<blockquote>
+<p>参数</p>
+</blockquote>
+<ul>
+<li><p>array</p>
+<p>   要循环的数组</p>
+</li>
+<li><p>callback</p>
+<p>   使用的回调函数</p>
+</li>
+</ul>
+<p>如果没有提供 callback 函数， 将删除 array 中所有等值为 FALSE 的条目。更多信息见转换为布尔值。</p>
+<ul>
+<li><p>flag</p>
+<p>  决定callback接收的参数形式:</p>
+<p>  ARRAY_FILTER_USE_KEY - callback接受键名作为的唯一参数<br>  ARRAY_FILTER_USE_BOTH - callback同时接受键名和键值</p>
+<blockquote>
+<p>返回值</p>
+</blockquote>
+</li>
+</ul>
+<p>返回过滤后的数组。</p>
+<p>array_filter其实是一个相当好用的函数，常用的场景包括，表单多条件筛选，可以直接用此函数过滤掉没有值的筛选项。</p>
+<p><strong>但是有一个问题，必须要重视：</strong></p>
+<h4 id="array-filter会过滤掉任何值等于FALSE的值，也就是说-0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。"><a href="#array-filter会过滤掉任何值等于FALSE的值，也就是说-0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。" class="headerlink" title="array_filter会过滤掉任何值等于FALSE的值，也就是说  0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。"></a>array_filter会过滤掉任何值等于FALSE的值，也就是说  0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。</h4>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/30182.html" class="image is-7by1">
+            <img class="thumbnail" src="http://www.mt30.com/Soft/UploadSoftPic/201711/2017110909245152.png" alt="Sublime text3中文版 无法安装插件There are no packages available for installation问题的解决">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-01T07:16:11.000Z">2018-08-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 424 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/30182.html">Sublime text3中文版 无法安装插件There are no packages available for installation问题的解决</a>
+            
+        </h1>
+        <div class="content">
+            <p>说起来差点没被气死，我当时的情况已经是要疯了，连他们的域名都ping不通，我还想着，咋地，要倒闭了？</p>
+<p>首选项-》插件设置-》Package Control-》默认</p>
+<p>里边的这个配置项  <a href="https://sublime.wbond.net/channel.json" target="_blank" rel="noopener">https://sublime.wbond.net/channel.json</a> 这个地址我在浏览器都无法访问，ping这个域名都超时（后来被证明可能是网速的原因，有时候能访问得到有时候访问不到）。</p>
+<p>可是我不明白的是，官方的这个配置为什么不能直接用，还需要用户自行进行配置，感觉有毒啊。</p>
+<p>好了，不废话了，直接说解决方案：</p>
+<p>1.下载  <a href="https://packagecontrol.io/channel_v3.json" target="_blank" rel="noopener">https://packagecontrol.io/channel_v3.json</a> 随便放在什么目录里，php程序员的话，我觉得我们可以这么搞:</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file_put_contents(<span class="hljs-string">'channel_v3.json'</span>,file_get_contents(<span class="hljs-string">"https://packagecontrol.io/channel_v3.json"</span>));</span><br></pre></td></tr></table></figure>
+<p>在sublime里直接ctrol+b运行，直接下载了，是不是很棒？哈哈哈</p>
+<p>2.打开这个文件，修改”schema_version”: “ 3.0.0” 为 “schema_version”:” 2.0”</p>
+<p>3.路径：首选项-》插件设置-》Package Control-》默认</p>
+<p>修改此配置<br><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"channels": [</span><br><span class="line">		<span class="hljs-string">"https://sublime.wbond.net/channel.json"</span></span><br><span class="line">	],</span><br></pre></td></tr></table></figure></p>
+<p>改为：<br><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"channels": [</span><br><span class="line">		<span class="hljs-string">"D:/Program File/phpstudy/PHPTutorial/WWW/test/channel_v3.json"</span></span><br><span class="line">	],</span><br></pre></td></tr></table></figure></p>
+<p>好了，大功告成。至于这么做的原理，参见这位老哥的文章，不过这个老哥好像发了一篇博文之后再没有更新了，本来也想直接转载的，但是怕是等不到作者回我了，还是自己写一遍吧。</p>
+<blockquote>
+<p>文章地址在这里</p>
+</blockquote>
+<p><a href="https://blog.csdn.net/qiangweiyan/article/details/79117641" target="_blank" rel="noopener">参考文章</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/23321.html" class="image is-7by1">
+            <img class="thumbnail" src="http://codeigniter.org.cn/assets/images/ci-logo-big.png" alt="CI框架对HTML输入的处理/CI框架引用ueditor时对提交内容的默认处理">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-30T07:01:57.000Z">2018-07-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 224 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/23321.html">CI框架对HTML输入的处理/CI框架引用ueditor时对提交内容的默认处理</a>
+            
+        </h1>
+        <div class="content">
+            <p>项目里近期用到了富文本编辑器，可是写入数据的时候总是写入，</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">xss</span>=<span class="hljs-string">"removed"</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>所有的样式都会被改写成这样，<code>xss=&quot;removed&quot;</code>，造成前端展示的时候没有任何样式，排查的过程中一度以为是百度的富文本编辑器对输入的数据进行了处理，不过在进行排查的过程中，我用官方的demo提交到一个php文件做测试的时候发现，接受到的数据并没有问题。</p>
+<p>所以想到框架中接受数据用的是CI框架封装的<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">$this</span>-&gt;input-&gt;post(<span class="hljs-keyword">null</span>,<span class="hljs-keyword">true</span>);</span><br></pre></td></tr></table></figure></p>
+<p>并不是原生的 <code>$_POST</code> 有可能是这里有问题，很容易就想到，是框架本身都输入的内容做了防XSS攻击的处理。<br><img src="/images/postsimages/20180730104321870.png" alt="对比图"></p>
+<p>以上。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/32812.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/layui.png" alt="layer.js错误Uncaught TypeError: i is not a function">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-24T06:44:08.000Z">2018-07-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 356 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/32812.html">layer.js错误Uncaught TypeError: i is not a function</a>
+            
+        </h1>
+        <div class="content">
+            <h5 id="最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。"><a href="#最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。" class="headerlink" title="最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。"></a>最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。</h5><p><img src="/images/postsimages/20180724113849694.png" alt="i is not a function"></p>
+<p><strong>呐，就是这个，我自己一个人在那里纳闷，卧槽，我啥也没做啊，我只是引入进来怎么还报错了呢？</strong></p>
+<h5 id="我还心想着，这个layer-js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer-js是依赖于JQ的。"><a href="#我还心想着，这个layer-js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer-js是依赖于JQ的。" class="headerlink" title="我还心想着，这个layer.js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer.js是依赖于JQ的。"></a>我还心想着，这个layer.js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer.js是依赖于JQ的。</h5><p>后记：其实以上问题都是不仔细看别人的文档造成的。</p>
+<p>来自layer.js官网的说明：</p>
+<p><img src="/images/postsimages/20180724114741117.png" alt="来自官网的说明"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/49088.html" class="image is-7by1">
+            <img class="thumbnail" src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2822188571,1792558379&amp;fm=58&amp;bpow=600&amp;bpoh=600" alt="本地服务CURL请求本地另一个服务API返回超时/或无返回">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-23T06:27:06.000Z">2018-07-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 369 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/49088.html">本地服务CURL请求本地另一个服务API返回超时/或无返回</a>
+            
+        </h1>
+        <div class="content">
+            <h5 id="入职之后一直在忙，终于有时间整理一波最近踩到的坑。"><a href="#入职之后一直在忙，终于有时间整理一波最近踩到的坑。" class="headerlink" title="入职之后一直在忙，终于有时间整理一波最近踩到的坑。"></a>入职之后一直在忙，终于有时间整理一波最近踩到的坑。</h5><blockquote>
+<p>起因：</p>
+</blockquote>
+<p>项目是微服务架构，一个项目对外提供API，新的项目调用API获得数据。于是就在本地搭建了两个服务。配置了两个虚拟域名，指向两个项目，当然我本地是windows+nginx。意外就在这个时候发生了，我在新开发的项目中，调用另一个项目的API时，总是CURL超时，如果CURL不设置超时的话就会造成NGINX卡死。百思不得其解。</p>
+<blockquote>
+<p>问题成因：</p>
+</blockquote>
+<ul>
+<li>后来了解到原来PHP+NGINX在windows下是不支持并发的？<a href="http://ishwy.me/?cat=12" target="_blank" rel="noopener">参考文章在这里</a><br>这个我并不敢十分的肯定，我只是觉得能理解这个东西，我们看nginx的配置文件的话，会更清楚一些，到底发生了什么：</li>
+</ul>
+<p><img src="/images/postsimages/20180723183343520.png" alt="nginx配置"></p>
+<p>fastcgi_pass 都绑定了9000端口</p>
+<p>所以两个服务就会有一个端口被占用，无法返回消息。</p>
+<p>解决方案：</p>
+<p>第一是要把服务绑定到其他没被占用的端口，比如9009<br><img src="/images/postsimages/20180723184314759.png" alt="参考配置"><br>然后切换到php-cgi所在的目录，再单独启动一个php-cgi进程，去监听这个个端口</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php-chi.exe -b <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">9009</span></span><br></pre></td></tr></table></figure>
+<p>好的，完美解决。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/18842.html" class="image is-7by1">
+            <img class="thumbnail" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADmAZUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopKAFpM0lBZQMkigBc0maqyahaQ5825iT/ecCq/8AbmlDrqNn/wB/l/xqeZdyHOPc0vwozWeuuaWx41C0P0mX/GrEd5bS8xzxP/uuDRzLuCnF9S1RTQwIyCKMiqLHUUlGKAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKTNJmql7f2+n2zz3UqxRL1ZjSbtuJtJXZZLcVh6v4r0vRwUnn3zDnyo/mb/6341wfiDx1d6iWt9O3WtrnBf+Nx/7KK5DkksSSTySetclXFqOkTycRmaj7tNXO01D4j6jPuWygjtkzwz/ADt/hXNXet6rfMWudQuH/wBkOVH5CqFFcMq05bs8upia03eUg5YksST6nmk2j0H5UtFRdmPNJhgeg/KlUsv3GK/7pxSUUXYKclsaNprurWJBt9RuFA/hZyw/I10enfEjULdgL6CO4Tuy/K2P5VxeaStI15x2ZtTxVaD92R7ZpPivStYwkFwFmxnypPlb/wCv+FbgbjivngEqQQSCDkEdjXYeHvHd3pxWDUC1zbdA5++n+IrspYtN2kerh8zUny1FY9aBpap2V9Bf2yz28qyRMMhlNWgea7Ez1U01dDqKKKYwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKae1OqKV1jjZ3ICqMknsKBMparqltpNjJd3T7Y0/Mn0HvXjmva/d69d+bOdsKn91COij1Pqas+K/EL69qREbkWcLEQr/e9W/HtXP4rzMRXcnyx2Pn8djHUfJHZBS0UVyHmhRRRQAUUUUAFFFFABRRSZoAWlAZmCqCWPQAc1saJ4Z1HXHBgiMdvnmZxhfw9a9BstC0TwjZm7unVpF6zyjnPoo7fhW9PDynq9EdtDBTqe9LRGR4J0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cdainh4w9TKhgaVLW12RNDHIm10Ur6EZrEvfB2iX5JksY0c/xRfIf0roMe9LitXFPdHVKnGW6OFm+GmnOT5N3cx/XDfzFVG+Fy/w6q/4wj/GvRcUVm8PT7GDwVB/ZPOB8L1/i1RyPaEf41bg+Gdgv+uvLiT2AC13maTFCw9NdBRwVCP2TnrDwZolgwZLFJGH8Uvz/wA63Y4o412xxqqjoAMVLikxWiilsdEacYK0UAFOooqiwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKTApaKAExiloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooATmloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=" alt="记一个微信支付-1错误JSAPI缺少参数app|get_brand_request:Fail">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-04-05T09:39:14.000Z">2018-04-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 389 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/18842.html">记一个微信支付-1错误JSAPI缺少参数app|get_brand_request:Fail</a>
+            
+        </h1>
+        <div class="content">
+            <h5 id="最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。"><a href="#最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。" class="headerlink" title="最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。"></a>最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。</h5><p><img src="/images/postsimages/20180403191752541.png" alt="图"></p>
+<h5 id="我们来看一下这个方法-GetJsApiParameters"><a href="#我们来看一下这个方法-GetJsApiParameters" class="headerlink" title="我们来看一下这个方法 GetJsApiParameters"></a>我们来看一下这个方法 <code>GetJsApiParameters</code></h5><p><img src="/images/postsimages/20180403192123425.png" alt="图2"></p>
+<h5 id="怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？"><a href="#怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？" class="headerlink" title="怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？"></a>怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？</h5><ul>
+<li>但是如果你传了字符串进去，那不好意思，一准报错，我们必须在前端把这个json字符串对象化。<br>但是你以为这就完了么？不存在的。</li>
+</ul>
+<h5 id="我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall-这个方法中，都对数据进行一下JSON-parse是最妥当的。"><a href="#我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall-这个方法中，都对数据进行一下JSON-parse是最妥当的。" class="headerlink" title="我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall()这个方法中，都对数据进行一下JSON.parse是最妥当的。"></a>我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall()这个方法中，都对数据进行一下JSON.parse是最妥当的。</h5><p>————————————————–<strong>分割线</strong>———————————————————–</p>
+<h4 id="单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是"><a href="#单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是" class="headerlink" title="单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是"></a>单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是</h4><p><img src="/images/postsimages/20180403193537371.png" alt="图3"></p>
+<h5 id="这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。"><a href="#这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。" class="headerlink" title="这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。"></a>这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。</h5>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/爬坑日常/page/0/">上一页</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/爬坑日常/page/2/">下一页</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link is-current" href="/categories/爬坑日常/">1</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/爬坑日常/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/./images/logo.jpg" alt="好人二狗">
+                    
+                    <p class="is-size-4 is-block">
+                        好人二狗
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        一个PHPer的成长史
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>北京 朝阳</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        22
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        19
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/LuhangRui">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/LuhangRui">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/厚积薄发/">
+            <span class="level-start">
+                <span class="level-item">厚积薄发</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/有点意思/">
+            <span class="level-start">
+                <span class="level-item">有点意思</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/爬坑日常/">
+            <span class="level-start">
+                <span class="level-item">爬坑日常</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">12</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
+    </div>
+</div>
+
+    
+    
+        <div class="card card-transparent is-hidden-widescreen">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/posts/25776.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="一个有趣的BUG">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-17T13:11:25.000Z">2018-12-17</time></div>
+                    <a href="/posts/25776.html" class="has-link-black-ter is-size-6">一个有趣的BUG</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/23580.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/layui.png" alt="layer快速点击会触发多次回调">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-14T06:16:53.000Z">2018-12-14</time></div>
+                    <a href="/posts/23580.html" class="has-link-black-ter is-size-6">layer快速点击会触发多次回调</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/51984.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time></div>
+                    <a href="/posts/51984.html" class="has-link-black-ter is-size-6">如何丧心病狂的使用python爬虫读小说</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/55229.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time></div>
+                    <a href="/posts/55229.html" class="has-link-black-ter is-size-6">laydate V5.0.8动态设置min值</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/733.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time></div>
+                    <a href="/posts/733.html" class="has-link-black-ter is-size-6">关于hexo-abbrlink链接undefined</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/CI/">
+                        <span class="level-start">
+                            <span class="level-item">CI</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Curl/">
+                        <span class="level-start">
+                            <span class="level-item">Curl</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Javascript/">
+                        <span class="level-start">
+                            <span class="level-item">Javascript</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Sublime-text3/">
+                        <span class="level-start">
+                            <span class="level-item">Sublime text3</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/abbrlink/">
+                        <span class="level-start">
+                            <span class="level-item">abbrlink</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/cmder/">
+                        <span class="level-start">
+                            <span class="level-item">cmder</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/fun/">
+                        <span class="level-start">
+                            <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/laydate/">
+                        <span class="level-start">
+                            <span class="level-item">laydate</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layer/">
+                        <span class="level-start">
+                            <span class="level-item">layer</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layui/">
+                        <span class="level-start">
+                            <span class="level-item">layui</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/mysql/">
+                        <span class="level-start">
+                            <span class="level-item">mysql</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/vagrant/">
+                        <span class="level-start">
+                            <span class="level-item">vagrant</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/优雅/">
+                        <span class="level-start">
+                            <span class="level-item">优雅</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信/">
+                        <span class="level-start">
+                            <span class="level-item">微信</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信开发/">
+                        <span class="level-start">
+                            <span class="level-item">微信开发</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信支付/">
+                        <span class="level-start">
+                            <span class="level-item">微信支付</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组排序/">
+                        <span class="level-start">
+                            <span class="level-item">数组排序</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组筛选/">
+                        <span class="level-start">
+                            <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/posts/25776.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="一个有趣的BUG">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-17T13:11:25.000Z">2018-12-17</time></div>
+                    <a href="/posts/25776.html" class="has-link-black-ter is-size-6">一个有趣的BUG</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/23580.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/layui.png" alt="layer快速点击会触发多次回调">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-14T06:16:53.000Z">2018-12-14</time></div>
+                    <a href="/posts/23580.html" class="has-link-black-ter is-size-6">layer快速点击会触发多次回调</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/51984.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time></div>
+                    <a href="/posts/51984.html" class="has-link-black-ter is-size-6">如何丧心病狂的使用python爬虫读小说</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/55229.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time></div>
+                    <a href="/posts/55229.html" class="has-link-black-ter is-size-6">laydate V5.0.8动态设置min值</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/733.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time></div>
+                    <a href="/posts/733.html" class="has-link-black-ter is-size-6">关于hexo-abbrlink链接undefined</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/CI/">
+                        <span class="level-start">
+                            <span class="level-item">CI</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Curl/">
+                        <span class="level-start">
+                            <span class="level-item">Curl</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Javascript/">
+                        <span class="level-start">
+                            <span class="level-item">Javascript</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Sublime-text3/">
+                        <span class="level-start">
+                            <span class="level-item">Sublime text3</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/abbrlink/">
+                        <span class="level-start">
+                            <span class="level-item">abbrlink</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/cmder/">
+                        <span class="level-start">
+                            <span class="level-item">cmder</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/fun/">
+                        <span class="level-start">
+                            <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/laydate/">
+                        <span class="level-start">
+                            <span class="level-item">laydate</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layer/">
+                        <span class="level-start">
+                            <span class="level-item">layer</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layui/">
+                        <span class="level-start">
+                            <span class="level-item">layui</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/mysql/">
+                        <span class="level-start">
+                            <span class="level-item">mysql</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/vagrant/">
+                        <span class="level-start">
+                            <span class="level-item">vagrant</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/优雅/">
+                        <span class="level-start">
+                            <span class="level-item">优雅</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信/">
+                        <span class="level-start">
+                            <span class="level-item">微信</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信开发/">
+                        <span class="level-start">
+                            <span class="level-item">微信开发</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信支付/">
+                        <span class="level-start">
+                            <span class="level-item">微信支付</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组排序/">
+                        <span class="level-start">
+                            <span class="level-item">数组排序</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组筛选/">
+                        <span class="level-start">
+                            <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="一个PHPer的成长之旅" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2018 Er Dog&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

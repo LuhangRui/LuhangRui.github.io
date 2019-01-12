@@ -132,8 +132,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/11255.html" class="image is-7by1">
-            <img class="thumbnail" src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=b7c0b9d9fc36afc30e0c38638b228cf9/203fb80e7bec54e7825eee07b2389b504fc26a7d.jpg" alt="使用vagrant一键部署本地php开发环境（二）制作自己的vagrant box">
+        <a href="/posts/60263.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
         </a>
     </div>
     
@@ -141,17 +141,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-14T08:00:43.000Z">2018-09-14</time>
+                <time class="level-item has-text-grey" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 596 个字)
+                    19 分钟 读完 (大约 2798 个字)
                 </span>
                 
             </div>
@@ -159,587 +159,124 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/11255.html">使用vagrant一键部署本地php开发环境（二）制作自己的vagrant box</a>
+                <a class="has-link-black-ter" href="/posts/60263.html">2018年终总结</a>
             
         </h1>
         <div class="content">
-            <p>在上篇的基础上 ，我们已经安装好了virtualbox和vagrant，没有安装的话，参照上篇</p>
-<p><a href="/2018/09/14/使用vagrant一键部署本地php开发环境（一）/">使用vagrant一键部署本地php开发环境（一）</a></p>
-<p>1.从网易镜像或阿里等等镜像下载Centos7<br><a href="http://mirrors.163.com/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso" target="_blank" rel="noopener">http://mirrors.163.com/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso</a></p>
-<p>2.打开virtualbox进行虚拟机安装<br>——————具体步骤自己百度，没什么难的。</p>
-<p>3.虚拟机安装好之后<br>1）以root用户登陆<br><img src="/images/postsimages/20180914142203352.png" alt="登陆"></p>
-<p>登陆之后依次执行  <code>adduser vagrant</code>  和 <code>passwd vagrant</code>命令，创建vagrant用户密码也设置为vagrant。</p>
-<p>为vagrant用户配置sudo免密权限：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 0777 /etc/sudoers</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure></p>
-<p>依次执行这两个命令<br><img src="/images/postsimages/20180914143311492.png" alt="设置免密"></p>
-<p>在root行下新增vagrant用户，参照图片设置。完事esc :wq保存退出</p>
-<p>执行<code>chmod 0440 /etc/sudoers</code> 恢复默认权限</p>
-<p>2）配置ssh</p>
-<p>执行 yum install openssh-server 如果没安装的话安装一下，如图是已经安装过的。<br><img src="/images/postsimages/20180914142528988.png" alt="安装openssh"></p>
-<p>安装完毕之后执行  <code>vim /etc/ssh/sshd_config</code><br><img src="/images/postsimages/20180914143918964.png" alt="配置ssh"></p>
-<p>打开监听和端口，并把允许root用户远程登陆打开。</p>
-<p>4.下载官方公钥配置  vagrant ssh<br>1）. 下载官方公钥<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub</span><br></pre></td></tr></table></figure></p>
-<p>2）. 重命名authorized_keys，移动到.ssh文件下</p>
-<p><code>mv vagrant.pub .ssh/authorized_keys</code></p>
-<p>3）. 修改authorized_keys文件权限 除了属主vagrant以外，group和其他用户都不可写</p>
-<p><code>chmod go-w /home/vagrant/.ssh/authorized_keys</code> </p>
-<p>5.安装virtualbox增强工具，为共享目录做准备<br>1).点击菜单中的  设备 &gt; 安装增强功能</p>
-<p>2).切换到根目录创建cdrom目录</p>
-<p><code>cd / &amp;&amp; mkdir cdrom &amp;&amp; mount /dev/cdrom /cdrom</code></p>
-<p>3).切换到/cdrom并安装高级功能</p>
-<p><code>cd  /cdrom &amp;&amp; ./VBoxLinuxAdditions.run</code></p>
-<p>4).安装完成关闭虚拟机</p>
-<p>6.设置网络规则<br>网卡1按照如下设置，端口转发规则2222-》22<br><img src="/images/postsimages/20180914145119497.png" alt="设置端口映射"></p>
-<p>网卡2设置：<br><img src="/images/postsimages/20180914145227965.png" alt="设置网络"></p>
-<p>7.打包制作box<br>在本地主机的任意目录 执行<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant.exe package --base  centos(virtualbox中显示的虚拟机的名称)  --output  centos-lnmp.box(你给box起的名字，随意)，该操作会在当前目录下生成  centos-lnmp.box</span><br></pre></td></tr></table></figure></p>
-<p>接下来你懂的。就又回到第一篇，如何使用box上了</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/2021.html" class="image is-7by1">
-            <img class="thumbnail" src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=b7c0b9d9fc36afc30e0c38638b228cf9/203fb80e7bec54e7825eee07b2389b504fc26a7d.jpg" alt="使用vagrant一键部署本地php开发环境（一）">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-14T07:46:31.000Z">2018-09-14</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8 分钟 读完 (大约 1231 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/2021.html">使用vagrant一键部署本地php开发环境（一）</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="一：我们为什么需要用这玩意"><a href="#一：我们为什么需要用这玩意" class="headerlink" title="一：我们为什么需要用这玩意"></a>一：我们为什么需要用这玩意</h4><p>我们在开发中经常会面临的问题：环境不一致，有人用Mac有人用Windos还有几个用linux的，而我们的服务器都是linux。<br>在我本地是可以的啊，我测了都，没有问题啊，然后看着上线之后的500错误懵比。It works on my pc .</p>
-<h4 id="二：vagrant是什么东西"><a href="#二：vagrant是什么东西" class="headerlink" title="二：vagrant是什么东西"></a>二：vagrant是什么东西</h4><p>Vagrant是一个基于Ruby的工具，用于创建和部署虚拟化开发环境。它 使用Oracle的开源VirtualBox虚拟化系统，使用 Chef创建自动化虚拟环境。——————-来自百度百科。</p>
-<p>直白的说是一键生成特定虚拟机的工具。详细的我们下边会说。</p>
-<h4 id="三：所需的软件："><a href="#三：所需的软件：" class="headerlink" title="三：所需的软件："></a>三：所需的软件：</h4><p>1、virtualBox<br>可以到VirtualBox的官网进行下载：<br><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></p>
-<p>2、vagrant<br>可以到vagrant官网下载<br><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener">https://www.vagrantup.com/downloads.html</a></p>
-<p>这个下载特别慢，这里放出百度云的链接 </p>
-<p>链接: <a href="https://pan.baidu.com/s/1Toy3SRRACOWa8g0ybUHD8Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1Toy3SRRACOWa8g0ybUHD8Q</a> 密码: puwm</p>
-<p>3、vagrant box<br>    vagrant部署环境，需要一个box文件。如果在公司里面，可以从他们那里拷一个box文件安装。这样安装的环境与他们的开发环境是一致的。box文件也可以在网上下载。搜索：vagrantbox</p>
-<p><a href="http://www.vagrantbox.es/" target="_blank" rel="noopener">http://www.vagrantbox.es/</a></p>
-<p>（备注：这个地址实际上是失效的，很多box文件都找不到资源了，不过不要紧，因为我们可以自己做一个box，这个在下一篇文章我会讲如何定制一个自己的box，顺道放一个我制作好的基于centos7且安装好lnmp1.5的box）链接: <a href="https://pan.baidu.com/s/1LEN9dNZf2LWNhCCrBBregg" target="_blank" rel="noopener">Centos-lnmp.box</a>密码: tssp</p>
-<h4 id="四：工作流程"><a href="#四：工作流程" class="headerlink" title="四：工作流程"></a>四：工作流程</h4><p><img src="/images/postsimages/20180914115249464.png" alt="工作流程"></p>
-<h4 id="五：vagrant的日常使用"><a href="#五：vagrant的日常使用" class="headerlink" title="五：vagrant的日常使用"></a>五：vagrant的日常使用</h4><p>下载以上vagrant和virtualbox之后，一路next安装，安装完成之后。</p>
-<p>在任意位置新建一个文件夹，来管理你的box ，比如我们在D盘新建一个vagrant文件夹</p>
-<p>1.把你下载的box文件扔进来，如图：</p>
-<p><img src="/images/postsimages/201809141313240.png" alt=""></p>
-<p>2.我们在这个位置打开git-bash，或者用cmd切换到这个目录，我们以git-bash为例：</p>
-<p>1）执行<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant.exe  box add centos centos-lnmp.box</span><br></pre></td></tr></table></figure></p>
-<p>该命令是给box起名并添加到box列表</p>
-<p>需要注意的就是在cmd命令窗口下可以不用.exe  直接执行<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant box add &#123;name(你要起的名字随意)&#125;  &#123;url/file(本地文件地址或远程地址)&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="/images/postsimages/20180914131643512.png" alt="执行效果"><br>2）执行命令<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant.exe init &#123;centos(刚刚add操作时起的名字)&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="/images/postsimages/20180914132351742.png" alt="初始化虚拟机"></p>
-<p>就像这样，这个命令会初始化box并生成一个Vargrantfile的配置文件，在这个文件里我们可以 设置一些配置信息，比如共享主机目录到虚拟机目录，网络，虚拟机ip等信息。</p>
-<p>打开配置文件<br><img src="/images/postsimages/20180914132720938.png" alt="修改配置文件"></p>
-<p>这些配置项默认都是注释掉的，我们需要找到这两行进行设置。其中共享目录的配置我们可以这样写，第一个参数为本地目录，第二个参数是虚拟机目录，/ 代表了虚拟机下的根目录。</p>
-<p>通过共享目录设置，我们可以把我们的项目开发目录映射到虚拟机目录，通过虚拟机配置nginx，来让项目直接跑在虚拟机中。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config.vm.synced_folder &quot;D:/data&quot;, &quot;/vagrant_data&quot;</span><br></pre></td></tr></table></figure></p>
-<p>3）部署环境</p>
-<p>执行命令<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant.exe up</span><br></pre></td></tr></table></figure></p>
-<p>就可以一键部署虚拟机环境了</p>
-<p><img src="/images/postsimages/20180914133548923.png" alt="启动虚拟机"></p>
-<p>4）虚拟机管理</p>
+            <h2 id="2018年终总结"><a href="#2018年终总结" class="headerlink" title="2018年终总结"></a>2018年终总结</h2><blockquote>
+<p>How time flies</p>
+</blockquote>
+<p>很快，再过一个工作日就又到元旦假期了，这意味着2018年已经走完了。回头看看过去这一年，真的是相当的魔幻啊！</p>
 <blockquote>
-<p>执行命令 vagrant.exe ssh</p>
+<p>工作</p>
 </blockquote>
-<p>vagrant.exe ssh<br>就能直接链接到虚拟机的系统了，目录已经挂载好了，接下来就是考验你linux操作能力的时候了，我们可以在这上边查看日志等等一系列事情。</p>
-<p>备注:你也可以通过xshell来链接你的虚拟机，ip就是你配置的ip端口22，用户名密码均为vagrant</p>
-<p>一般来说虚拟机启动之后就不需要管了。不过对于项目开发而言，你还需要做的一件事就是修改本地的hosts文件，让你请求的虚拟域名指向你的虚拟机ip。</p>
-<h4 id="六：vagrant常用命令"><a href="#六：vagrant常用命令" class="headerlink" title="六：vagrant常用命令"></a>六：vagrant常用命令</h4><ul>
-<li>vagrant init      # 初始化</li>
-<li>vagrant up        # 启动虚拟机</li>
-<li>vagrant halt      # 关闭虚拟机</li>
-<li>vagrant reload    # 重启虚拟机</li>
-<li>vagrant ssh       # SSH 至虚拟机</li>
-<li>vagrant status    # 查看虚拟机运行状态</li>
-<li>vagrant destroy   # 销毁当前虚拟机</li>
-<li>vagrant box list    # 查看本地box列表</li>
-<li>vagrant box add     # 添加box到列表</li>
-<li>vagrant box remove  # 从box列表移除 </li>
-</ul>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/30182.html" class="image is-7by1">
-            <img class="thumbnail" src="http://www.mt30.com/Soft/UploadSoftPic/201711/2017110909245152.png" alt="Sublime text3中文版 无法安装插件There are no packages available for installation问题的解决">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-08-01T07:16:11.000Z">2018-08-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 424 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/30182.html">Sublime text3中文版 无法安装插件There are no packages available for installation问题的解决</a>
-            
-        </h1>
-        <div class="content">
-            <p>说起来差点没被气死，我当时的情况已经是要疯了，连他们的域名都ping不通，我还想着，咋地，要倒闭了？</p>
-<p>首选项-》插件设置-》Package Control-》默认</p>
-<p>里边的这个配置项  <a href="https://sublime.wbond.net/channel.json" target="_blank" rel="noopener">https://sublime.wbond.net/channel.json</a> 这个地址我在浏览器都无法访问，ping这个域名都超时（后来被证明可能是网速的原因，有时候能访问得到有时候访问不到）。</p>
-<p>可是我不明白的是，官方的这个配置为什么不能直接用，还需要用户自行进行配置，感觉有毒啊。</p>
-<p>好了，不废话了，直接说解决方案：</p>
-<p>1.下载  <a href="https://packagecontrol.io/channel_v3.json" target="_blank" rel="noopener">https://packagecontrol.io/channel_v3.json</a> 随便放在什么目录里，php程序员的话，我觉得我们可以这么搞:</p>
-<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file_put_contents(<span class="hljs-string">'channel_v3.json'</span>,file_get_contents(<span class="hljs-string">"https://packagecontrol.io/channel_v3.json"</span>));</span><br></pre></td></tr></table></figure>
-<p>在sublime里直接ctrol+b运行，直接下载了，是不是很棒？哈哈哈</p>
-<p>2.打开这个文件，修改”schema_version”: “ 3.0.0” 为 “schema_version”:” 2.0”</p>
-<p>3.路径：首选项-》插件设置-》Package Control-》默认</p>
-<p>修改此配置<br><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"channels": [</span><br><span class="line">		<span class="hljs-string">"https://sublime.wbond.net/channel.json"</span></span><br><span class="line">	],</span><br></pre></td></tr></table></figure></p>
-<p>改为：<br><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"channels": [</span><br><span class="line">		<span class="hljs-string">"D:/Program File/phpstudy/PHPTutorial/WWW/test/channel_v3.json"</span></span><br><span class="line">	],</span><br></pre></td></tr></table></figure></p>
-<p>好了，大功告成。至于这么做的原理，参见这位老哥的文章，不过这个老哥好像发了一篇博文之后再没有更新了，本来也想直接转载的，但是怕是等不到作者回我了，还是自己写一遍吧。</p>
+<p>2017年的9月份，入职了搜狐畅游移动互联事业部旗下的蜂群工作室，这是我的第一份工作。这份工作很棒，在这里，我第一次体验了整个完成的开发流程和开发规范，积累了宝贵的工作经验，当然还遇到了一大波很有趣的人。</p>
+<p><code>老毕</code>:</p>
+<p>蜂群工作室的项目负责人，很NICE的一个领导，面试的时候问：你一个人住么？我说是的，然后老毕说那可不行啊，我们公司都是有家室的人，你过来了也给你配一个，啊哈哈哈，我内心想的是，还有配一个这样的骚操作么？印象最深的是，得知外派员工春节期间不能像畅游本部员工那样享有三天的探亲假之后，老毕找到我说：没关系，我们可以团队内部实现一下，你申请外出就好了。哇，可以说是相当的感动了。</p>
+<p><code>小夏哥</code>：</p>
+<p>小夏哥，这算是我的<code>老师</code>了，我的直属leader，是我们的技术负责人，小夏哥是一个很好的人，他的技术全是自学的，这个人精神毅力简直强到可怕，一直在学习，总是看到他再看一些机器学习的东西。在日常的工作中，小夏哥总是很维护我们的技术团队，包括周会复盘上出现的问题，我们有问题解决问题就行了，不要去苛责技术人员的责任，每个人都会犯错。尤其是在有任务给我的时候，小夏哥会额外的给我开一个小会，帮我分析一下业务流程，把每一步都给我解析的很彻底，建什么表，流程该怎么走都说的很清楚，相当的感动，这个人真的很棒。在我的第一份工作中有这样一个指路人，很幸运。</p>
+<p><code>璐瑶</code>：</p>
+<p>这个是我们的产品经理，说实话我一开始并不怎么喜欢这个产品经理，因为她给人的感觉很不好惹，经常把实习生的小产品训的一文不值。但是我之所以也会说这个人，是因为这个人其实是刀子嘴，豆腐心，很善良的一个人。我妈在12月份的时候住院了，我突闻这个消息，着急的差点飙泪，要请假回家。璐瑶安慰我不要着急，还把请假的过程都省去了，说她会帮我处理好，平时谁感冒的时候，她也很关心，还会拿出很多自己的药给我们吃。特别是最后，我们部门要解散了，本来外派员工，直接就脱离了，但是她为我们多争取了15天的缓冲期，我觉得真的是相当的棒了，自己团队的人不能吃一点亏。</p>
+<p>当然，还有一些其他人，就不再一一提起：</p>
+<p>Thanks for you :</p>
+<p>号称女装双雄的测试同学：<code>彬彬&amp;&amp;初锐</code>，这两个同学在年会的时候变身朱碧石，骚断腿。</p>
+<p>天然呆的小产品：<code>赖云</code> ， 呆萌呆萌的小产品，哦哦哦，这个样子是日常。</p>
+<p>还有热心帮我查代码的姐姐：<code>薇薇姐</code> 一言不和就自己动手帮我查代码中的问题。</p>
+<p>还有好为人师的：<code>强哥</code> 强哥这个怎么搞？强哥，你看这个？强哥？</p>
+<p>最后还有瞬间爆炸的设计师：<code>王先生</code> 王先生一言不和就和产品刚，分分钟爆炸给你看 。</p>
+<h4 id="畅游的故事"><a href="#畅游的故事" class="headerlink" title="畅游的故事"></a>畅游的故事</h4><p>畅游的故事最具代表性的，应该是年会事件了，我负责开发整个年会抽奖系统。在2000多号人的会场里边，进行到第一轮抽奖的时候表现的没有任何问题的抽奖系统在第二轮抽奖的时候抽奖名单突然白屏，真的是给我吓坏了，头皮一阵发麻。虽然还顶着如花的妆容，但是也要马上去check日志，看看到底出了什么问题。我擦，这是个什么问题？强哥？你见过这个问题么？强哥往边上一闪，没，没有。嘤嘤嘤，好想哭，这个错误定位不到啊。台上的表演还有5分钟就结束了，这个问题要在下一轮抽奖之前解决。好紧张，好刺激。查看一下数据库，看一下写入的中奖信息，卧槽，数据居然还在变化，马上想到应该是第一轮中奖之后的微信消息推送接口执行时间过长，导致脚本超时了,但是这个进程还在。所以数据还在变化。得益于出发去年会现场之前<code>小夏哥</code>的提醒，补充过一个重新推送没有推送成功中奖信息的脚本，所以果断做决定，告诉配合我的前端，中奖之后不再调用推送消息接口，改为抽奖结束后脚本推送。然后提醒吊胆的等着主持人上午抽下一轮的奖，OK，完全没有问题，完美。</p>
+<p><img src="/images/postsimages/20181229092120.jpg" alt="如花"></p>
 <blockquote>
-<p>文章地址在这里</p>
+<p>畅游&amp;&amp;诸葛找房</p>
 </blockquote>
-<p><a href="https://blog.csdn.net/qiangweiyan/article/details/79117641" target="_blank" rel="noopener">参考文章</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/23321.html" class="image is-7by1">
-            <img class="thumbnail" src="http://codeigniter.org.cn/assets/images/ci-logo-big.png" alt="CI框架对HTML输入的处理/CI框架引用ueditor时对提交内容的默认处理">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-30T07:01:57.000Z">2018-07-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 224 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/23321.html">CI框架对HTML输入的处理/CI框架引用ueditor时对提交内容的默认处理</a>
-            
-        </h1>
-        <div class="content">
-            <p>项目里近期用到了富文本编辑器，可是写入数据的时候总是写入，</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">xss</span>=<span class="hljs-string">"removed"</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>所有的样式都会被改写成这样，<code>xss=&quot;removed&quot;</code>，造成前端展示的时候没有任何样式，排查的过程中一度以为是百度的富文本编辑器对输入的数据进行了处理，不过在进行排查的过程中，我用官方的demo提交到一个php文件做测试的时候发现，接受到的数据并没有问题。</p>
-<p>所以想到框架中接受数据用的是CI框架封装的<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">$this</span>-&gt;input-&gt;post(<span class="hljs-keyword">null</span>,<span class="hljs-keyword">true</span>);</span><br></pre></td></tr></table></figure></p>
-<p>并不是原生的 <code>$_POST</code> 有可能是这里有问题，很容易就想到，是框架本身都输入的内容做了防XSS攻击的处理。<br><img src="/images/postsimages/20180730104321870.png" alt="对比图"></p>
-<p>以上。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/32812.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/layui.png" alt="layer.js错误Uncaught TypeError: i is not a function">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-24T06:44:08.000Z">2018-07-24</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 356 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/32812.html">layer.js错误Uncaught TypeError: i is not a function</a>
-            
-        </h1>
-        <div class="content">
-            <h5 id="最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。"><a href="#最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。" class="headerlink" title="最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。"></a>最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。</h5><p><img src="/images/postsimages/20180724113849694.png" alt="i is not a function"></p>
-<p><strong>呐，就是这个，我自己一个人在那里纳闷，卧槽，我啥也没做啊，我只是引入进来怎么还报错了呢？</strong></p>
-<h5 id="我还心想着，这个layer-js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer-js是依赖于JQ的。"><a href="#我还心想着，这个layer-js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer-js是依赖于JQ的。" class="headerlink" title="我还心想着，这个layer.js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer.js是依赖于JQ的。"></a>我还心想着，这个layer.js也已经被很多人用了，不太可能是这个插件的问题吧。我就把引入的js文件一个一个的注释掉，开始排查，后来发现，单独引入layer，或者单独引入JQuery都是没有问题的，但是同时引入的话，就会报错，我也有点懵逼了，什么鬼，这两个js冲突了？后来突然想到，马丹，layer.js是依赖于JQ的。</h5><p>后记：其实以上问题都是不仔细看别人的文档造成的。</p>
-<p>来自layer.js官网的说明：</p>
-<p><img src="/images/postsimages/20180724114741117.png" alt="来自官网的说明"></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/49088.html" class="image is-7by1">
-            <img class="thumbnail" src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2822188571,1792558379&amp;fm=58&amp;bpow=600&amp;bpoh=600" alt="本地服务CURL请求本地另一个服务API返回超时/或无返回">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-23T06:27:06.000Z">2018-07-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 369 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/49088.html">本地服务CURL请求本地另一个服务API返回超时/或无返回</a>
-            
-        </h1>
-        <div class="content">
-            <h5 id="入职之后一直在忙，终于有时间整理一波最近踩到的坑。"><a href="#入职之后一直在忙，终于有时间整理一波最近踩到的坑。" class="headerlink" title="入职之后一直在忙，终于有时间整理一波最近踩到的坑。"></a>入职之后一直在忙，终于有时间整理一波最近踩到的坑。</h5><blockquote>
-<p>起因：</p>
-</blockquote>
-<p>项目是微服务架构，一个项目对外提供API，新的项目调用API获得数据。于是就在本地搭建了两个服务。配置了两个虚拟域名，指向两个项目，当然我本地是windows+nginx。意外就在这个时候发生了，我在新开发的项目中，调用另一个项目的API时，总是CURL超时，如果CURL不设置超时的话就会造成NGINX卡死。百思不得其解。</p>
+<p>在小夏哥的指引下，我学到了挺多东西。虽然我也希望能继续在畅游呆下去，但是我们部门的盈利能力不行，不再继续孵化了，CEO的决策终结了我们部门的命运。2018年5月份的时候，我离开了畅游，挺不舍的。但是离开未偿不是一个新的开始，祝各位安好吧。</p>
+<p>一个月后从家中归来的我，入职了诸葛找房，一家以聚合房屋信息为主要业务线的B轮创业公司，其实诸葛很好，不论是上班时间还是福利待遇都相当的不错。早上10-10.30才上班，一日三餐都包管,每月还有1K的房补。虽然是一周单休一周双休，但是不论从工作环境还是企业文化上来讲都是比较舒适的，但是两个多月后，我还是离开了这家公司。现在想起来其实是有点任性的，但是我觉得那种环境会让我对技术产生怀疑，公司内部的技术团队之间怎么说呢，会互相嘲讽，这真是让我感觉有点难以下咽。其二是，我当时的负责人，写的代码中居然有很多，再遍历中去查询的操作，这令我十分的惊奇。这种操作，除了新手基本没有人会干这种事情。客户端反馈接口响应比较慢，他去优化，然而你们猜猜看他干了什么事情，他这次是不去遍历中查询mysql了，但是他去遍历中查询redis。我有点想骂娘，明明可以通过构建合理的数据结构来完成这件事的。只要查询一次就好了。其三，诸葛的KPI考核机制，有员工会因为<strong>输出不够而被延迟转正</strong>说实话，我是第一次听说这种操作，当然，这件事发生在普通员工身上还比较能理解，可是连我们的部门VP身上也发生了这种事情，那我就不得不考虑我接下来的转正事宜了。斟酌再三，还是跟HR谈了离职。</p>
 <blockquote>
-<p>问题成因：</p>
+<p>后续</p>
 </blockquote>
-<ul>
-<li>后来了解到原来PHP+NGINX在windows下是不支持并发的？<a href="http://ishwy.me/?cat=12" target="_blank" rel="noopener">参考文章在这里</a><br>这个我并不敢十分的肯定，我只是觉得能理解这个东西，我们看nginx的配置文件的话，会更清楚一些，到底发生了什么：</li>
-</ul>
-<p><img src="/images/postsimages/20180723183343520.png" alt="nginx配置"></p>
-<p>fastcgi_pass 都绑定了9000端口</p>
-<p>所以两个服务就会有一个端口被占用，无法返回消息。</p>
-<p>解决方案：</p>
-<p>第一是要把服务绑定到其他没被占用的端口，比如9009<br><img src="/images/postsimages/20180723184314759.png" alt="参考配置"><br>然后切换到php-cgi所在的目录，再单独启动一个php-cgi进程，去监听这个个端口</p>
-<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php-chi.exe -b <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">9009</span></span><br></pre></td></tr></table></figure>
-<p>好的，完美解决。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/19527.html" class="image is-7by1">
-            <img class="thumbnail" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADmAZUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopKAFpM0lBZQMkigBc0maqyahaQ5825iT/ecCq/8AbmlDrqNn/wB/l/xqeZdyHOPc0vwozWeuuaWx41C0P0mX/GrEd5bS8xzxP/uuDRzLuCnF9S1RTQwIyCKMiqLHUUlGKAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKTNJmql7f2+n2zz3UqxRL1ZjSbtuJtJXZZLcVh6v4r0vRwUnn3zDnyo/mb/6341wfiDx1d6iWt9O3WtrnBf+Nx/7KK5DkksSSTySetclXFqOkTycRmaj7tNXO01D4j6jPuWygjtkzwz/ADt/hXNXet6rfMWudQuH/wBkOVH5CqFFcMq05bs8upia03eUg5YksST6nmk2j0H5UtFRdmPNJhgeg/KlUsv3GK/7pxSUUXYKclsaNprurWJBt9RuFA/hZyw/I10enfEjULdgL6CO4Tuy/K2P5VxeaStI15x2ZtTxVaD92R7ZpPivStYwkFwFmxnypPlb/wCv+FbgbjivngEqQQSCDkEdjXYeHvHd3pxWDUC1zbdA5++n+IrspYtN2kerh8zUny1FY9aBpap2V9Bf2yz28qyRMMhlNWgea7Ez1U01dDqKKKYwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKae1OqKV1jjZ3ICqMknsKBMparqltpNjJd3T7Y0/Mn0HvXjmva/d69d+bOdsKn91COij1Pqas+K/EL69qREbkWcLEQr/e9W/HtXP4rzMRXcnyx2Pn8djHUfJHZBS0UVyHmhRRRQAUUUUAFFFFABRRSZoAWlAZmCqCWPQAc1saJ4Z1HXHBgiMdvnmZxhfw9a9BstC0TwjZm7unVpF6zyjnPoo7fhW9PDynq9EdtDBTqe9LRGR4J0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cdainh4w9TKhgaVLW12RNDHIm10Ur6EZrEvfB2iX5JksY0c/xRfIf0roMe9LitXFPdHVKnGW6OFm+GmnOT5N3cx/XDfzFVG+Fy/w6q/4wj/GvRcUVm8PT7GDwVB/ZPOB8L1/i1RyPaEf41bg+Gdgv+uvLiT2AC13maTFCw9NdBRwVCP2TnrDwZolgwZLFJGH8Uvz/wA63Y4o412xxqqjoAMVLikxWiilsdEacYK0UAFOooqiwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKTApaKAExiloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooATmloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=" alt="微信支付秘钥绝对路径问题">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-04-25T03:43:49.000Z">2018-04-25</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 156 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/19527.html">微信支付秘钥绝对路径问题</a>
-            
-        </h1>
-        <div class="content">
-            <p><strong>如果你使用了微信的官方SDK，那我想其实你很容易发现这个问题</strong></p>
-<p><img src="/images/postsimages/2018042510530547.png" alt="图"></p>
-<p><strong>在微信官方PHPSDK中WxPay.Api.php这个文件中，微信支付秘钥这里的路径写的是相对路径</strong><br><img src="/images/postsimages/20180425105646833.png" alt="图"></p>
-<p>这样这样</p>
-<p>点开路径之后我们看到的是这样这样：<br><img src="/images/postsimages/20180425105732334.png" alt="图"></p>
-<p>然而我们在生产环境的时候，微信要求这个路径为绝对路径，所以我们需要对WxPay.Api.php文件的以下两行内容做修改，改成绝对路径。<br><img src="/images/postsimages/20180425105235660.png" alt="图"></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/18842.html" class="image is-7by1">
-            <img class="thumbnail" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADmAZUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopKAFpM0lBZQMkigBc0maqyahaQ5825iT/ecCq/8AbmlDrqNn/wB/l/xqeZdyHOPc0vwozWeuuaWx41C0P0mX/GrEd5bS8xzxP/uuDRzLuCnF9S1RTQwIyCKMiqLHUUlGKAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKTNJmql7f2+n2zz3UqxRL1ZjSbtuJtJXZZLcVh6v4r0vRwUnn3zDnyo/mb/6341wfiDx1d6iWt9O3WtrnBf+Nx/7KK5DkksSSTySetclXFqOkTycRmaj7tNXO01D4j6jPuWygjtkzwz/ADt/hXNXet6rfMWudQuH/wBkOVH5CqFFcMq05bs8upia03eUg5YksST6nmk2j0H5UtFRdmPNJhgeg/KlUsv3GK/7pxSUUXYKclsaNprurWJBt9RuFA/hZyw/I10enfEjULdgL6CO4Tuy/K2P5VxeaStI15x2ZtTxVaD92R7ZpPivStYwkFwFmxnypPlb/wCv+FbgbjivngEqQQSCDkEdjXYeHvHd3pxWDUC1zbdA5++n+IrspYtN2kerh8zUny1FY9aBpap2V9Bf2yz28qyRMMhlNWgea7Ez1U01dDqKKKYwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKae1OqKV1jjZ3ICqMknsKBMparqltpNjJd3T7Y0/Mn0HvXjmva/d69d+bOdsKn91COij1Pqas+K/EL69qREbkWcLEQr/e9W/HtXP4rzMRXcnyx2Pn8djHUfJHZBS0UVyHmhRRRQAUUUUAFFFFABRRSZoAWlAZmCqCWPQAc1saJ4Z1HXHBgiMdvnmZxhfw9a9BstC0TwjZm7unVpF6zyjnPoo7fhW9PDynq9EdtDBTqe9LRGR4J0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cdainh4w9TKhgaVLW12RNDHIm10Ur6EZrEvfB2iX5JksY0c/xRfIf0roMe9LitXFPdHVKnGW6OFm+GmnOT5N3cx/XDfzFVG+Fy/w6q/4wj/GvRcUVm8PT7GDwVB/ZPOB8L1/i1RyPaEf41bg+Gdgv+uvLiT2AC13maTFCw9NdBRwVCP2TnrDwZolgwZLFJGH8Uvz/wA63Y4o412xxqqjoAMVLikxWiilsdEacYK0UAFOooqiwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKTApaKAExiloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooATmloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=" alt="记一个微信支付-1错误JSAPI缺少参数app|get_brand_request:Fail">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-04-05T09:39:14.000Z">2018-04-05</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 389 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/18842.html">记一个微信支付-1错误JSAPI缺少参数app|get_brand_request:Fail</a>
-            
-        </h1>
-        <div class="content">
-            <h5 id="最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。"><a href="#最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。" class="headerlink" title="最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。"></a>最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。</h5><p><img src="/images/postsimages/20180403191752541.png" alt="图"></p>
-<h5 id="我们来看一下这个方法-GetJsApiParameters"><a href="#我们来看一下这个方法-GetJsApiParameters" class="headerlink" title="我们来看一下这个方法 GetJsApiParameters"></a>我们来看一下这个方法 <code>GetJsApiParameters</code></h5><p><img src="/images/postsimages/20180403192123425.png" alt="图2"></p>
-<h5 id="怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？"><a href="#怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？" class="headerlink" title="怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？"></a>怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？</h5><ul>
-<li>但是如果你传了字符串进去，那不好意思，一准报错，我们必须在前端把这个json字符串对象化。<br>但是你以为这就完了么？不存在的。</li>
-</ul>
-<h5 id="我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall-这个方法中，都对数据进行一下JSON-parse是最妥当的。"><a href="#我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall-这个方法中，都对数据进行一下JSON-parse是最妥当的。" class="headerlink" title="我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall()这个方法中，都对数据进行一下JSON.parse是最妥当的。"></a>我们的前端有一个公共的方法，会把JSON字符串转为JSON对象，但是传进去给这个微信的callpay方法，它都会自动的变成字符串（当然这也可能和我们前端框架有关系），我们试了各种方案，最后发现，不管你的数据类型是什么，在微信的jsApiCall()这个方法中，都对数据进行一下JSON.parse是最妥当的。</h5><p>————————————————–<strong>分割线</strong>———————————————————–</p>
-<h4 id="单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是"><a href="#单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是" class="headerlink" title="单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是"></a>单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是</h4><p><img src="/images/postsimages/20180403193537371.png" alt="图3"></p>
-<h5 id="这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。"><a href="#这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。" class="headerlink" title="这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。"></a>这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。</h5>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/20637.html" class="image is-7by1">
-            <img class="thumbnail" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAEBAfoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiivLPE/xy0Dw1rt1pBsL+6uLV/LleMKqBu4BJycfSgD1OiuJ8CfEnSfH/2pNPt7q3mtQrSR3CryGzgggnPT2rtqACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooqrf39ppdnJeX1zFbW0Qy8srBVUe5NAFqivHtc/aF8NWEjw6VZ3mqSKcCQYhib6Fst/47XO/8NLTebkeFY/L/u/bzn8/L/pQB9B0V41o37RXhy8dI9V06904scGRSJ41+pGG/JTXqmk6zpuuWCX2l3sN3bP0kibIz6H0PseaANGiiigAoori/FHxQ8KeEneC/wBRE14vW1tR5kgPoecKfZiKAO0orwa+/aTtkciw8NTSJ2e4uwh/75Ct/OqcP7S06sPO8Lxsv+xfEH9UNAH0LRXkmh/tBeFdSdYdRhvNMduN8iiSMf8AAl5/8dr1Gxv7TU7OO8sbmG5tpBlJYXDqw9iKALVFFFABRVW+vIdO0+5vblisFtE00hAzhVBJ4+gryM/tHeGhNtGk6sYs/fxHnH03/wBaAPZq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Xlt/ClyxilHtwCp+uR9Kwo/gN47eXY9naIv99rpcfpk/pQB3ngT4z634v+I1hpE9lZ22n3Kyr5cYZnUrGzgliefu46DrXuteN/DP4Mz+D9bj13V7+Ce8hRlhhtgSiFgVJLEAngkYx3r2SgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==" alt="用PHP自带函数对二维数组进行排序">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-03-29T09:16:53.000Z">2018-03-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 307 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/20637.html">用PHP自带函数对二维数组进行排序</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="经常会面临这样的需求，虽然有时候我们可以在数据库查询的时候，直接对数据进行排序，但还是无法满足日益复杂的业务需求。"><a href="#经常会面临这样的需求，虽然有时候我们可以在数据库查询的时候，直接对数据进行排序，但还是无法满足日益复杂的业务需求。" class="headerlink" title="经常会面临这样的需求，虽然有时候我们可以在数据库查询的时候，直接对数据进行排序，但还是无法满足日益复杂的业务需求。"></a>经常会面临这样的需求，虽然有时候我们可以在数据库查询的时候，直接对数据进行排序，但还是无法满足日益复杂的业务需求。</h4><blockquote>
-<p>这里边会用到两个函数</p>
-</blockquote>
-<ul>
-<li><p>一个是array_column()函数，这个函数是从二维数组中抽出一个键的值，作为一个新的数组返回。</p>
-</li>
-<li><p>另一个是array_multisort()函数，这个函数是一个排序函数，它会依照第一个参数数组的排序规则，依照第一个参数数组的值在第三个参数重的位置对第三个参数进行排序。</p>
-</li>
-</ul>
-<h5 id="听不明白吧？听不明白就对了，还是直接看代码来的实在："><a href="#听不明白吧？听不明白就对了，还是直接看代码来的实在：" class="headerlink" title="听不明白吧？听不明白就对了，还是直接看代码来的实在："></a>听不明白吧？听不明白就对了，还是直接看代码来的实在：</h5><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">$orgin = <span class="hljs-keyword">array</span>(</span><br><span class="line">  <span class="hljs-keyword">array</span>(</span><br><span class="line">    <span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">5698</span>,</span><br><span class="line">    <span class="hljs-string">'first_name'</span> =&gt; <span class="hljs-string">'Bill'</span>,</span><br><span class="line">    <span class="hljs-string">'last_name'</span> =&gt; <span class="hljs-string">'Gates'</span>,</span><br><span class="line">  ),</span><br><span class="line">  <span class="hljs-keyword">array</span>(</span><br><span class="line">    <span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">4767</span>,</span><br><span class="line">    <span class="hljs-string">'first_name'</span> =&gt; <span class="hljs-string">'Steve'</span>,</span><br><span class="line">    <span class="hljs-string">'last_name'</span> =&gt; <span class="hljs-string">'Jobs'</span>,</span><br><span class="line">  ),</span><br><span class="line">  <span class="hljs-keyword">array</span>(</span><br><span class="line">    <span class="hljs-string">'id'</span> =&gt; <span class="hljs-number">3809</span>,</span><br><span class="line">    <span class="hljs-string">'first_name'</span> =&gt; <span class="hljs-string">'Mark'</span>,</span><br><span class="line">    <span class="hljs-string">'last_name'</span> =&gt; <span class="hljs-string">'Zuckerberg'</span>,</span><br><span class="line">  )</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line">$idArr = array_column($orgin, <span class="hljs-string">'id'</span>);</span><br><span class="line">array_multisort($idArr,SORT_ASC,$orgin);</span><br><span class="line">var_dump($orgin);</span><br><span class="line"><span class="hljs-comment">// 这个打印的结果是：</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">array</span> (size=<span class="hljs-number">3</span>)</span><br><span class="line">  <span class="hljs-number">0</span> =&gt; </span><br><span class="line">    <span class="hljs-keyword">array</span> (size=<span class="hljs-number">3</span>)</span><br><span class="line">      <span class="hljs-string">'id'</span> =&gt; int <span class="hljs-number">3809</span></span><br><span class="line">      <span class="hljs-string">'first_name'</span> =&gt; string <span class="hljs-string">'Mark'</span> (length=<span class="hljs-number">4</span>)</span><br><span class="line">      <span class="hljs-string">'last_name'</span> =&gt; string <span class="hljs-string">'Zuckerberg'</span> (length=<span class="hljs-number">10</span>)</span><br><span class="line">  <span class="hljs-number">1</span> =&gt; </span><br><span class="line">    <span class="hljs-keyword">array</span> (size=<span class="hljs-number">3</span>)</span><br><span class="line">      <span class="hljs-string">'id'</span> =&gt; int <span class="hljs-number">4767</span></span><br><span class="line">      <span class="hljs-string">'first_name'</span> =&gt; string <span class="hljs-string">'Steve'</span> (length=<span class="hljs-number">5</span>)</span><br><span class="line">      <span class="hljs-string">'last_name'</span> =&gt; string <span class="hljs-string">'Jobs'</span> (length=<span class="hljs-number">4</span>)</span><br><span class="line">  <span class="hljs-number">2</span> =&gt; </span><br><span class="line">    <span class="hljs-keyword">array</span> (size=<span class="hljs-number">3</span>)</span><br><span class="line">      <span class="hljs-string">'id'</span> =&gt; int <span class="hljs-number">5698</span></span><br><span class="line">      <span class="hljs-string">'first_name'</span> =&gt; string <span class="hljs-string">'Bill'</span> (length=<span class="hljs-number">4</span>)</span><br><span class="line">      <span class="hljs-string">'last_name'</span> =&gt; string <span class="hljs-string">'Gates'</span> (length=<span class="hljs-number">5</span>)</span><br></pre></td></tr></table></figure>
-<p>这样是不是就清楚的多了？</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/2192.html" class="image is-7by1">
-            <img class="thumbnail" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=436013150,3405885141&amp;fm=26&amp;gp=0.jpg" alt="微信分享没图片的可能原因">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-03-29T09:11:05.000Z">2018-03-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 166 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/2192.html">微信分享没图片的可能原因</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="微信关键词屏蔽规则"><a href="#微信关键词屏蔽规则" class="headerlink" title="微信关键词屏蔽规则"></a>微信关键词屏蔽规则</h3><blockquote>
-<p>问题描述</p>
-</blockquote>
-<ul>
-<li>调用微信公众平台的分享接口,自己分享的只有自己能看见图片别人看不见<br>（效果示例）</li>
-</ul>
+<p>从诸葛离职之后，又投了新的公司，期间只面试了两家：<code>360</code>和<code>和信贷</code>。</p>
+<p>在和信贷的面试经历还是很有意思的，谈技术的时候，我的面试官说，你写的慢一些，你别光快了，那不对。你说的是对的，写出来的不太对。这让我想起一个关于面试的段子：</p>
+<p>面试官问应聘者：你有什么特长么？</p>
+<p>应聘者：我心算特别快。</p>
+<p>面试官：好那你算一下1687899*84651315等于多少？</p>
+<p>应聘者：等于488884546。</p>
+<p>面试官：你这不对啊？</p>
+<p>应聘者：你别管对不对，你就说快不快吧？</p>
+<p>哈哈哈哈哈哈，好了，我们接着往下说：</p>
+<p>技术面完之后，面试官说帮我喊一下HR，HR就和我简单聊了聊，然后说让我先回去，CTO今天上午不在，没办法复试。我出门的时候又碰到面试官，面试官说：诶？你这是准备回去了么？我不是帮你喊了HR了么？什么情况啊，你先别着急走？我帮你问一下。这个动作，让我特别暖心，哈哈哈，我是不是太容易被感动了。反正当时就觉得这个面试官，也就是我的leader人好好哦。看样子面试应该是通过的。可以考虑这一家。</p>
+<p>下午的时候又去360面试：</p>
+<p>说实话，360我内心还是比较向往的，毕竟是第二梯队的大厂，而且我对360并不排斥，我甚至还用过360的手机，这要是有机会去360工作，可以说是棒棒哒。然而在我通过了两轮技术面试之后，HR过来找我谈，说由于我毕业院校和工作经验的问题，给了我否定的答案。据称是，我2017年毕业，工作经验又不足。相对来说还是社招的人或许潜力更大一些。我：emmmm，那好吧，以后有机会再一起共事吧。</p>
+<p>最后还是入职了和信贷。</p>
+<p>和信贷的技术团队也很棒，技术leader也在推进新技术，很符合我的成长路线，团队也很年轻。这很好，一个新的篇章。未来，我来了。。。</p>
 <blockquote>
-<p>可能的原因</p>
+<p>关于未来</p>
 </blockquote>
-<ul>
-<li>红包和领取这两个词不能同时出现,红包中间加空格,标点符号都不行<strong><br>“双11”关键字，分享内容的标题和内容不能包含此关键词</strong></li>
-</ul>
+<p>2018的故事就此告一段落，未来的故事，就让2019去抒写吧</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/25776.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="一个有趣的BUG">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-17T13:11:25.000Z">2018-12-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 267 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/25776.html">一个有趣的BUG</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>一个很有意思的Bug</p>
+</blockquote>
+<p>某天测试同学再次向我反馈，你这个删除按钮虽然置灰了，但是还是可以点击啊？</p>
+<p>我：？？？？（黑人问号）</p>
+<p>卧槽？不可能啊，按钮都disabled了，怎么还可以点击？还能触发click事件？开玩笑的吧？，匆忙应付了测试同学开始复现这个Bug.</p>
 <blockquote>
-<p>传进微信接口的参数title desc 里边不能包含微信屏蔽规则中的关键词</p>
+<p>复现</p>
 </blockquote>
-<p>forexample :</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;<span class="hljs-attr">title</span>: <span class="hljs-string">"双11购物狂欢节人品大爆发"</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">"@你，双11人品爆发这是没谁了！"</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>重新写了个页面demo，开始测试，卧槽？复现不了啊，这尼玛。。。。？</p>
+<p><img src="/images/postsimages/2018121701.jpg" alt="摸不着头脑"></p>
+<blockquote>
+<p>叮！事情の真相</p>
+</blockquote>
+<p>没办法复现很烦啊，什么鬼？遂去原页面检查，然后发现了这样一段代码：</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-cancel"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">disabled</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="hljs-undefined"></span></span><br><span class="line"><span class="hljs-undefined">$(".btn-cancel").click(function()&#123;</span></span><br><span class="line"><span class="hljs-undefined">    //业务逻辑....</span></span><br><span class="line"><span class="hljs-undefined">&#125;)</span></span><br><span class="line"><span class="hljs-undefined"></span></span><br><span class="line"><span class="hljs-undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>卧槽，点击事件居然是绑定在div上的，由于button在div内部并且是disabled，button处于不可点击的状态，所以测试同学点击到的其实是div!!!</strong></p>
+<p>真的是十分的有意思了。Funny!</p>
+
         </div>
         
         
@@ -768,6 +305,10 @@
             <li><a class="pagination-link is-current" href="/page/2/">2</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/13/">13</a></li>
             
         </ul>
     </nav>
@@ -812,7 +353,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        22
+                        25
                     </p>
                 </div>
             </div>
@@ -832,7 +373,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        22
                     </p>
                 </div>
             </div>
@@ -880,7 +421,7 @@
                 <span class="level-item">有点意思</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/爬坑日常/">
@@ -888,7 +429,7 @@
                 <span class="level-item">爬坑日常</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">12</span>
+                <span class="level-item tag">14</span>
             </span>
         </a></li>
             </ul>
@@ -902,7 +443,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
+        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
     </div>
 </div>
 
@@ -916,6 +457,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/posts/47886.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
+                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/3834.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
+                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/60263.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
+                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -955,63 +553,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/posts/51984.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time></div>
-                    <a href="/posts/51984.html" class="has-link-black-ter is-size-6">如何丧心病狂的使用python爬虫读小说</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/55229.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time></div>
-                    <a href="/posts/55229.html" class="has-link-black-ter is-size-6">laydate V5.0.8动态设置min值</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/733.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time></div>
-                    <a href="/posts/733.html" class="has-link-black-ter is-size-6">关于hexo-abbrlink链接undefined</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1025,12 +566,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/12/">
                 <span class="level-start">
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1170,6 +722,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/Sublime-text3/">
                         <span class="level-start">
                             <span class="level-item">Sublime text3</span>
@@ -1206,6 +769,17 @@
                     <a class="level is-marginless" href="/tags/fun/">
                         <span class="level-start">
                             <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1283,6 +857,17 @@
                     <a class="level is-marginless" href="/tags/优雅/">
                         <span class="level-start">
                             <span class="level-item">优雅</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/年终总结/">
+                        <span class="level-start">
+                            <span class="level-item">年终总结</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1369,6 +954,63 @@
         
         <article class="media">
             
+            <a href="/posts/47886.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
+                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/3834.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
+                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/60263.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
+                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/posts/25776.html" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="一个有趣的BUG">
@@ -1405,63 +1047,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/posts/51984.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time></div>
-                    <a href="/posts/51984.html" class="has-link-black-ter is-size-6">如何丧心病狂的使用python爬虫读小说</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/55229.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time></div>
-                    <a href="/posts/55229.html" class="has-link-black-ter is-size-6">laydate V5.0.8动态设置min值</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/733.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time></div>
-                    <a href="/posts/733.html" class="has-link-black-ter is-size-6">关于hexo-abbrlink链接undefined</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1475,12 +1060,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/12/">
                 <span class="level-start">
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1620,6 +1216,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/Sublime-text3/">
                         <span class="level-start">
                             <span class="level-item">Sublime text3</span>
@@ -1656,6 +1263,17 @@
                     <a class="level is-marginless" href="/tags/fun/">
                         <span class="level-start">
                             <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1741,6 +1359,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/年终总结/">
+                        <span class="level-start">
+                            <span class="level-item">年终总结</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/微信/">
                         <span class="level-start">
                             <span class="level-item">微信</span>
@@ -1816,7 +1445,10 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2018 Er Dog&nbsp;
+                &copy;<a href="http://www.miitbeian.gov.cn/">京ICP备19000965号</a>
+                </p>
+                <p class="is-size-7">
+                &copy; 2019 Er Dog&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>
@@ -1858,6 +1490,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
 <script>moment.locale("zh-CN");</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ygbhf/clicklove/clicklove.js"></script>
 
 
     

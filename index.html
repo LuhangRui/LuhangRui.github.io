@@ -132,8 +132,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/25776.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="一个有趣的BUG">
+        <a href="/posts/47886.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
         </a>
     </div>
     
@@ -141,71 +141,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-17T13:11:25.000Z">2018-12-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 267 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/25776.html">一个有趣的BUG</a>
-            
-        </h1>
-        <div class="content">
-            <blockquote>
-<p>一个很有意思的Bug</p>
-</blockquote>
-<p>某天测试同学再次向我反馈，你这个删除按钮虽然置灰了，但是还是可以点击啊？</p>
-<p>我：？？？？（黑人问号）</p>
-<p>卧槽？不可能啊，按钮都disabled了，怎么还可以点击？还能触发click事件？开玩笑的吧？，匆忙应付了测试同学开始复现这个Bug.</p>
-<blockquote>
-<p>复现</p>
-</blockquote>
-<p>重新写了个页面demo，开始测试，卧槽？复现不了啊，这尼玛。。。。？</p>
-<p><img src="/images/postsimages/2018121701.jpg" alt="摸不着头脑"></p>
-<blockquote>
-<p>叮！事情の真相</p>
-</blockquote>
-<p>没办法复现很烦啊，什么鬼？遂去原页面检查，然后发现了这样一段代码：</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-cancel"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">disabled</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="hljs-undefined"></span></span><br><span class="line"><span class="hljs-undefined">$(".btn-cancel").click(function()&#123;</span></span><br><span class="line"><span class="hljs-undefined">    //业务逻辑....</span></span><br><span class="line"><span class="hljs-undefined">&#125;)</span></span><br><span class="line"><span class="hljs-undefined"></span></span><br><span class="line"><span class="hljs-undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>卧槽，点击事件居然是绑定在div上的，由于button在div内部并且是disabled，button处于不可点击的状态，所以测试同学点击到的其实是div!!!</strong></p>
-<p>真的是十分的有意思了。Funny!</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/23580.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/layui.png" alt="layer快速点击会触发多次回调">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-14T06:16:53.000Z">2018-12-14</time>
+                <time class="level-item has-text-grey" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
@@ -215,7 +151,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 162 个字)
+                    3 分钟 读完 (大约 418 个字)
                 </span>
                 
             </div>
@@ -223,29 +159,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/23580.html">layer快速点击会触发多次回调</a>
+                <a class="has-link-black-ter" href="/posts/47886.html">gitment初始化评论跳回博客首页</a>
             
         </h1>
         <div class="content">
             <blockquote>
-<p>场景还原</p>
+<p>表现</p>
 </blockquote>
-<p>测试同学反馈点击了一次操作，为什么会有两条操作记录？</p>
-<p>我：？？？？</p>
+<p>众所周知，gitment评论系统需要初始化以创建对应的<code>issue</code>，可是我在点击login with github的时候，总是跳向博客首页！WTF！什么鬼？这样不程序啊？</p>
+<p><img src="/images/postsimages/what.jpg" alt="WTF"></p>
 <blockquote>
-<p>排查思路</p>
+<p>排查</p>
 </blockquote>
-<p>查看日志，看一下是不是发了两次请求，果不其然啊：</p>
-<p><img src="/images/postsimages/20181214142322.png" alt="日志截图"></p>
-<p>并发了，同一时间发送了两次请求，出现了脏写。</p>
+<p>1.F12查看login回调链接，<code>redirect_uri</code>参数没有什么问题啊，行，我们回头查看，github的文档，</p>
+<p><img src="/images/postsimages/redirect.png" alt="github文档"></p>
+<p><a href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/" target="_blank" rel="noopener">github文档地址</a></p>
+<p>2.文档中提到，如果地址不匹配的话，就会重定向到你在OAuth Apps 中设置的<code>Authorization callback URL</code>，而这里我们配置的都是首页，所以会跳向首页就可以理解了，那也就是说这里的地址和回调地址里我们传的<code>redirect_uri</code>不匹配，那就检查这两个地址吧，对比之后果然发现了一些有意思的事情：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">redirect_uri      https://ergou.fun/posts/3834.html</span><br><span class="line"></span><br><span class="line">Authorization callback URL  http://ergou.fun</span><br></pre></td></tr></table></figure>
+<p>一个是http，一个是https，当然匹配不上了啊！摔！修改一下，<code>Authorization callback URL</code>改为<code>https</code>，来来来测试一下，OK，完美解决。</p>
 <blockquote>
-<p>原因  </p>
+<p>后记</p>
 </blockquote>
-<p>系统的confirm是线程阻塞的，而layer.confirm是非阻塞的，这一点在官方的API文档中有提到。</p>
-<blockquote>
-<p>解决方案</p>
-</blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> lock = <span class="hljs-literal">false</span>;</span><br><span class="line">layer.confirm(<span class="hljs-string">'is not?'</span>,&#123;<span class="hljs-attr">btn</span>:[<span class="hljs-string">'确定'</span>,<span class="hljs-string">'取消'</span>]&#125;,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index</span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span>(!lock) &#123;</span><br><span class="line">        <span class="hljs-comment">//加锁防止多次回调</span></span><br><span class="line">        lock =<span class="hljs-literal">true</span>;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            <span class="hljs-comment">// .....</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>如果你仔细观察的时候，你会发现跳向博客首页的时候，地址栏链接变的很复杂，都是些什么东西呢，我们不妨解析一下</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://ergou.fun/?</span><br><span class="line">error=redirect_uri_mismatch&amp;</span><br><span class="line">error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri=https://developer.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#redirect-uri-mismatch</span><br><span class="line"></span><br><span class="line">//真是贴心啊，错误原因，和参考文档地址全都给了</span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -261,8 +197,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/51984.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
+        <a href="/posts/3834.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
         </a>
     </div>
     
@@ -270,75 +206,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 801 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/51984.html">如何丧心病狂的使用python爬虫读小说</a>
-            
-        </h1>
-        <div class="content">
-            <blockquote>
-<p>写在前边</p>
-</blockquote>
-<p>其实一直想入门python很久了，慕课网啊，菜鸟教程啊python的基础的知识被我翻了很多遍了，但是一直没有什么实践。刚好，这两天被别人一直安利一本小说《我可能修的是假仙》，还在连载中的，我等屌丝，打钱是不可能打钱的，只好先去网上找一下资源了，基本笔趣阁啊，什么的提供很多在线的资源给我们。好吧，就看这个就行了，可是看也看得不爽啊，，浏览器上下部分都被什么 <strong>美女荷官在线发牌</strong>，<strong>一夜不射提升半小时</strong>之类你懂的画面遮盖了，还经常误触，如果是在电脑上看，我们可以用ADBLOCK之类的广告插件屏蔽，可是手机浏览器貌似没有插件啊，那怎么办呢？我可是程序员啊，程序员怎么能向这种问题低头呢？</p>
-<blockquote>
-<p>解决方案</p>
-</blockquote>
-<p>我们把在线网页上的章节名和章节内容都保存下来，造一个离线的版本不就没这个问题了么？</p>
-<p>那怎么保存呢，这就需要我们的主角出场了，铛铛铛，<strong>python scrapy爬虫框架</strong></p>
-<blockquote>
-<p>关于scrapy</p>
-</blockquote>
-<p>向大家推荐 一个好玩的有趣的牛逼的网站<strong><a href="http://www.scrapyd.cn/doc" target="_blank" rel="noopener">scrapy中文教程</a></strong></p>
-<p>这个作者写的很有趣，摘录一下：</p>
-<p>本scrapy文档，主要是给诸君介绍一下神马是scrapy，scrapy能干神马，提提大伙的学习热情！scrapy是一个网页爬虫框架，神马叫做爬虫，如果没听说过，那就：内事不知问度娘，外事不决问谷歌，百度或谷歌一下吧！……（这里的省略号代表scrapy很牛逼，基本神马都能爬，包括你喜欢的苍老师……这里就不翻译了）</p>
-<blockquote>
-<p>爬虫代码</p>
-</blockquote>
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">firstdemo</span><span class="hljs-params">(scrapy.Spider)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment"># 爬虫名称</span></span><br><span class="line">    name = <span class="hljs-string">'firstdemo'</span></span><br><span class="line">    <span class="hljs-comment"># 第一页</span></span><br><span class="line">    start_urls= [<span class="hljs-string">'http://m.biquku.la/16/16889/578155.html'</span>]</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse</span><span class="hljs-params">(self,response)</span>:</span></span><br><span class="line">        filename = <span class="hljs-string">'我可能修的是假仙.txt'</span></span><br><span class="line">        <span class="hljs-comment"># 章节名</span></span><br><span class="line">        title = response.css(<span class="hljs-string">'.zhong::text'</span>).extract_first()</span><br><span class="line">        <span class="hljs-comment"># 章节内容</span></span><br><span class="line">        content = response.xpath(<span class="hljs-string">"string(//article[@id='nr'])"</span>).extract()[<span class="hljs-number">0</span>].replace(<span class="hljs-string">'\n'</span>,<span class="hljs-string">''</span>).replace(<span class="hljs-string">'\xa0'</span>,<span class="hljs-string">''</span>)</span><br><span class="line">        self.log(title)</span><br><span class="line">        <span class="hljs-keyword">with</span> open(filename,<span class="hljs-string">"a+"</span>,encoding=<span class="hljs-string">'utf-8'</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">           f.write(title)</span><br><span class="line">        <span class="hljs-comment">#    添加章节目录</span></span><br><span class="line">           f.write(<span class="hljs-string">'\n'</span>)</span><br><span class="line">        <span class="hljs-comment">#    添加换行（\n）是为了让txt阅读器识别章节目录</span></span><br><span class="line">           f.write(content)</span><br><span class="line">           f.write(<span class="hljs-string">'\n'</span>)</span><br><span class="line">           f.close</span><br><span class="line">        next_page = response.css(<span class="hljs-string">'.nr_page a::attr(href)'</span>).extract()[<span class="hljs-number">2</span>]</span><br><span class="line">        <span class="hljs-keyword">if</span> next_page <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:</span><br><span class="line">            next_page = <span class="hljs-string">'http://m.biquku.la'</span>+next_page</span><br><span class="line">            <span class="hljs-keyword">yield</span> scrapy.Request(next_page,callback=self.parse)</span><br><span class="line">        <span class="hljs-keyword">else</span>:</span><br><span class="line">            self.log(<span class="hljs-string">'已到最终章节'</span>)</span><br></pre></td></tr></table></figure>
-<p>没想到吧，代码就这么多，具体的教程可以参见向大家推荐的那个网站。最后我们执行<code>scrapy crawl firstdemo</code>就开始爬取了。</p>
-<p><img src="/images/postsimages/20181213100803.png" alt="运行图"></p>
-<blockquote>
-<p>最后</p>
-</blockquote>
-<p>最后？哪里有什么最后？都下载下来了，还不抓紧去看一下我们的战斗成果？</p>
-<p>当然还是要提醒诸位，学习为主，不要玩物丧志。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/55229.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time>
+                <time class="level-item has-text-grey" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
@@ -348,7 +216,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 275 个字)
+                    3 分钟 读完 (大约 464 个字)
                 </span>
                 
             </div>
@@ -356,451 +224,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/55229.html">laydate V5.0.8动态设置min值</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="laydate通过设置min-max值来对用户输入的时间做约束"><a href="#laydate通过设置min-max值来对用户输入的时间做约束" class="headerlink" title="laydate通过设置min,max值来对用户输入的时间做约束"></a>laydate通过设置min,max值来对用户输入的时间做约束</h3><blockquote>
-<p>laydate v1.0版本</p>
-</blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">//日期插件</span></span><br><span class="line">    <span class="hljs-keyword">var</span> start=&#123;</span><br><span class="line">        elem:<span class="hljs-string">"#start"</span>,</span><br><span class="line">        format:<span class="hljs-string">"YYYY-MM-DD hh:mm:ss"</span>,</span><br><span class="line">        min:<span class="hljs-string">"2013-08-18 00:00:00"</span>,</span><br><span class="line">        max:<span class="hljs-string">"2099-06-16 23:59:59"</span>,</span><br><span class="line">        istime:<span class="hljs-literal">true</span>,</span><br><span class="line">        istoday:<span class="hljs-literal">true</span>,</span><br><span class="line">        choose:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">            end.min=a;</span><br><span class="line">            end.start=a</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="hljs-keyword">var</span> end=&#123;</span><br><span class="line">        elem:<span class="hljs-string">"#end"</span>,</span><br><span class="line">        format:<span class="hljs-string">"YYYY-MM-DD hh:mm:ss"</span>,</span><br><span class="line">        min:<span class="hljs-string">"2013-08-18 00:00:00"</span>,</span><br><span class="line">        max:<span class="hljs-string">"2099-06-16 23:59:59"</span>,</span><br><span class="line">        istime:<span class="hljs-literal">true</span>,</span><br><span class="line">        istoday:<span class="hljs-literal">true</span>,</span><br><span class="line">        choose:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">            start.max=a</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    laydate(start);</span><br><span class="line">    laydate(end);</span><br><span class="line"><span class="hljs-comment">//只要在回调函数choose中赋值就行了</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>laydate v5.0版本</p>
-</blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//日期插件</span></span><br><span class="line">        <span class="hljs-keyword">var</span> start=laydate.render(&#123;</span><br><span class="line">            elem:<span class="hljs-string">"#start_time"</span>,</span><br><span class="line">            type:<span class="hljs-string">"datetime"</span>,</span><br><span class="line">            format:<span class="hljs-string">"yyyy-MM-dd HH:mm:ss"</span>,</span><br><span class="line">            min:<span class="hljs-string">"2013-08-18"</span>,</span><br><span class="line">            max:<span class="hljs-string">"2099-06-16"</span>,</span><br><span class="line">            done:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value,date</span>)</span>&#123;</span><br><span class="line">                end.config.min=&#123;</span><br><span class="line">                    year: date.year,</span><br><span class="line">                    month: date.month<span class="hljs-number">-1</span>,</span><br><span class="line">                    date: date.date,</span><br><span class="line">                    hours: date.hours,</span><br><span class="line">                    minutes: date.minutes,</span><br><span class="line">                    seconds: date.seconds</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="hljs-keyword">var</span> end =laydate.render(&#123;</span><br><span class="line">            elem:<span class="hljs-string">"#end_time"</span>,</span><br><span class="line">            type:<span class="hljs-string">"datetime"</span>,</span><br><span class="line">            format:<span class="hljs-string">"yyyy-MM-dd HH:mm:ss"</span>,</span><br><span class="line">            min:<span class="hljs-string">"2013-08-18"</span>,</span><br><span class="line">            max:<span class="hljs-string">"2099-06-16"</span>,</span><br><span class="line">            done:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">                <span class="hljs-comment">// start.max=a</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-<p>在v5.0版本中，min值变成了一个对象，并不会重新渲染，所以直接对min设置值是没有用的，得单独对每个min的子元素赋值</p>
-<p><strong>特别要注意的是month要减1</strong></p>
-<p>虽然我也并不清楚为什么要这么做，但是It works. 我已经去layui的社区问了，希望能有人帮我解惑。    </p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/733.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 250 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/733.html">关于hexo-abbrlink链接undefined</a>
+                <a class="has-link-black-ter" href="/posts/3834.html">关于浏览器请求PHP一次请求执行了两次</a>
             
         </h1>
         <div class="content">
             <blockquote>
-<p>关于hexo-abbrlink</p>
+<p>测试同学今天又双叒反馈了一个Bug</p>
 </blockquote>
-<p><code>hexo-abbrlink</code>是一个hexo博客链接永久化的解决方案</p>
-<ul>
-<li>支持使用不同的算法和进制对文章链接进行转换</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>算法</th>
-<th>进制</th>
-<th>生成链接</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>crc16</td>
-<td>hex</td>
-<td><a href="https://post.zz173.com/posts/3ab2.html" target="_blank" rel="noopener">https://post.zz173.com/posts/3ab2.html</a></td>
-</tr>
-<tr>
-<td>crc16</td>
-<td>dec</td>
-<td><a href="https://post.zz173.com/posts/12345.html" target="_blank" rel="noopener">https://post.zz173.com/posts/12345.html</a></td>
-</tr>
-<tr>
-<td>crc32</td>
-<td>hex</td>
-<td><a href="https://post.zz173.com/posts/9a8b6c4d.html" target="_blank" rel="noopener">https://post.zz173.com/posts/9a8b6c4d.html</a></td>
-</tr>
-<tr>
-<td>crc32</td>
-<td>dec</td>
-<td><a href="https://post.zz173.com/posts/1690090958.html" target="_blank" rel="noopener">https://post.zz173.com/posts/1690090958.html</a></td>
-</tr>
-</tbody>
-</table>
+<p>继上次解决了重复请求的问题之后，本来就以为可以万事大吉了，没想到我还是太年轻了，测试同学说，不行啊，老哥，你这个我点击了一次创建居然创建出来两条数据！！并且查看日志的时候，确实是发了两次网络请求！！！</p>
+<p>我：？？？？？</p>
+<p><img src="/images/postsimages/2018121701.jpg" alt="真是让人头秃啊"></p>
 <blockquote>
-<p>安装</p>
+<p>排查</p>
 </blockquote>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>1.先看看是不是JS的问题，我们看一下network跟踪一下，没有啊，这只发送了一个请求，挠头，继续，</p>
+<p>2.好的，我去我的工位上复现一下，在JS处打断点，没有啊，ajax这里只进来一次，好吧，继续查，</p>
+<p>3.好的，把host地址改向测试机,请求，我擦，日志正常，结果也正常是一条数据啊，根本没办法复现啊。</p>
+<p>这。。。It works on my computer ! 这就非常的有趣了，测试同学和我访问的都是同一台测试机，为什么，我创建没问题，他创建就有问题呢。好奇怪，首要之急要解决问题的话，就避免重复请求，在代码里判断一下请求间隔。可是不应该啊，有这么麻烦么？我不死心啊？</p>
 <blockquote>
-<p>使用</p>
+<p>猜想&amp;&amp;解决</p>
 </blockquote>
-<p>打开config.yml，修改permalink中类似这样</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink.html</span><br></pre></td></tr></table></figure>
-<p>具体说明参照作者的github说明</p>
-<p><a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">项目地址在这里</a></p>
-<blockquote>
-<p>可能出现的问题：</p>
-</blockquote>
-<p>终于回到标题上来，有的同学说，这个配置完成之后，文章的链接都变成了undefined,新的文章没问题，老的文章就不行了。这个问题其实我们仔细想一下就能明白，我们首先要执行<code>hexo clean</code> 清楚掉以前生成的文章缓存，然后<code>hexo g</code>重新渲染就ok了。</p>
+<p>讲道理，没道理一个请求到后边代码会执行两次的，会不会是有个多个进程的原因？我们重启一下<code>NGINX</code>好了，在服务机上执行</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/nginx resatrt</span><br></pre></td></tr></table></figure>
+<p>测试大哥，快执行一下试试，诶，好了耶。</p>
+<p>好的，完美。</p>
 
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/45548.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/layui.png" alt="如何修改layer/layui中的confirm">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-29T05:12:16.000Z">2018-11-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 294 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/45548.html">如何修改layer/layui中的confirm</a>
-            
-        </h1>
-        <div class="content">
-            <blockquote>
-<p>需求：</p>
-</blockquote>
-<p><img src="/images/postsimages/QQ01.png" alt="原始图">改成<img src="/images/postsimages/QQ02.png" alt="修改后"></p>
-<blockquote>
-<p>背景：</p>
-</blockquote>
-<p>这个confirm是layui中的layer弹出框，要想修改这个弹出框的内容岂不是要去修改源码？当我在源码里扒拉半天梳理好了逻辑之后，突然意识到，其实我本可以不必这么麻烦的，直接找到这个弹窗append元素进去就不就完了么？卧槽！<br>所以我在代码里加了一行注释 <strong>浪费在这里的时间=2h</strong></p>
-<blockquote>
-<p>10分钟可以搞定的解决方案：</p>
-</blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> option = &#123;<span class="hljs-number">1</span>:<span class="hljs-string">'筛选项1'</span>,<span class="hljs-number">2</span>:<span class="hljs-string">'筛选项2'</span>&#125;;</span><br><span class="line"><span class="hljs-keyword">var</span> optionString = <span class="hljs-string">''</span>;</span><br><span class="line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> option) &#123;</span><br><span class="line">    optionString =optionString+<span class="hljs-string">'&lt;option value="'</span>+i+<span class="hljs-string">'"&gt;'</span>+option[i]+<span class="hljs-string">"&lt;/option&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//一定要给加入的元素加入id，提交的时候取值方便</span></span><br><span class="line">$(<span class="hljs-string">".layui-layer-content"</span>).append(<span class="hljs-string">"&lt;br/&gt;&lt;select id='reinvest_type'&gt;"</span>+optionString+<span class="hljs-string">"&lt;/select&gt;"</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>结语 </p>
-</blockquote>
-<h4 id="尽可能的不要犯蠢吧，有些问题并不像看上去那么难。"><a href="#尽可能的不要犯蠢吧，有些问题并不像看上去那么难。" class="headerlink" title="尽可能的不要犯蠢吧，有些问题并不像看上去那么难。"></a>尽可能的不要犯蠢吧，有些问题并不像看上去那么难。</h4><p>当然修改源码也是可以的，而且还能做成一个通用方案，不过相当耗时。问题是没必要，整个项目就一处需要这样干，我们尽可能选择效率最高的那种方案。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/57887.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/cmder.png" alt="cmder的segmentation fault错误修复">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-29T02:54:10.000Z">2018-11-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 575 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/57887.html">cmder的segmentation fault错误修复</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="Segmentation-fault"><a href="#Segmentation-fault" class="headerlink" title="Segmentation fault"></a>Segmentation fault</h3><blockquote>
-<p>现场还原</p>
-</blockquote>
-<ul>
-<li>问题出现的原因是我在 cmder的命令行里执行了<code>cmder /register ALL</code>命令，本意是把cmder放到右键菜单里去的<br>但我没想到的是，各种不成功，提示cmder lanchun什么的，之后，我换在了windows自带的cmd中执行这个命令，成功了。<br>但是令人疑惑的是cmder的bash窗口就此开始抽疯，<code>cd</code> 命令可以使用 <code>ll</code>、<code>ls</code>之类的命令直接抛出<code>Segmentation fault</code><br>错误。</li>
-</ul>
-<blockquote>
-<p>实验过程&amp;&amp;猜想</p>
-</blockquote>
-<ul>
-<li>百度搜了很久并没有找到解决方案，百度提到可能的原因：</li>
-</ul>
-<ol>
-<li>git bash 版本过旧，有概率出现这个问题，但是升级之后并没有解决这个问题</li>
-</ol>
-<ul>
-<li>猜想可能的原因：</li>
-</ul>
-<ol>
-<li><p>Cmder full这个版本是有BUG的，我们看Cmder的设置的时候，可以发现他的GUI其实是<code>ConEmu</code><br>，然后又拿这个调用了git bash ，那我们直接拿ConEmu调用git bash会不会有问题呢，所以我们打开ConEmu执行<br>命令<code>cd git/bin</code> &amp;&amp; <code>bash --login -i</code> 我们发现我们这时候进入bash 界面了，我们使用一下<code>ll</code>命令，哎，这次没有报错了。</p>
-</li>
-<li><p>我们换Cmder mini 试一下，打开bash:bash窗口，卧槽，啥玩意，居然说系统找不到制定路径，好的，我们从设置里看一下，执行bash窗口之后<br>执行的哪个命令，可以看到是<code>cmd /c &quot;&quot;%ConEmuDir%\..\git-for-windows\bin\bash&quot; --login -i&quot;</code> ,我们打开安装目录，看一下，我去！<br><code>ConEmuDir</code> 的上级根本没有<code>git-for-windows</code>目录，好吧，你赢了，而在full版本中是有的！！！ 我后来找到我git-bash的安装目录，复制整个文件夹<br>到cmder的<code>Vender</code> 目录，改名成<code>git-for-windows</code>,打开bash:bash窗口，哎，进来了，运行命令试试，好的，Surprise ! 这次没有报错。<br>问题成功解决。</p>
-</li>
-</ol>
-<blockquote>
-<p>结论 </p>
-</blockquote>
-<h4 id="结论就是-Cmder-full-的版本在Windows10下，可能有某种未知的Bug-我们可以通过尝试使用给-Cmder-mini-添加git-bash的办法，来代替它。"><a href="#结论就是-Cmder-full-的版本在Windows10下，可能有某种未知的Bug-我们可以通过尝试使用给-Cmder-mini-添加git-bash的办法，来代替它。" class="headerlink" title="结论就是 Cmder full 的版本在Windows10下，可能有某种未知的Bug , 我们可以通过尝试使用给 Cmder mini 添加git-bash的办法，来代替它。"></a>结论就是 Cmder full 的版本在Windows10下，可能有某种未知的Bug , 我们可以通过尝试使用给 Cmder mini 添加git-bash的办法，来代替它。</h4>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/59946.html" class="image is-7by1">
-            <img class="thumbnail" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAEsAhYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyyiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoqW2tpru4SCBC8jHAAru9H8NW2nqss4Wa565I+VfoP611YbCVMQ/d27nHi8bTw0fe1fY5Kz8P6lfANHblUP8cnyj/GtaPwTckfvbyJT/sqW/wrtKK9qnlVCK967PAqZziJP3bI45vBEgHy36k+8WP61RufCOpwAtGI5wP7jYP5HFd/RVSyzDtaK3zJhm+Ki9Wn8v8AI8lmhlt5DHNG0bjqrDBpleqXun2uoQmK5iDjse6/Q1wOt6FNpEu4EyWzH5JMdPY+9eTi8vnQXMtYntYLM6eIfJLSX5mTRRRXnnphRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAPiiknlWOJGd26KoyTVv+xtT/58Ln/v2am8O/8AIwWf+8f5GvSa9PBYGOIg5SdtTyMwzGeFqKEYp3Vzyi4s7m0Ki4gkiLfd3qRmoa6zxv8A62y/3X/pXJ1x4miqNV010O7CV3XoxqNWuFFT2dpNf3sNpbqGmmcIgJxkn3rpP+Fc+Jv+fKP/AL/p/jXFUxFKk7VJJerO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FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXRr4B8VNEko0S58uQAq2AAQeneucr65h06LUdD0xZXkTy4o3BjIGTsxzkHjmgD5rPw+8WKCW0O6AHXOP8aX/hXni3/oBXfTPQdPzr6Nl8JabN9vz5ym+cPMVYA5BJGOPc1YHh3T1nmuFSQTSwLAziQg7VAA46Z4H5fXIB81/wDCuvF//QAu/wAh/jRX1LbwLb26RKWIUdW6n/PtxRQB/9k=" alt="论好的代码习惯的养成/做一个优雅的coder">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-06T09:26:10.000Z">2018-11-06</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 303 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/59946.html">论好的代码习惯的养成/做一个优雅的coder</a>
-            
-        </h1>
-        <div class="content">
-            <p>1.先说一下以前被滴滴大佬教育的事情：</p>
-<p>以前写代码的时候，因为只需要取特定的几个字段，所以经常这么写<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//Request $request for example</span></span><br><span class="line">$parameters = $request-&gt;all();</span><br><span class="line">$data[<span class="hljs-string">'name'</span>] = $parameters[<span class="hljs-string">'name'</span>];</span><br><span class="line">$data[<span class="hljs-string">'email'</span>] = $parameters[<span class="hljs-string">'email'</span>];</span><br><span class="line">$data[<span class="hljs-string">'tel'</span>] = $parameters[<span class="hljs-string">'tel'</span>];</span><br><span class="line">$data[<span class="hljs-string">'address'</span>] = $parameters[<span class="hljs-string">'address'</span>];</span><br><span class="line">$data[<span class="hljs-string">'birthday'</span>] = $parameters[<span class="hljs-string">'birthday'</span>];</span><br><span class="line">$data[<span class="hljs-string">'sex'</span>] = $parameters[<span class="hljs-string">'sex'</span>];</span><br></pre></td></tr></table></figure></p>
-<p>后来，大佬说，事实上你可以这样写：<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//Request $request</span></span><br><span class="line"> </span><br><span class="line">$column = [<span class="hljs-string">'name'</span>,<span class="hljs-string">'email'</span>,<span class="hljs-string">'tel'</span>,<span class="hljs-string">'address'</span>,<span class="hljs-string">'sex'</span>,<span class="hljs-string">'birthday'</span>];</span><br><span class="line">$data = [];</span><br><span class="line"><span class="hljs-keyword">foreach</span> ($column <span class="hljs-keyword">as</span> $v) &#123;</span><br><span class="line">   $data[$v] = $request[$v];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>emmmm，好像确实要精简一点哈。。。。</p>
-<p>2.再说一下最近被老大@的事情</p>
-<p>因为对字符串函数用的比较多，我下意识的会把数组解开处理，已经形成思维定式了，拿到东西优先转成自己最熟悉的那种形态，但实际上，完全没有这么麻烦，比如下边的代码：<br><img src="/images/postsimages/20181106113901754.png" alt="被老大@了"></p>
-<p>其实完全可以这样：<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//Request $request</span></span><br><span class="line">$search = $request-&gt;all();</span><br><span class="line">$data[<span class="hljs-string">'query'</span>] = http_build_query($search);</span><br></pre></td></tr></table></figure></p>
-<p>或者说，本来就应该这么写，有自带的函数可以完成这样的功能，我们就不要自己再造轮子了。（我是真的菜哈。。。）</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/40280.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/2018102611282095.jpeg" alt="50行代码写的一个插件，破解一个H5小游戏">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-10-26T09:21:14.000Z">2018-10-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 591 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/40280.html">50行代码写的一个插件，破解一个H5小游戏</a>
-            
-        </h1>
-        <div class="content">
-            <p>小游戏链接：测测你的眼睛对色差的辨识度<a href="http://www.webhek.com/post/color-test.html?from=timeline" target="_blank" rel="noopener">http://www.webhek.com/post/color-test.html?from=timeline</a></p>
-<p>废话不多说，先放代码：<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"点击开始测试-------"</span>);</span><br><span class="line">	<span class="hljs-comment">//点击开始按钮</span></span><br><span class="line">	<span class="hljs-keyword">var</span> play = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">'play-btn'</span>);</span><br><span class="line">	play[<span class="hljs-number">0</span>].click();</span><br><span class="line">	<span class="hljs-comment">//获取画布盒子</span></span><br><span class="line">	<span class="hljs-comment">// sleep(1);</span></span><br><span class="line">	<span class="hljs-keyword">var</span> box = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'box'</span>);</span><br><span class="line">	<span class="hljs-keyword">var</span> num = box.children.length;</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'共有'</span>+ num + <span class="hljs-string">'个字元素'</span>);</span><br><span class="line">	<span class="hljs-comment">//把第一个元素定义为基础色</span></span><br><span class="line">	<span class="hljs-keyword">var</span> color = [];</span><br><span class="line">	<span class="hljs-keyword">var</span> basecolor = box.children[<span class="hljs-number">0</span>].style.backgroundColor;</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(basecolor);</span><br><span class="line">	<span class="hljs-comment">//循环</span></span><br><span class="line">	</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickButton</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'下一关'</span>);</span><br><span class="line">		 box = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'box'</span>);</span><br><span class="line">		 num = box.children.length;</span><br><span class="line">		 color = [];</span><br><span class="line">		 basecolor = box.children[<span class="hljs-number">0</span>].style.backgroundColor;</span><br><span class="line">		<span class="hljs-comment">// console.log('进入下一关');</span></span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; num ; i++) &#123;</span><br><span class="line">			color[i] = box.children[i].style.backgroundColor;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = num<span class="hljs-number">-1</span>; i &gt;<span class="hljs-number">0</span> ; i--) &#123;</span><br><span class="line">			<span class="hljs-keyword">if</span> (color[i]!=basecolor &amp;&amp; color[i<span class="hljs-number">-1</span>] ==basecolor) &#123;</span><br><span class="line">				box.children[i].click();</span><br><span class="line">				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"点击第"</span>+(i+<span class="hljs-number">1</span>)+<span class="hljs-string">'个元素'</span>);</span><br><span class="line">			&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (color[i]!=basecolor &amp;&amp; color[i<span class="hljs-number">-1</span>] !=basecolor) &#123;</span><br><span class="line">				box.children[<span class="hljs-number">0</span>].click();</span><br><span class="line">				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"点击第"</span>+<span class="hljs-number">1</span>+<span class="hljs-string">'个元素'</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	setInterval(clickButton,<span class="hljs-number">300</span>);</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>游戏界面：</p>
-</blockquote>
-<p><img src="/images/postsimages/20181026113633556.png" alt="游戏界面"></p>
-<p>思路都在代码里了，就是取到全部的色块元素，拿CSS对比，找到不一样那个，JS点击，进入下一关。当然，代码写的很粗糙，还有改进的空间。轻喷。</p>
-<p>说一下流程：</p>
-<p>首先呢，我们要把JS代码注入到游戏页面中，这个我是通过把代码打包成浏览器插件实现的。我做的谷歌浏览器的插件，当然你也可以做360的，火狐的，等等。</p>
-<p>具体不同浏览器的插件的方法，你可以通过百度，在CSDN上找到对应的文章。</p>
-<p>如果有人想试一下的话，可以下载这个谷歌浏览器的插件：</p>
-<p>链接: <a href="https://pan.baidu.com/s/1yASkGKcrz1pPt0vY6gxqeg" target="_blank" rel="noopener">https://pan.baidu.com/s/1yASkGKcrz1pPt0vY6gxqeg</a> 提取码: jvcu</p>
-<p>插件安装方法：</p>
-<p>解压文件到一个好找的文件夹，然后 谷歌浏览器-》设置-》更多工具-》拓展程序-》开发者模式打开-》加载已解压的插件。</p>
-<p>插件使用：</p>
-<p>打开游戏界面，，插件就会自动运行，如果出问题的话，就多刷新几次。</p>
-<p>放在最后：</p>
-<p>体验几次之后就把插件移除吧，代码写的不完善，插件会在每个页面都运行，而JS里有一个定时器，因而可能会拖累浏览器的速度。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/posts/43176.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/20181129.jpg" alt="慎用array_filter函数">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-26T08:22:21.000Z">2018-09-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 389 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/posts/43176.html">慎用array_filter函数</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="array-filter"><a href="#array-filter" class="headerlink" title="array_filter"></a>array_filter</h3><p>(PHP 4 &gt;= 4.0.6, PHP 5, PHP 7)</p>
-<p>array_filter — 用回调函数过滤数组中的单元</p>
-<blockquote>
-<p>说明</p>
-</blockquote>
-<p>array array_filter ( array $array [, callable $callback [, int $flag = 0 ]] )</p>
-<p>依次将 array 数组中的每个值传递到 callback 函数。如果 callback 函数返回 true，则 array 数组的当前值会被包含在返回的结果数组中。数组的键名保留不变。</p>
-<blockquote>
-<p>参数</p>
-</blockquote>
-<ul>
-<li><p>array</p>
-<p>   要循环的数组</p>
-</li>
-<li><p>callback</p>
-<p>   使用的回调函数</p>
-</li>
-</ul>
-<p>如果没有提供 callback 函数， 将删除 array 中所有等值为 FALSE 的条目。更多信息见转换为布尔值。</p>
-<ul>
-<li><p>flag</p>
-<p>  决定callback接收的参数形式:</p>
-<p>  ARRAY_FILTER_USE_KEY - callback接受键名作为的唯一参数<br>  ARRAY_FILTER_USE_BOTH - callback同时接受键名和键值</p>
-<blockquote>
-<p>返回值</p>
-</blockquote>
-</li>
-</ul>
-<p>返回过滤后的数组。</p>
-<p>array_filter其实是一个相当好用的函数，常用的场景包括，表单多条件筛选，可以直接用此函数过滤掉没有值的筛选项。</p>
-<p><strong>但是有一个问题，必须要重视：</strong></p>
-<h4 id="array-filter会过滤掉任何值等于FALSE的值，也就是说-0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。"><a href="#array-filter会过滤掉任何值等于FALSE的值，也就是说-0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。" class="headerlink" title="array_filter会过滤掉任何值等于FALSE的值，也就是说  0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。"></a>array_filter会过滤掉任何值等于FALSE的值，也就是说  0值，空字符串，null，都会被过滤当你的筛选项里有值等于0时，问题就会暴露出来，在我们的项目里，在调接口时做了过滤，没想到有一个默认的状态等于0的参数被我过滤掉了，就造成了线上数据的失常，也算是一个比较低级的错误了。此文谨记。</h4>
         </div>
         
         
@@ -828,7 +276,9 @@
             
             <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/13/">13</a></li>
             
         </ul>
     </nav>
@@ -873,7 +323,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        22
+                        25
                     </p>
                 </div>
             </div>
@@ -893,7 +343,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        22
                     </p>
                 </div>
             </div>
@@ -941,7 +391,7 @@
                 <span class="level-item">有点意思</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/爬坑日常/">
@@ -949,7 +399,7 @@
                 <span class="level-item">爬坑日常</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">12</span>
+                <span class="level-item tag">14</span>
             </span>
         </a></li>
             </ul>
@@ -963,7 +413,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
+        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
     </div>
 </div>
 
@@ -977,6 +427,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/posts/47886.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
+                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/3834.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
+                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/60263.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
+                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1016,63 +523,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/posts/51984.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time></div>
-                    <a href="/posts/51984.html" class="has-link-black-ter is-size-6">如何丧心病狂的使用python爬虫读小说</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/55229.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time></div>
-                    <a href="/posts/55229.html" class="has-link-black-ter is-size-6">laydate V5.0.8动态设置min值</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/733.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time></div>
-                    <a href="/posts/733.html" class="has-link-black-ter is-size-6">关于hexo-abbrlink链接undefined</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1086,12 +536,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/12/">
                 <span class="level-start">
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1231,6 +692,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/Sublime-text3/">
                         <span class="level-start">
                             <span class="level-item">Sublime text3</span>
@@ -1267,6 +739,17 @@
                     <a class="level is-marginless" href="/tags/fun/">
                         <span class="level-start">
                             <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1344,6 +827,17 @@
                     <a class="level is-marginless" href="/tags/优雅/">
                         <span class="level-start">
                             <span class="level-item">优雅</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/年终总结/">
+                        <span class="level-start">
+                            <span class="level-item">年终总结</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1430,6 +924,63 @@
         
         <article class="media">
             
+            <a href="/posts/47886.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
+                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/3834.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
+                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/60263.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
+                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/posts/25776.html" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="一个有趣的BUG">
@@ -1466,63 +1017,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/posts/51984.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181213.jpg" alt="如何丧心病狂的使用python爬虫读小说">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T01:37:03.000Z">2018-12-13</time></div>
-                    <a href="/posts/51984.html" class="has-link-black-ter is-size-6">如何丧心病狂的使用python爬虫读小说</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/55229.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time></div>
-                    <a href="/posts/55229.html" class="has-link-black-ter is-size-6">laydate V5.0.8动态设置min值</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/733.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time></div>
-                    <a href="/posts/733.html" class="has-link-black-ter is-size-6">关于hexo-abbrlink链接undefined</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1536,12 +1030,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/12/">
                 <span class="level-start">
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1681,6 +1186,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/Sublime-text3/">
                         <span class="level-start">
                             <span class="level-item">Sublime text3</span>
@@ -1717,6 +1233,17 @@
                     <a class="level is-marginless" href="/tags/fun/">
                         <span class="level-start">
                             <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1802,6 +1329,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/年终总结/">
+                        <span class="level-start">
+                            <span class="level-item">年终总结</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/微信/">
                         <span class="level-start">
                             <span class="level-item">微信</span>
@@ -1877,7 +1415,10 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2018 Er Dog&nbsp;
+                &copy;<a href="http://www.miitbeian.gov.cn/">京ICP备19000965号</a>
+                </p>
+                <p class="is-size-7">
+                &copy; 2019 Er Dog&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>
@@ -1919,6 +1460,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
 <script>moment.locale("zh-CN");</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ygbhf/clicklove/clicklove.js"></script>
 
 
     

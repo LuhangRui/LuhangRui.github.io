@@ -15,7 +15,7 @@ date: 2019-05-14 11:39:07
 这个时候我们需要执行
 
 ```mysql
-select @sql_mode;
+select @@sql_mode;
 ```
 
 你会发现值是这样的：

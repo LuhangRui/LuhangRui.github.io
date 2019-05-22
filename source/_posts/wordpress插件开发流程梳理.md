@@ -3,7 +3,7 @@ title: wordpress插件开发流程梳理
 tags: wordpress
 abbrlink: 5344
 date: 2019-05-21 16:32:49
-category: 开发日常
+category: 厚积薄发
 thumbnail: /images/postsimages/wordpress.jpg
 ---
 

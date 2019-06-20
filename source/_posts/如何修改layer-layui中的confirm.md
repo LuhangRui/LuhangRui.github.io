@@ -9,7 +9,7 @@ date: 2018-11-29 13:12:16
 
 > 需求：
 
-![原始图](/images/postsimages/QQ01.png)改成![修改后](/images/postsimages/QQ02.png)
+![原始图](https://kengdie.oss-cn-shanghai.aliyuncs.com/QQ01.png)改成![修改后](https://kengdie.oss-cn-shanghai.aliyuncs.com/QQ02.png)
 
 > 背景：
 

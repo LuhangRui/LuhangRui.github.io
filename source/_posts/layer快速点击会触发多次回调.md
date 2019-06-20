@@ -17,7 +17,7 @@ date: 2018-12-14 14:16:53
 
 查看日志，看一下是不是发了两次请求，果不其然啊：
 
-![日志截图](/images/postsimages/20181214142322.png)
+![日志截图](https://kengdie.oss-cn-shanghai.aliyuncs.com/20181214142322.png)
 
 并发了，同一时间发送了两次请求，出现了脏写。
 

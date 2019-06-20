@@ -37,7 +37,7 @@ http://www.vagrantbox.es/
 （备注：这个地址实际上是失效的，很多box文件都找不到资源了，不过不要紧，因为我们可以自己做一个box，这个在下一篇文章我会讲如何定制一个自己的box，顺道放一个我制作好的基于centos7且安装好lnmp1.5的box）链接: [Centos-lnmp.box](https://pan.baidu.com/s/1LEN9dNZf2LWNhCCrBBregg)密码: tssp
 
 #### 四：工作流程
-![工作流程](/images/postsimages/20180914115249464.png)
+![工作流程](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914115249464.png)
 
 #### 五：vagrant的日常使用
 下载以上vagrant和virtualbox之后，一路next安装，安装完成之后。
@@ -46,7 +46,7 @@ http://www.vagrantbox.es/
 
 1.把你下载的box文件扔进来，如图：
 
-![](/images/postsimages/201809141313240.png)
+![](https://kengdie.oss-cn-shanghai.aliyuncs.com/201809141313240.png)
 
 2.我们在这个位置打开git-bash，或者用cmd切换到这个目录，我们以git-bash为例：
 
@@ -60,19 +60,19 @@ vagrant.exe  box add centos centos-lnmp.box
 ```
 vagrant box add {name(你要起的名字随意)}  {url/file(本地文件地址或远程地址)}
 ```
-![执行效果](/images/postsimages/20180914131643512.png)
+![执行效果](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914131643512.png)
 2）执行命令
 ```
 vagrant.exe init {centos(刚刚add操作时起的名字)}
 ```
-![初始化虚拟机](/images/postsimages/20180914132351742.png)
+![初始化虚拟机](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914132351742.png)
 
 就像这样，这个命令会初始化box并生成一个Vargrantfile的配置文件，在这个文件里我们可以 设置一些配置信息，比如共享主机目录到虚拟机目录，网络，虚拟机ip等信息。
 
 
 
 打开配置文件
-![修改配置文件](/images/postsimages/20180914132720938.png)
+![修改配置文件](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914132720938.png)
 
 
 这些配置项默认都是注释掉的，我们需要找到这两行进行设置。其中共享目录的配置我们可以这样写，第一个参数为本地目录，第二个参数是虚拟机目录，/ 代表了虚拟机下的根目录。
@@ -89,7 +89,7 @@ vagrant.exe up
 ```
 就可以一键部署虚拟机环境了
 
-![启动虚拟机](/images/postsimages/20180914133548923.png)
+![启动虚拟机](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914133548923.png)
 
 4）虚拟机管理
 

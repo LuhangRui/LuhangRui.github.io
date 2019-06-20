@@ -19,7 +19,7 @@ date: 2018-12-17 21:11:25
 
 重新写了个页面demo，开始测试，卧槽？复现不了啊，这尼玛。。。。？
 
-![摸不着头脑](/images/postsimages/2018121701.jpg)
+![摸不着头脑](https://kengdie.oss-cn-shanghai.aliyuncs.com/2018121701.jpg)
 
 > 叮！事情の真相
 

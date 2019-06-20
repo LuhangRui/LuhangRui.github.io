@@ -11,13 +11,13 @@ date: 2019-01-08 17:05:01
 
 众所周知，gitment评论系统需要初始化以创建对应的`issue`，可是我在点击login with github的时候，总是跳向博客首页！WTF！什么鬼？这样不程序啊？
 
-![WTF](/images/postsimages/what.jpg)
+![WTF](https://kengdie.oss-cn-shanghai.aliyuncs.com/what.jpg)
 
 > 排查
 
 1.F12查看login回调链接，`redirect_uri`参数没有什么问题啊，行，我们回头查看，github的文档，
 
-![github文档](/images/postsimages/redirect.png)
+![github文档](https://kengdie.oss-cn-shanghai.aliyuncs.com/redirect.png)
 
 [github文档地址](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
 

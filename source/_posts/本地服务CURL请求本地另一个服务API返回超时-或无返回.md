@@ -19,7 +19,7 @@ date: 2018-07-23 14:27:06
 + 后来了解到原来PHP+NGINX在windows下是不支持并发的？[参考文章在这里](http://ishwy.me/?cat=12)
 这个我并不敢十分的肯定，我只是觉得能理解这个东西，我们看nginx的配置文件的话，会更清楚一些，到底发生了什么：
 
-![nginx配置](/images/postsimages/20180723183343520.png)
+![nginx配置](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180723183343520.png)
 
 fastcgi_pass 都绑定了9000端口
 
@@ -30,7 +30,7 @@ fastcgi_pass 都绑定了9000端口
 
 
 第一是要把服务绑定到其他没被占用的端口，比如9009
-![参考配置](/images/postsimages/20180723184314759.png)
+![参考配置](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180723184314759.png)
 然后切换到php-cgi所在的目录，再单独启动一个php-cgi进程，去监听这个个端口
 
 ```php

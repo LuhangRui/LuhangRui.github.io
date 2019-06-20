@@ -13,7 +13,7 @@ date: 2019-01-08 11:26:09
 
 我：？？？？？
 
-![真是让人头秃啊](/images/postsimages/2018121701.jpg)
+![真是让人头秃啊](https://kengdie.oss-cn-shanghai.aliyuncs.com/2018121701.jpg)
 
 > 排查
 

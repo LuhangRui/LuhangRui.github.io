@@ -19,7 +19,7 @@ http://mirrors.163.com/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso
 
 3.虚拟机安装好之后
 1）以root用户登陆
-![登陆](/images/postsimages/20180914142203352.png)
+![登陆](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914142203352.png)
 
 
 登陆之后依次执行  `adduser vagrant`  和 `passwd vagrant`命令，创建vagrant用户密码也设置为vagrant。
@@ -31,7 +31,7 @@ vim /etc/sudoers
 ```
 
 依次执行这两个命令
-![设置免密](/images/postsimages/20180914143311492.png)
+![设置免密](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914143311492.png)
 
 
 在root行下新增vagrant用户，参照图片设置。完事esc :wq保存退出
@@ -41,11 +41,11 @@ vim /etc/sudoers
 2）配置ssh
 
 执行 yum install openssh-server 如果没安装的话安装一下，如图是已经安装过的。
-![安装openssh](/images/postsimages/20180914142528988.png)
+![安装openssh](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914142528988.png)
 
 
 安装完毕之后执行  `vim /etc/ssh/sshd_config`
-![配置ssh](/images/postsimages/20180914143918964.png)
+![配置ssh](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914143918964.png)
 
 
 打开监听和端口，并把允许root用户远程登陆打开。
@@ -79,11 +79,11 @@ wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
 
 6.设置网络规则
 网卡1按照如下设置，端口转发规则2222-》22
-![设置端口映射](/images/postsimages/20180914145119497.png)
+![设置端口映射](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914145119497.png)
 
 
 网卡2设置：
-![设置网络](/images/postsimages/20180914145227965.png)
+![设置网络](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180914145227965.png)
 
 
 7.打包制作box

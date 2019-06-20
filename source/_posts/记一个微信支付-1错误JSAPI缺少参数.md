@@ -10,11 +10,11 @@ date: 2018-04-05 17:39:14
 
 ##### 最近公司要做一个H5小游戏里边涉及到微信公众号支付，中间摸爬滚打遇到了很多坑。记录一下，留待后人看。
 
-![图](/images/postsimages/20180403191752541.png)
+![图](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180403191752541.png)
 
 ##### 我们来看一下这个方法 `GetJsApiParameters`
 
-![图2](/images/postsimages/20180403192123425.png)
+![图2](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180403192123425.png)
 
 ##### 怎么样，看起来像不像输出了一个JSON字符串作为微信支付JSAPI的参数？
 
@@ -27,6 +27,6 @@ date: 2018-04-05 17:39:14
 
 #### 单纯的我以为这就完了，然而并没有，再后来我们发现这样也依旧会偶尔出现唤不起微信支付的情况，所以后来我们是
 
-![图3](/images/postsimages/20180403193537371.png)
+![图3](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180403193537371.png)
 
 ##### 这么干的，尽管看起来什么也没做，但这样就是好使。如果你也遇到了同样的问题，建议你也试试这种解决方案。

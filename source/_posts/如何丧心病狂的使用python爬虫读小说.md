@@ -61,7 +61,7 @@ class firstdemo(scrapy.Spider):
 
 没想到吧，代码就这么多，具体的教程可以参见向大家推荐的那个网站。最后我们执行`scrapy crawl firstdemo`就开始爬取了。
 
-![运行图](/images/postsimages/20181213100803.png)
+![运行图](https://kengdie.oss-cn-shanghai.aliyuncs.com/20181213100803.png)
 
 > 最后
 

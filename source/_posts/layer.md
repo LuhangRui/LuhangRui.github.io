@@ -9,7 +9,7 @@ date: 2018-07-24 14:44:08
 
 ##### 最初是要写一个管理后台来着，项目中需要用到弹出层，但是没有前端配合，我一个小PHP需要去写这玩意，怎么办呢？查了一些资料，发现layer对我来说还行，文档写的也比较完全，学习成本不高，就下决心用这个了。但是现实总是会给你泼冷水，刚引入就报了一个莫名其妙的错误。
 
-![i is not a function](/images/postsimages/20180724113849694.png)
+![i is not a function](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180724113849694.png)
 
 **呐，就是这个，我自己一个人在那里纳闷，卧槽，我啥也没做啊，我只是引入进来怎么还报错了呢？**
 
@@ -21,4 +21,4 @@ date: 2018-07-24 14:44:08
 
 来自layer.js官网的说明：
 
-![来自官网的说明](/images/postsimages/20180724114741117.png)
+![来自官网的说明](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180724114741117.png)

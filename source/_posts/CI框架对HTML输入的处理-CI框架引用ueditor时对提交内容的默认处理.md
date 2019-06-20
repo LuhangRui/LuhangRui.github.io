@@ -19,7 +19,7 @@ date: 2018-07-30 15:01:57
 $this->input->post(null,true);
 ```
 并不是原生的 `$_POST` 有可能是这里有问题，很容易就想到，是框架本身都输入的内容做了防XSS攻击的处理。
-![对比图](/images/postsimages/20180730104321870.png)
+![对比图](https://kengdie.oss-cn-shanghai.aliyuncs.com/20180730104321870.png)
 
 
 以上。

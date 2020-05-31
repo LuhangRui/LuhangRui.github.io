@@ -132,8 +132,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/45548.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/layui.png" alt="如何修改layer/layui中的confirm">
+        <a href="/posts/25938.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/newStart.jpg" alt="写在2019年开始工作的第一天">
         </a>
     </div>
     
@@ -141,17 +141,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-29T05:12:16.000Z">2018-11-29</time>
+                <time class="level-item has-text-grey" datetime="2019-02-13T01:21:36.000Z">2019-02-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                <a class="has-link-grey -link" href="/categories/关于我/">关于我</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 294 个字)
+                    5 分钟 读完 (大约 735 个字)
                 </span>
                 
             </div>
@@ -159,26 +159,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/45548.html">如何修改layer/layui中的confirm</a>
+                <a class="has-link-black-ter" href="/posts/25938.html">写在2019年开始工作的第一天</a>
             
         </h1>
         <div class="content">
             <blockquote>
-<p>需求：</p>
+<p>回京</p>
 </blockquote>
-<p><img src="/images/postsimages/QQ01.png" alt="原始图">改成<img src="/images/postsimages/QQ02.png" alt="修改后"></p>
+<p>多调休了1.5天，初六晚上我坐上了发往北京的火车。一夜的硬座，睡的不是很好，旁边有个大叔还一直在咒骂走走停停的火车，无意义的嚎叫着他的傻屌言论。早上9点的时候列车抵达，一路上，透过窗可以看到窗外飞扬的大雪，北京，终于下雪了啊。</p>
+<p>出了地铁站，一路顶着漫天飞舞的雪花往住处走，心里控制不住的开心。很久没有见过这样的大雪了啊！尤其，是在北京。听人说，下了雪的北京，便是北平了，是真正的北国风光。这一路走来，这些雪中的精灵，或隐于发梢，或藏于眉际，还有往脖子里跳的，端的是无比的皮。虽然是一个地地道道的北方汉子，看过了很多场雪，但这场雪尤其让人开心，提着行李箱，心已经飞起来了，我摘下帽子，肆意的让他们落在我的头发上，肩膀上。真真是妙不可言。</p>
+<p><img src="https://kengdie.oss-cn-shanghai.aliyuncs.com/snow20190212.jpg" alt="附2019-02-12雪景"></p>
 <blockquote>
-<p>背景：</p>
+<p>工作</p>
 </blockquote>
-<p>这个confirm是layui中的layer弹出框，要想修改这个弹出框的内容岂不是要去修改源码？当我在源码里扒拉半天梳理好了逻辑之后，突然意识到，其实我本可以不必这么麻烦的，直接找到这个弹窗append元素进去就不就完了么？卧槽！<br>所以我在代码里加了一行注释 <strong>浪费在这里的时间=2h</strong></p>
+<p>说了这么多，不还是逃不过去上班的命运？嘻嘻嘻</p>
+<p>9点到北京过了40分钟左右的安检，直到接近11点才到住处，洗个澡吃个饭，美滋滋的去上班了，告辞</p>
+<p>到了公司，翻出来年前写的代码，Emmm 好像没有什么可以做的事情，该写的东西都写完了啊。迫于没有正事干，公司的暖气一会就给我吹的打起瞌睡来，我心里吓了一大跳，这可不行啊，<code>leader</code>就在后边坐呢。Emmm , 去楼下走走吧，那首歌是怎么唱来着，<code>吹吹冷风会清醒的多</code> , 下去去超市买了个薄荷味的炫迈，Nice 兄弟，炫迈，根本停不下来。（此处应该有广告费）逛了一圈回来，带我的大哥说，Emmm，你看一下前台的代码吧，前台的代码后期如果有什么问题，你也可以跟着修复一下，我：卧槽，有事情做了耶！</p>
 <blockquote>
-<p>10分钟可以搞定的解决方案：</p>
+<p>关于2019</p>
 </blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> option = &#123;<span class="hljs-number">1</span>:<span class="hljs-string">'筛选项1'</span>,<span class="hljs-number">2</span>:<span class="hljs-string">'筛选项2'</span>&#125;;</span><br><span class="line"><span class="hljs-keyword">var</span> optionString = <span class="hljs-string">''</span>;</span><br><span class="line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> option) &#123;</span><br><span class="line">    optionString =optionString+<span class="hljs-string">'&lt;option value="'</span>+i+<span class="hljs-string">'"&gt;'</span>+option[i]+<span class="hljs-string">"&lt;/option&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//一定要给加入的元素加入id，提交的时候取值方便</span></span><br><span class="line">$(<span class="hljs-string">".layui-layer-content"</span>).append(<span class="hljs-string">"&lt;br/&gt;&lt;select id='reinvest_type'&gt;"</span>+optionString+<span class="hljs-string">"&lt;/select&gt;"</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>结语 </p>
-</blockquote>
-<h4 id="尽可能的不要犯蠢吧，有些问题并不像看上去那么难。"><a href="#尽可能的不要犯蠢吧，有些问题并不像看上去那么难。" class="headerlink" title="尽可能的不要犯蠢吧，有些问题并不像看上去那么难。"></a>尽可能的不要犯蠢吧，有些问题并不像看上去那么难。</h4><p>当然修改源码也是可以的，而且还能做成一个通用方案，不过相当耗时。问题是没必要，整个项目就一处需要这样干，我们尽可能选择效率最高的那种方案。</p>
+<p>强哥之前给我说，我们PHP程序员的成长路径还是很清晰的，PHP+MYSQL+NGINX+LINUX这是基础，要列一个清单，每年看一本书，每年攻其中的一个，从原理到应用。这样就会越来越秃（划掉），越来越强。是啊，都9012年了，我得时间不多了，是要好好学习，沉淀技术了。我要去学习了，告辞！</p>
 
         </div>
         
@@ -194,8 +194,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/57887.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/cmder.png" alt="cmder的segmentation fault错误修复">
+        <a href="/posts/47886.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
         </a>
     </div>
     
@@ -203,7 +203,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-29T02:54:10.000Z">2018-11-29</time>
+                <time class="level-item has-text-grey" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
@@ -213,7 +213,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 575 个字)
+                    3 分钟 读完 (大约 428 个字)
                 </span>
                 
             </div>
@@ -221,38 +221,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/57887.html">cmder的segmentation fault错误修复</a>
+                <a class="has-link-black-ter" href="/posts/47886.html">gitment初始化评论跳回博客首页</a>
             
         </h1>
         <div class="content">
-            <h3 id="Segmentation-fault"><a href="#Segmentation-fault" class="headerlink" title="Segmentation fault"></a>Segmentation fault</h3><blockquote>
-<p>现场还原</p>
+            <blockquote>
+<p>表现</p>
 </blockquote>
-<ul>
-<li>问题出现的原因是我在 cmder的命令行里执行了<code>cmder /register ALL</code>命令，本意是把cmder放到右键菜单里去的<br>但我没想到的是，各种不成功，提示cmder lanchun什么的，之后，我换在了windows自带的cmd中执行这个命令，成功了。<br>但是令人疑惑的是cmder的bash窗口就此开始抽疯，<code>cd</code> 命令可以使用 <code>ll</code>、<code>ls</code>之类的命令直接抛出<code>Segmentation fault</code><br>错误。</li>
-</ul>
+<p>众所周知，gitment评论系统需要初始化以创建对应的<code>issue</code>，可是我在点击login with github的时候，总是跳向博客首页！WTF！什么鬼？这样不程序啊？</p>
+<p><img src="https://kengdie.oss-cn-shanghai.aliyuncs.com/what.jpg" alt="WTF"></p>
 <blockquote>
-<p>实验过程&amp;&amp;猜想</p>
+<p>排查</p>
 </blockquote>
-<ul>
-<li>百度搜了很久并没有找到解决方案，百度提到可能的原因：</li>
-</ul>
-<ol>
-<li>git bash 版本过旧，有概率出现这个问题，但是升级之后并没有解决这个问题</li>
-</ol>
-<ul>
-<li>猜想可能的原因：</li>
-</ul>
-<ol>
-<li><p>Cmder full这个版本是有BUG的，我们看Cmder的设置的时候，可以发现他的GUI其实是<code>ConEmu</code><br>，然后又拿这个调用了git bash ，那我们直接拿ConEmu调用git bash会不会有问题呢，所以我们打开ConEmu执行<br>命令<code>cd git/bin</code> &amp;&amp; <code>bash --login -i</code> 我们发现我们这时候进入bash 界面了，我们使用一下<code>ll</code>命令，哎，这次没有报错了。</p>
-</li>
-<li><p>我们换Cmder mini 试一下，打开bash:bash窗口，卧槽，啥玩意，居然说系统找不到制定路径，好的，我们从设置里看一下，执行bash窗口之后<br>执行的哪个命令，可以看到是<code>cmd /c &quot;&quot;%ConEmuDir%\..\git-for-windows\bin\bash&quot; --login -i&quot;</code> ,我们打开安装目录，看一下，我去！<br><code>ConEmuDir</code> 的上级根本没有<code>git-for-windows</code>目录，好吧，你赢了，而在full版本中是有的！！！ 我后来找到我git-bash的安装目录，复制整个文件夹<br>到cmder的<code>Vender</code> 目录，改名成<code>git-for-windows</code>,打开bash:bash窗口，哎，进来了，运行命令试试，好的，Surprise ! 这次没有报错。<br>问题成功解决。</p>
-</li>
-</ol>
+<p>1.F12查看login回调链接，<code>redirect_uri</code>参数没有什么问题啊，行，我们回头查看，github的文档，</p>
+<p><img src="https://kengdie.oss-cn-shanghai.aliyuncs.com/redirect.png" alt="github文档"></p>
+<p><a href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/" target="_blank" rel="noopener">github文档地址</a></p>
+<p>2.文档中提到，如果地址不匹配的话，就会重定向到你在OAuth Apps 中设置的<code>Authorization callback URL</code>，而这里我们配置的都是首页，所以会跳向首页就可以理解了，那也就是说这里的地址和回调地址里我们传的<code>redirect_uri</code>不匹配，那就检查这两个地址吧，对比之后果然发现了一些有意思的事情：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">redirect_uri      https://ergou.fun/posts/3834.html</span><br><span class="line"></span><br><span class="line">Authorization callback URL  http://ergou.fun</span><br></pre></td></tr></table></figure>
+<p>一个是http，一个是https，当然匹配不上了啊！摔！修改一下，<code>Authorization callback URL</code>改为<code>https</code>，来来来测试一下，OK，完美解决。</p>
 <blockquote>
-<p>结论 </p>
+<p>后记</p>
 </blockquote>
-<h4 id="结论就是-Cmder-full-的版本在Windows10下，可能有某种未知的Bug-我们可以通过尝试使用给-Cmder-mini-添加git-bash的办法，来代替它。"><a href="#结论就是-Cmder-full-的版本在Windows10下，可能有某种未知的Bug-我们可以通过尝试使用给-Cmder-mini-添加git-bash的办法，来代替它。" class="headerlink" title="结论就是 Cmder full 的版本在Windows10下，可能有某种未知的Bug , 我们可以通过尝试使用给 Cmder mini 添加git-bash的办法，来代替它。"></a>结论就是 Cmder full 的版本在Windows10下，可能有某种未知的Bug , 我们可以通过尝试使用给 Cmder mini 添加git-bash的办法，来代替它。</h4>
+<p>如果你仔细观察的时候，你会发现跳向博客首页的时候，地址栏链接变的很复杂，都是些什么东西呢，我们不妨解析一下</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://ergou.fun/?</span><br><span class="line">error=redirect_uri_mismatch&amp;</span><br><span class="line">error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri=https://developer.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#redirect-uri-mismatch</span><br><span class="line"></span><br><span class="line">//真是贴心啊，错误原因，和参考文档地址全都给了</span><br></pre></td></tr></table></figure>
+
         </div>
         
         
@@ -288,7 +280,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/14/">14</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/18/">18</a></li>
             
         </ul>
     </nav>
@@ -333,7 +325,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        36
                     </p>
                 </div>
             </div>
@@ -353,7 +345,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        22
+                        26
                     </p>
                 </div>
             </div>
@@ -401,7 +393,7 @@
                 <span class="level-item">厚积薄发</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">12</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/有点意思/">
@@ -417,7 +409,7 @@
                 <span class="level-item">爬坑日常</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">19</span>
             </span>
         </a></li>
             </ul>
@@ -431,7 +423,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
+        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 13.33px;">layui</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 13.33px;">vagrant</a> <a href="/tags/wordpress/" style="font-size: 16.67px;">wordpress</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 13.33px;">微信支付</a> <a href="/tags/数据导出/" style="font-size: 10px;">数据导出</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a> <a href="/tags/身份证号/" style="font-size: 10px;">身份证号</a>
     </div>
 </div>
 
@@ -448,16 +440,54 @@
         
         <article class="media">
             
-            <a href="/posts/55261.html" class="media-left">
+            <a href="/posts/33698.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="关于Mysql:unknow column in where clause">
+                    <img class="thumbnail" src="/images/postsimages/excel.jpg" alt="大批量数据导出/前端导出数据实践">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T08:13:53.000Z">2019-03-13</time></div>
-                    <a href="/posts/55261.html" class="has-link-black-ter is-size-6">关于Mysql:unknow column in where clause</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T11:43:42.000Z">2020-04-21</time></div>
+                    <a href="/posts/33698.html" class="has-link-black-ter is-size-6">大批量数据导出/前端导出数据实践</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/46867.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/card.jpg" alt="根据身份证获取所在省份对照表">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T07:14:51.000Z">2020-04-03</time></div>
+                    <a href="/posts/46867.html" class="has-link-black-ter is-size-6">根据身份证获取所在省份对照表</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/26716.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux服务器文件传输利器lrzsz">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T07:37:45.000Z">2019-12-05</time></div>
+                    <a href="/posts/26716.html" class="has-link-black-ter is-size-6">linux服务器文件传输利器lrzsz</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -467,35 +497,16 @@
         
         <article class="media">
             
-            <a href="/posts/25938.html" class="media-left">
+            <a href="/posts/57345.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/newStart.jpg" alt="写在2019年开始工作的第一天">
+                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="Mysql不同版本cast/truncate函数对浮点型的处理">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-13T01:21:36.000Z">2019-02-13</time></div>
-                    <a href="/posts/25938.html" class="has-link-black-ter is-size-6">写在2019年开始工作的第一天</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/关于我/">关于我</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/47886.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
-                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T05:35:48.000Z">2019-10-28</time></div>
+                    <a href="/posts/57345.html" class="has-link-black-ter is-size-6">Mysql不同版本cast/truncate函数对浮点型的处理</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -505,37 +516,18 @@
         
         <article class="media">
             
-            <a href="/posts/3834.html" class="media-left">
+            <a href="/posts/18296.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                    <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
-                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time></div>
+                    <a href="/posts/18296.html" class="has-link-black-ter is-size-6">wordpress插件开发从创建一个新的菜单开始</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/60263.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
-                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
                     </p>
                 </div>
             </div>
@@ -552,6 +544,72 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/03/">
@@ -831,12 +889,23 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/linux/">
+                        <span class="level-start">
+                            <span class="level-item">linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/mysql/">
                         <span class="level-start">
                             <span class="level-item">mysql</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">4</span>
                         </span>
                     </a>
                 </li>
@@ -859,6 +928,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/wordpress/">
+                        <span class="level-start">
+                            <span class="level-item">wordpress</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
                         </span>
                     </a>
                 </li>
@@ -919,6 +999,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/数据导出/">
+                        <span class="level-start">
+                            <span class="level-item">数据导出</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/数组排序/">
                         <span class="level-start">
                             <span class="level-item">数组排序</span>
@@ -933,6 +1024,17 @@
                     <a class="level is-marginless" href="/tags/数组筛选/">
                         <span class="level-start">
                             <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/身份证号/">
+                        <span class="level-start">
+                            <span class="level-item">身份证号</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -964,16 +1066,54 @@
         
         <article class="media">
             
-            <a href="/posts/55261.html" class="media-left">
+            <a href="/posts/33698.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="关于Mysql:unknow column in where clause">
+                    <img class="thumbnail" src="/images/postsimages/excel.jpg" alt="大批量数据导出/前端导出数据实践">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T08:13:53.000Z">2019-03-13</time></div>
-                    <a href="/posts/55261.html" class="has-link-black-ter is-size-6">关于Mysql:unknow column in where clause</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T11:43:42.000Z">2020-04-21</time></div>
+                    <a href="/posts/33698.html" class="has-link-black-ter is-size-6">大批量数据导出/前端导出数据实践</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/46867.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/card.jpg" alt="根据身份证获取所在省份对照表">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T07:14:51.000Z">2020-04-03</time></div>
+                    <a href="/posts/46867.html" class="has-link-black-ter is-size-6">根据身份证获取所在省份对照表</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/26716.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux服务器文件传输利器lrzsz">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T07:37:45.000Z">2019-12-05</time></div>
+                    <a href="/posts/26716.html" class="has-link-black-ter is-size-6">linux服务器文件传输利器lrzsz</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -983,35 +1123,16 @@
         
         <article class="media">
             
-            <a href="/posts/25938.html" class="media-left">
+            <a href="/posts/57345.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/newStart.jpg" alt="写在2019年开始工作的第一天">
+                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="Mysql不同版本cast/truncate函数对浮点型的处理">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-13T01:21:36.000Z">2019-02-13</time></div>
-                    <a href="/posts/25938.html" class="has-link-black-ter is-size-6">写在2019年开始工作的第一天</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/关于我/">关于我</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/47886.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
-                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T05:35:48.000Z">2019-10-28</time></div>
+                    <a href="/posts/57345.html" class="has-link-black-ter is-size-6">Mysql不同版本cast/truncate函数对浮点型的处理</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -1021,37 +1142,18 @@
         
         <article class="media">
             
-            <a href="/posts/3834.html" class="media-left">
+            <a href="/posts/18296.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                    <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
-                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time></div>
+                    <a href="/posts/18296.html" class="has-link-black-ter is-size-6">wordpress插件开发从创建一个新的菜单开始</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/60263.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
-                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
                     </p>
                 </div>
             </div>
@@ -1068,6 +1170,72 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/03/">
@@ -1347,12 +1515,23 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/linux/">
+                        <span class="level-start">
+                            <span class="level-item">linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/mysql/">
                         <span class="level-start">
                             <span class="level-item">mysql</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">4</span>
                         </span>
                     </a>
                 </li>
@@ -1375,6 +1554,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/wordpress/">
+                        <span class="level-start">
+                            <span class="level-item">wordpress</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
                         </span>
                     </a>
                 </li>
@@ -1435,6 +1625,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/数据导出/">
+                        <span class="level-start">
+                            <span class="level-item">数据导出</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/数组排序/">
                         <span class="level-start">
                             <span class="level-item">数组排序</span>
@@ -1449,6 +1650,17 @@
                     <a class="level is-marginless" href="/tags/数组筛选/">
                         <span class="level-start">
                             <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/身份证号/">
+                        <span class="level-start">
+                            <span class="level-item">身份证号</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1477,10 +1689,10 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy;<a href="http://www.miitbeian.gov.cn/">京ICP备19000965号</a>
+                &copy;<a href="http://www.beian.miit.gov.cn/">京ICP备19000965号</a>
                 </p>
                 <p class="is-size-7">
-                &copy; 2019 Er Dog&nbsp;
+                &copy; 2020 Er Dog&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>

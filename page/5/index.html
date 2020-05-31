@@ -132,8 +132,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/55229.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/20181205.jpg" alt="laydate V5.0.8动态设置min值">
+        <a href="/posts/62801.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux操作利器alias用法">
         </a>
     </div>
     
@@ -141,7 +141,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-05T05:47:18.000Z">2018-12-05</time>
+                <time class="level-item has-text-grey" datetime="2019-04-04T07:33:35.000Z">2019-04-04</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
@@ -151,7 +151,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 275 个字)
+                    5 分钟 读完 (大约 738 个字)
                 </span>
                 
             </div>
@@ -159,21 +159,50 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/55229.html">laydate V5.0.8动态设置min值</a>
+                <a class="has-link-black-ter" href="/posts/62801.html">linux操作利器alias用法</a>
             
         </h1>
         <div class="content">
-            <h3 id="laydate通过设置min-max值来对用户输入的时间做约束"><a href="#laydate通过设置min-max值来对用户输入的时间做约束" class="headerlink" title="laydate通过设置min,max值来对用户输入的时间做约束"></a>laydate通过设置min,max值来对用户输入的时间做约束</h3><blockquote>
-<p>laydate v1.0版本</p>
-</blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">//日期插件</span></span><br><span class="line">    <span class="hljs-keyword">var</span> start=&#123;</span><br><span class="line">        elem:<span class="hljs-string">"#start"</span>,</span><br><span class="line">        format:<span class="hljs-string">"YYYY-MM-DD hh:mm:ss"</span>,</span><br><span class="line">        min:<span class="hljs-string">"2013-08-18 00:00:00"</span>,</span><br><span class="line">        max:<span class="hljs-string">"2099-06-16 23:59:59"</span>,</span><br><span class="line">        istime:<span class="hljs-literal">true</span>,</span><br><span class="line">        istoday:<span class="hljs-literal">true</span>,</span><br><span class="line">        choose:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">            end.min=a;</span><br><span class="line">            end.start=a</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="hljs-keyword">var</span> end=&#123;</span><br><span class="line">        elem:<span class="hljs-string">"#end"</span>,</span><br><span class="line">        format:<span class="hljs-string">"YYYY-MM-DD hh:mm:ss"</span>,</span><br><span class="line">        min:<span class="hljs-string">"2013-08-18 00:00:00"</span>,</span><br><span class="line">        max:<span class="hljs-string">"2099-06-16 23:59:59"</span>,</span><br><span class="line">        istime:<span class="hljs-literal">true</span>,</span><br><span class="line">        istoday:<span class="hljs-literal">true</span>,</span><br><span class="line">        choose:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">            start.max=a</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    laydate(start);</span><br><span class="line">    laydate(end);</span><br><span class="line"><span class="hljs-comment">//只要在回调函数choose中赋值就行了</span></span><br></pre></td></tr></table></figure>
+            <h3 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h3><p>学习这件事，有时候并不一定很刻意，而是从生活，从经验中去积累，不知道什么时候就发生了。</p>
 <blockquote>
-<p>laydate v5.0版本</p>
+<p>type 命令</p>
 </blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//日期插件</span></span><br><span class="line">        <span class="hljs-keyword">var</span> start=laydate.render(&#123;</span><br><span class="line">            elem:<span class="hljs-string">"#start_time"</span>,</span><br><span class="line">            type:<span class="hljs-string">"datetime"</span>,</span><br><span class="line">            format:<span class="hljs-string">"yyyy-MM-dd HH:mm:ss"</span>,</span><br><span class="line">            min:<span class="hljs-string">"2013-08-18"</span>,</span><br><span class="line">            max:<span class="hljs-string">"2099-06-16"</span>,</span><br><span class="line">            done:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value,date</span>)</span>&#123;</span><br><span class="line">                end.config.min=&#123;</span><br><span class="line">                    year: date.year,</span><br><span class="line">                    month: date.month<span class="hljs-number">-1</span>,</span><br><span class="line">                    date: date.date,</span><br><span class="line">                    hours: date.hours,</span><br><span class="line">                    minutes: date.minutes,</span><br><span class="line">                    seconds: date.seconds</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="hljs-keyword">var</span> end =laydate.render(&#123;</span><br><span class="line">            elem:<span class="hljs-string">"#end_time"</span>,</span><br><span class="line">            type:<span class="hljs-string">"datetime"</span>,</span><br><span class="line">            format:<span class="hljs-string">"yyyy-MM-dd HH:mm:ss"</span>,</span><br><span class="line">            min:<span class="hljs-string">"2013-08-18"</span>,</span><br><span class="line">            max:<span class="hljs-string">"2099-06-16"</span>,</span><br><span class="line">            done:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>&#123;</span><br><span class="line">                <span class="hljs-comment">// start.max=a</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-<p>在v5.0版本中，min值变成了一个对象，并不会重新渲染，所以直接对min设置值是没有用的，得单独对每个min的子元素赋值</p>
-<p><strong>特别要注意的是month要减1</strong></p>
-<p>虽然我也并不清楚为什么要这么做，但是It works. 我已经去layui的社区问了，希望能有人帮我解惑。    </p>
+<p> 一般情况下，type命令被用于判断另外一个命令是否是内置命令，但是它实际上有更多的用法。</p>
+<pre><code>1.判断一个名字当前是否是alias、keyword、function、builtin、file或者什么都不是；
+
+2.判断一个名字当前是否是alias、keyword、function、builtin、file或者什么都不是的另一种方法（适用于脚本编程）；
+
+3.显示一个名字的所有可能；
+
+4.查看一个命令的执行路径（如果它是外部命令的话）；
+
+5.强制搜索外部命令。
+</code></pre><p>详细参见这位老哥的博客 <a href="https://www.cnblogs.com/jxhd1/p/6699177.html" target="_blank" rel="noopener">type命令使用</a></p>
+<blockquote>
+<p>alias 命令</p>
+</blockquote>
+<p>我们在服务器上查看日志的过程种，不可避免的要记住一大串的路径，比如说<code>/export/www/logs_backend/Java_service_logs/</code>,每次链接到服务器都要输一遍这个长长的路径才能进入日志目录，Linux就给我们提供了一个简单的方法来避免这种操作，就是<code>alias</code>,当然你也可以用软连接来简化这个过程，不过用<code>alias</code>会更为简单。</p>
+<p>说这个之前我们要提一下<code>type</code>这个命令：</p>
+<p>我们用到的是上边说的<code>type</code>命令的第一个功能，用来测试一下我们要自定义的别名有没有被占用</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#如果没被占用</span></span><br><span class="line">dell@DESKTOP-8U4HTOL MINGW64 /d/develop</span><br><span class="line">$ <span class="hljs-built_in">type</span> t</span><br><span class="line">bash: <span class="hljs-built_in">type</span>: t: not found</span><br><span class="line"><span class="hljs-comment">#如果被占用了</span></span><br><span class="line">$ <span class="hljs-built_in">type</span> ll</span><br><span class="line">ll is aliased to `ls -l<span class="hljs-string">'</span></span><br></pre></td></tr></table></figure>
+<p>用法：alias [-p] [name[=value] … ]    注意<code>=</code>和字符串之间不能包含空格</p>
+<p>1.命令<code>alias</code></p>
+<p>直接使用命令<code>alias</code>可以查看当前登录环境下的所有命令别名</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">alias</span></span><br><span class="line"><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">'ls -l'</span></span><br><span class="line"><span class="hljs-built_in">alias</span> <span class="hljs-built_in">log</span>=<span class="hljs-string">'cd /d/develop/backend/storge/logs'</span></span><br><span class="line"><span class="hljs-built_in">alias</span> ls=<span class="hljs-string">'ls -F --color=auto --show-control-chars'</span></span><br></pre></td></tr></table></figure>
+<p>2.设置别名 <code>alias 别名=&#39;完整命令&#39;</code></p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">alias</span> <span class="hljs-built_in">log</span>=<span class="hljs-string">'cd /d/develop/backend/storge/logs'</span></span><br></pre></td></tr></table></figure>
+<p>3.命令<code>alias + 命令</code></p>
+<p>这将显示这个别名命令的具体含义</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">alias</span> <span class="hljs-built_in">log</span></span><br><span class="line"><span class="hljs-built_in">alias</span> <span class="hljs-built_in">log</span>=<span class="hljs-string">'cd /d/develop/backend/storge/logs'</span></span><br></pre></td></tr></table></figure>
+<p>4.给一组命令设置别名</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">dell@DESKTOP-8U4HTOL MINGW64 /d/develop</span><br><span class="line">$ <span class="hljs-built_in">type</span> t</span><br><span class="line">bash: <span class="hljs-built_in">type</span>: t: not found</span><br><span class="line"></span><br><span class="line">dell@DESKTOP-8U4HTOL MINGW64 /d/develop</span><br><span class="line">$ <span class="hljs-built_in">alias</span> t=<span class="hljs-string">'cd /d/study;mkdir test;touch 01.txt'</span></span><br><span class="line"></span><br><span class="line">dell@DESKTOP-8U4HTOL MINGW64 /d/develop</span><br><span class="line">$ t</span><br><span class="line"></span><br><span class="line">dell@DESKTOP-8U4HTOL MINGW64 /d/study</span><br><span class="line">$ ll</span><br><span class="line">total 1</span><br><span class="line">-rw-r--r-- 1 dell 197121 0 4月   4 16:03 01.txt</span><br></pre></td></tr></table></figure>
+<p>5.持久化别名</p>
+<p>以上说的方法，都是临时性的，只在当前登录环境下有效，一旦退出登录就会失效，要想持久化，需要修改<code>/etc/bash.bashrc</code></p>
+<p>centos下是<code>/etc/bashrc</code>,ubuntu下为<code>/etc/bash.bashrc</code></p>
+<p>vi /etc/bashrc</p>
+<p>在文件末尾添加alias log=’cd /d/develop/backend/storge/logs’并保存退出</p>
+<p>执行source /etc/bashrc  使配置生效</p>
+<p>以上。</p>
 
         </div>
         
@@ -189,8 +218,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/posts/733.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/postsimages/201812051407.jpg" alt="关于hexo-abbrlink链接undefined">
+        <a href="/posts/55261.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="关于Mysql:unknow column in where clause">
         </a>
     </div>
     
@@ -198,7 +227,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-30T02:01:44.000Z">2018-11-30</time>
+                <time class="level-item has-text-grey" datetime="2019-03-13T08:13:53.000Z">2019-03-13</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
@@ -208,7 +237,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 250 个字)
+                    5 分钟 读完 (大约 737 个字)
                 </span>
                 
             </div>
@@ -216,63 +245,36 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/posts/733.html">关于hexo-abbrlink链接undefined</a>
+                <a class="has-link-black-ter" href="/posts/55261.html">关于Mysql:unknow column in where clause</a>
             
         </h1>
         <div class="content">
             <blockquote>
-<p>关于hexo-abbrlink</p>
+<p>写在前边：</p>
 </blockquote>
-<p><code>hexo-abbrlink</code>是一个hexo博客链接永久化的解决方案</p>
+<p>已经很久不更新了啊，整个2月份几乎没有遇到什么新鲜事。直到昨天我又犯了一次傻，貌似只有我犯傻的时候才有材料可以跟大家分享…..</p>
+<blockquote>
+<p>问题表现：</p>
+</blockquote>
+<p>mysql 报错： <strong>unknow column ‘sys’ in where clause</strong> 。</p>
+<p>事实上这是个挺常见的错误,我猜你大概会说，这个问题不是已经很明了了么？ <strong>你查询了一个不存在的字段！</strong> 可是事情的真相真的是这样么？并不是，报这个错误的原因还有一种可能就是你的where条件中字符串的拼接出了问题。</p>
+<blockquote>
+<p>现场还原：</p>
+</blockquote>
 <ul>
-<li>支持使用不同的算法和进制对文章链接进行转换</li>
+<li>还是先说一下我犯的傻吧</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>算法</th>
-<th>进制</th>
-<th>生成链接</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>crc16</td>
-<td>hex</td>
-<td><a href="https://post.zz173.com/posts/3ab2.html" target="_blank" rel="noopener">https://post.zz173.com/posts/3ab2.html</a></td>
-</tr>
-<tr>
-<td>crc16</td>
-<td>dec</td>
-<td><a href="https://post.zz173.com/posts/12345.html" target="_blank" rel="noopener">https://post.zz173.com/posts/12345.html</a></td>
-</tr>
-<tr>
-<td>crc32</td>
-<td>hex</td>
-<td><a href="https://post.zz173.com/posts/9a8b6c4d.html" target="_blank" rel="noopener">https://post.zz173.com/posts/9a8b6c4d.html</a></td>
-</tr>
-<tr>
-<td>crc32</td>
-<td>dec</td>
-<td><a href="https://post.zz173.com/posts/1690090958.html" target="_blank" rel="noopener">https://post.zz173.com/posts/1690090958.html</a></td>
-</tr>
-</tbody>
-</table>
+<p>我首先开始排查的问题的时候输出了我的查询SQL，形似</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$sql = <span class="hljs-string">'select * from user where id in ('</span>.implode(<span class="hljs-string">','</span>,$idArr).<span class="hljs-string">')'</span>;</span><br></pre></td></tr></table></figure>
+<p><code>$idArr</code>为 <strong>一个元素很多</strong> 的<code>ID</code>数组，里边的内容都是整型的数字，所以我也没想很多，然后抛出了这个mysql错误，我开始检查我的sql语句 。我用记事本打开了我刚刚打印的sql，开始搜索<code>sys</code>这个关键词，但是我没注意到我鼠标的位置，记事本默认向下搜索，提示没搜索到。我后来就随机把这个SQL中的id字符串删掉了一段，删的只剩几个，执行，诶！好了！我开始疑惑，难道整型的id查询在数据长的时候会出问题么？加上在CSDN看到某博客上说是字符串拼接的问题，所以我决定给他做一下处理，顺带加上了这么一段注释。</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//做一下处理换成字符串否则在$IdString过长的时候会引发unknow column 'sys' in where clause 错误</span></span><br><span class="line"></span><br><span class="line">       <span class="hljs-keyword">foreach</span> ($idArr <span class="hljs-keyword">as</span> &amp;$v) &#123;</span><br><span class="line">           $v = <span class="hljs-string">'\''</span>.$v.<span class="hljs-string">'\''</span>;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>加上之后，问题果不其然的解决了，好的，没有问题，完美！然后开开心心的上个线。</p>
 <blockquote>
-<p>安装</p>
+<p>引发问题的真实原因</p>
 </blockquote>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用</p>
-</blockquote>
-<p>打开config.yml，修改permalink中类似这样</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink.html</span><br></pre></td></tr></table></figure>
-<p>具体说明参照作者的github说明</p>
-<p><a href="https://github.com/Rozbo/hexo-abbrlink" target="_blank" rel="noopener">项目地址在这里</a></p>
-<blockquote>
-<p>可能出现的问题：</p>
-</blockquote>
-<p>终于回到标题上来，有的同学说，这个配置完成之后，文章的链接都变成了undefined,新的文章没问题，老的文章就不行了。这个问题其实我们仔细想一下就能明白，我们首先要执行<code>hexo clean</code> 清楚掉以前生成的文章缓存，然后<code>hexo g</code>重新渲染就ok了。</p>
+<p>到了晚上快下班的时候，我在开发另一个需求的时候，突然在列表里看到了一个名为<code>sys</code>的用户！<strong>真的是瞬间像是被一道闪电击中了！卧槽！</strong> （这绝对值两个卧槽，才能表达我当时的内心！），是的就是你想的那样！那个用户id数组里有一个用户的<code>id</code>是<code>sys</code>，而这东西是个字符串，但是却没被引号包裹。所以才引发了<code>mysql</code>的<code>unknow column &#39;sys&#39; in where clause</code>错误。这才是错误的真相！</p>
+<p>好了，不说了，趁着还没有同事发现，我要把这个包含了我愚蠢猜测的注释给删掉。</p>
+<p>溜了溜了。</p>
 
         </div>
         
@@ -309,7 +311,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/14/">14</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/18/">18</a></li>
             
         </ul>
     </nav>
@@ -354,7 +356,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        36
                     </p>
                 </div>
             </div>
@@ -374,7 +376,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        22
+                        26
                     </p>
                 </div>
             </div>
@@ -422,7 +424,7 @@
                 <span class="level-item">厚积薄发</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">12</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/有点意思/">
@@ -438,7 +440,7 @@
                 <span class="level-item">爬坑日常</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">19</span>
             </span>
         </a></li>
             </ul>
@@ -452,7 +454,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 20px;">layui</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 20px;">vagrant</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 20px;">微信支付</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a>
+        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 13.33px;">layui</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 13.33px;">vagrant</a> <a href="/tags/wordpress/" style="font-size: 16.67px;">wordpress</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 13.33px;">微信支付</a> <a href="/tags/数据导出/" style="font-size: 10px;">数据导出</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a> <a href="/tags/身份证号/" style="font-size: 10px;">身份证号</a>
     </div>
 </div>
 
@@ -469,16 +471,54 @@
         
         <article class="media">
             
-            <a href="/posts/55261.html" class="media-left">
+            <a href="/posts/33698.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="关于Mysql:unknow column in where clause">
+                    <img class="thumbnail" src="/images/postsimages/excel.jpg" alt="大批量数据导出/前端导出数据实践">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T08:13:53.000Z">2019-03-13</time></div>
-                    <a href="/posts/55261.html" class="has-link-black-ter is-size-6">关于Mysql:unknow column in where clause</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T11:43:42.000Z">2020-04-21</time></div>
+                    <a href="/posts/33698.html" class="has-link-black-ter is-size-6">大批量数据导出/前端导出数据实践</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/46867.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/card.jpg" alt="根据身份证获取所在省份对照表">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T07:14:51.000Z">2020-04-03</time></div>
+                    <a href="/posts/46867.html" class="has-link-black-ter is-size-6">根据身份证获取所在省份对照表</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/26716.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux服务器文件传输利器lrzsz">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T07:37:45.000Z">2019-12-05</time></div>
+                    <a href="/posts/26716.html" class="has-link-black-ter is-size-6">linux服务器文件传输利器lrzsz</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -488,35 +528,16 @@
         
         <article class="media">
             
-            <a href="/posts/25938.html" class="media-left">
+            <a href="/posts/57345.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/newStart.jpg" alt="写在2019年开始工作的第一天">
+                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="Mysql不同版本cast/truncate函数对浮点型的处理">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-13T01:21:36.000Z">2019-02-13</time></div>
-                    <a href="/posts/25938.html" class="has-link-black-ter is-size-6">写在2019年开始工作的第一天</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/关于我/">关于我</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/47886.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
-                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T05:35:48.000Z">2019-10-28</time></div>
+                    <a href="/posts/57345.html" class="has-link-black-ter is-size-6">Mysql不同版本cast/truncate函数对浮点型的处理</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -526,37 +547,18 @@
         
         <article class="media">
             
-            <a href="/posts/3834.html" class="media-left">
+            <a href="/posts/18296.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                    <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
-                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time></div>
+                    <a href="/posts/18296.html" class="has-link-black-ter is-size-6">wordpress插件开发从创建一个新的菜单开始</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/60263.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
-                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
                     </p>
                 </div>
             </div>
@@ -573,6 +575,72 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/03/">
@@ -852,12 +920,23 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/linux/">
+                        <span class="level-start">
+                            <span class="level-item">linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/mysql/">
                         <span class="level-start">
                             <span class="level-item">mysql</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">4</span>
                         </span>
                     </a>
                 </li>
@@ -880,6 +959,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/wordpress/">
+                        <span class="level-start">
+                            <span class="level-item">wordpress</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
                         </span>
                     </a>
                 </li>
@@ -940,6 +1030,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/数据导出/">
+                        <span class="level-start">
+                            <span class="level-item">数据导出</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/数组排序/">
                         <span class="level-start">
                             <span class="level-item">数组排序</span>
@@ -954,6 +1055,17 @@
                     <a class="level is-marginless" href="/tags/数组筛选/">
                         <span class="level-start">
                             <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/身份证号/">
+                        <span class="level-start">
+                            <span class="level-item">身份证号</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -985,16 +1097,54 @@
         
         <article class="media">
             
-            <a href="/posts/55261.html" class="media-left">
+            <a href="/posts/33698.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="关于Mysql:unknow column in where clause">
+                    <img class="thumbnail" src="/images/postsimages/excel.jpg" alt="大批量数据导出/前端导出数据实践">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-13T08:13:53.000Z">2019-03-13</time></div>
-                    <a href="/posts/55261.html" class="has-link-black-ter is-size-6">关于Mysql:unknow column in where clause</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T11:43:42.000Z">2020-04-21</time></div>
+                    <a href="/posts/33698.html" class="has-link-black-ter is-size-6">大批量数据导出/前端导出数据实践</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/46867.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/card.jpg" alt="根据身份证获取所在省份对照表">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T07:14:51.000Z">2020-04-03</time></div>
+                    <a href="/posts/46867.html" class="has-link-black-ter is-size-6">根据身份证获取所在省份对照表</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/26716.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux服务器文件传输利器lrzsz">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T07:37:45.000Z">2019-12-05</time></div>
+                    <a href="/posts/26716.html" class="has-link-black-ter is-size-6">linux服务器文件传输利器lrzsz</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -1004,35 +1154,16 @@
         
         <article class="media">
             
-            <a href="/posts/25938.html" class="media-left">
+            <a href="/posts/57345.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/newStart.jpg" alt="写在2019年开始工作的第一天">
+                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="Mysql不同版本cast/truncate函数对浮点型的处理">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-13T01:21:36.000Z">2019-02-13</time></div>
-                    <a href="/posts/25938.html" class="has-link-black-ter is-size-6">写在2019年开始工作的第一天</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/关于我/">关于我</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/47886.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/gitment.jpg" alt="gitment初始化评论跳回博客首页">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T09:05:01.000Z">2019-01-08</time></div>
-                    <a href="/posts/47886.html" class="has-link-black-ter is-size-6">gitment初始化评论跳回博客首页</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T05:35:48.000Z">2019-10-28</time></div>
+                    <a href="/posts/57345.html" class="has-link-black-ter is-size-6">Mysql不同版本cast/truncate函数对浮点型的处理</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
                     </p>
@@ -1042,37 +1173,18 @@
         
         <article class="media">
             
-            <a href="/posts/3834.html" class="media-left">
+            <a href="/posts/18296.html" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/20181217.jpg" alt="关于浏览器请求PHP一次请求执行了两次">
+                    <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-08T03:26:09.000Z">2019-01-08</time></div>
-                    <a href="/posts/3834.html" class="has-link-black-ter is-size-6">关于浏览器请求PHP一次请求执行了两次</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time></div>
+                    <a href="/posts/18296.html" class="has-link-black-ter is-size-6">wordpress插件开发从创建一个新的菜单开始</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/posts/60263.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/postsimages/年终总结.jpg" alt="2018年终总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-28T06:27:23.000Z">2018-12-28</time></div>
-                    <a href="/posts/60263.html" class="has-link-black-ter is-size-6">2018年终总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/有点意思/">有点意思</a>
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
                     </p>
                 </div>
             </div>
@@ -1089,6 +1201,72 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/03/">
@@ -1368,12 +1546,23 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/linux/">
+                        <span class="level-start">
+                            <span class="level-item">linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/mysql/">
                         <span class="level-start">
                             <span class="level-item">mysql</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">4</span>
                         </span>
                     </a>
                 </li>
@@ -1396,6 +1585,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/wordpress/">
+                        <span class="level-start">
+                            <span class="level-item">wordpress</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
                         </span>
                     </a>
                 </li>
@@ -1456,6 +1656,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/数据导出/">
+                        <span class="level-start">
+                            <span class="level-item">数据导出</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/数组排序/">
                         <span class="level-start">
                             <span class="level-item">数组排序</span>
@@ -1470,6 +1681,17 @@
                     <a class="level is-marginless" href="/tags/数组筛选/">
                         <span class="level-start">
                             <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/身份证号/">
+                        <span class="level-start">
+                            <span class="level-item">身份证号</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -1498,10 +1720,10 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy;<a href="http://www.miitbeian.gov.cn/">京ICP备19000965号</a>
+                &copy;<a href="http://www.beian.miit.gov.cn/">京ICP备19000965号</a>
                 </p>
                 <p class="is-size-7">
-                &copy; 2019 Er Dog&nbsp;
+                &copy; 2020 Er Dog&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>

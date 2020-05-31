@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>标签: wordpress - 一个PHPer的成长之旅</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="一个php开发的踩坑经历与总结">
+<meta name="keywords" content="php mysql linux">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一个PHPer的成长之旅">
+<meta property="og:url" content="http://yoursite.com/tags/wordpress/index.html">
+<meta property="og:site_name" content="一个PHPer的成长之旅">
+<meta property="og:description" content="一个php开发的踩坑经历与总结">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个PHPer的成长之旅">
+<meta name="twitter:description" content="一个php开发的踩坑经历与总结">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="一个PHPer的成长之旅" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">首页</a>
+                
+                <a class="navbar-item" href="/archives">归档</a>
+                
+                <a class="navbar-item" href="/categories">分类</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+                <a class="navbar-item" href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">wordpress</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/18296.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 分钟 读完 (大约 1352 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/18296.html">wordpress插件开发从创建一个新的菜单开始</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="创建插件的目的"><a href="#创建插件的目的" class="headerlink" title="创建插件的目的"></a>创建插件的目的</h3><p>1.我们为什么要创建一个插件？</p>
+<ul>
+<li>IT界有一个知名的论调叫做<strong>不要造重复的轮子</strong>，如果有可能的话，你应该尽可能的从现有的网络资源上选择一个已有的插件来使用，而不是重新创造一个。它耗费的精力很可能是没有相应价值的。所以在创建一个插件之前，你应该先去wordpress的<a href="https://wordpress.org/plugins/" target="_blank" rel="noopener">插件仓库</a>搜索关键词，看一下是不是已经有了满足需求的插件。</li>
+</ul>
+<p>2.你希望你的插件具有什么功能？</p>
+<ul>
+<li>在开始开发之前，想好这个问题，能帮你省去很多麻烦。比如，你的插件是提供给前台页面使用的还是在后台页面使用的？是后台的独立模块么？它应该有哪几个页面，页面上应该有哪些功能？怎么去设计这个页面的布局？这些问题，都需要有一个清晰的规划。</li>
+</ul>
+<h3 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h3><p>尽管我们在<a href="/posts/5344.html">梳理开发流程</a>中已经提到了如何创建一个插件，但是我们还是要再说一次，以防有些读者没有看到。</p>
+<p>1.打开WordPress安装目录下的<code>wp-content</code>目录。</p>
+<p>2.打开<code>plugins</code>目录。</p>
+<p>3.创建一个新目录并在插件后命名（例如<code>plugin-name</code>）。</p>
+<p>4.打开新插件的目录。</p>
+<p>5.创建一个新的PHP文件（例如，在插件后命名此文件也很好<code>plugin-name.php</code>）。</p>
+<h3 id="开始开发"><a href="#开始开发" class="headerlink" title="开始开发"></a>开始开发</h3><p>就像下面的示例一样，你必须在你创建的主插件文件的<strong>开头</strong>加上一段<code>doc</code>注释来告诉wordpress这是个插件，当然也可以加上作者，邮箱等信息，下面只是简单示例，详细可以在我们梳理流程的那边博文/或者官网中看到。</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//wp-content/plugin-name/plugin-name.php</span></span><br><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * Plugin Name: 插件名称</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">do_something_else</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-comment">//.....你的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还记得我们在第一篇梳理中提到的三个基础插件钩子么？</p>
+<p>1.register_activation_hook //启用插件时触发的钩子</p>
+<p>2.register_deactivation_hook//禁用插件时触发的钩子</p>
+<p>3.register_uninstall_hook//删除插件时触发的钩子</p>
+<p>我们可以通过这三个钩子函数来做一下一些前置/后置的处理，比如说插件被启用时创建一个自定义数据表，初始化一些配置，禁用时恢复初始化设置，删除时删除自定义的数据表。</p>
+<p>这里我们先不展开来讲我们在讲<code>OptionApi</code>的时候再讲这个。</p>
+<p>准备工作都已经做好了，我们现在开始正式的开发。我们假设说我们要做的是一个额外的内容管理插件。那我们现在想要在后台创建一个<code>定制内容管理</code>菜单，该怎么做呢？</p>
+<p>wordpress向我们提供了一个<code>add_menu_page</code>的函数：</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">    //我们先看一下函数的参数</span></span><br><span class="line"><span class="hljs-comment">    add_menu_page(</span></span><br><span class="line"><span class="hljs-comment">        string $page_title, //页面标题</span></span><br><span class="line"><span class="hljs-comment">        string $menu_title, //菜单名称</span></span><br><span class="line"><span class="hljs-comment">        string $capability, //权限级别</span></span><br><span class="line"><span class="hljs-comment">        string $menu_slug,  //菜单标识 唯一</span></span><br><span class="line"><span class="hljs-comment">        callable $function = '', //回调函数 其实就是点击这个菜单后触发的函数 我们可以返回一个页面</span></span><br><span class="line"><span class="hljs-comment">        string $icon_url = '', //图标，可以为空</span></span><br><span class="line"><span class="hljs-comment">        int $position = null //位置  决定了菜单应该插入在第几个</span></span><br><span class="line"><span class="hljs-comment">    );</span></span><br><span class="line"><span class="hljs-comment">**/</span></span><br></pre></td></tr></table></figure>
+<p>那我们应该怎么使用呢？</p>
+<blockquote>
+<p>for-example :</p>
+</blockquote>
+<p>你的<code>wp-content/plugin-name/plugin-name.php</code>文件，看起来应该像这样：<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">    Plugin Name: 定制内容管理</span></span><br><span class="line"><span class="hljs-comment">    Plugin URI: http://ergou.fun</span></span><br><span class="line"><span class="hljs-comment">    Description: 内容管理模块（自定义内容非posts）</span></span><br><span class="line"><span class="hljs-comment">    Version: 1.0</span></span><br><span class="line"><span class="hljs-comment">    Author: ergou</span></span><br><span class="line"><span class="hljs-comment">    Author URI: http://ergou.fun</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">    Copyright 2019  ergou  (email : 531432012<span class="hljs-doctag">@qq</span>.com)</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">    This program is free software; you can redistribute it and/or modify</span></span><br><span class="line"><span class="hljs-comment">    it under the terms of the GNU General Public License as published by</span></span><br><span class="line"><span class="hljs-comment">    the Free Software Foundation; either version 2 of the License, or</span></span><br><span class="line"><span class="hljs-comment">    (at your option) any later version.</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">    This program is distributed in the hope that it will be useful,</span></span><br><span class="line"><span class="hljs-comment">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></span><br><span class="line"><span class="hljs-comment">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></span><br><span class="line"><span class="hljs-comment">    GNU General Public License for more details.</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">    You should have received a copy of the GNU General Public License</span></span><br><span class="line"><span class="hljs-comment">    along with this program; if not, write to the Free Software</span></span><br><span class="line"><span class="hljs-comment">    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/** 第1步：创建自定义菜单的函数**/</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ergou_cms_plugin_menu</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    add_menu_page(<span class="hljs-string">'定制内容管理'</span>, <span class="hljs-string">'内容管理'</span>, <span class="hljs-string">'manage_options'</span>, <span class="hljs-string">'ergou-cms-manager'</span>, <span class="hljs-string">'ergou_cms_plugin_options'</span>, <span class="hljs-string">''</span>, <span class="hljs-number">7</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/** 第2步：将函数注册到钩子中 */</span></span><br><span class="line">add_action(<span class="hljs-string">'admin_menu'</span>, <span class="hljs-string">'ergou_cms_plugin_menu'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/** 第3步：定义选项被点击时打开的页面 */</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ergou_cms_plugin_options</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (!current_user_can(<span class="hljs-string">'manage_options'</span>)) &#123;</span><br><span class="line">        wp_die(__(<span class="hljs-string">'You do not have sufficient permissions to access this page.'</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-comment">//include_once(plugin_dir_path(__FILE__) . 'detail/index.php');</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">//也可以直接返回HTML，不过我建议是额外放一个文件，这样以后维护起来好处理</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">//你可以直接 echo "hello world"</span></span><br><span class="line">    <span class="hljs-keyword">echo</span> <span class="hljs-string">"Hello World"</span>;</span><br><span class="line">    wp_die();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们现在回到我们的后台管理页面点击<code>插件管理</code>你会发现多了一个，定制内容管理的菜单，点击启用。菜单就会增加在左侧顶级菜单里。点击<code>定制内容管理</code>菜单，页面输出了<code>&quot;Hello World&quot;</code>。至此，我们算是完成了第一步。</p>
+<p>本篇内容就是这些。That’s all .Thank you .</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/45909.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发流程梳理(二)插件最佳实践">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-22T02:55:41.000Z">2019-05-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 908 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/45909.html">wordpress插件开发流程梳理(二)插件最佳实践</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="开发插件的最佳实践"><a href="#开发插件的最佳实践" class="headerlink" title="开发插件的最佳实践"></a>开发插件的最佳实践</h3><h2 id="避免命名冲突"><a href="#避免命名冲突" class="headerlink" title="避免命名冲突"></a>避免命名冲突</h2><p>当您的插件对变量，函数或类使用相同的名称作为另一个插件时，会发生命名冲突。</p>
+<p>幸运的是，您可以使用以下方法避免命名冲突。</p>
+<h2 id="程序性"><a href="#程序性" class="headerlink" title="程序性"></a>程序性</h2><p>默认情况下，所有变量，函数和类都在全局命名空间中定义，这意味着您的插件可以覆盖由另一个插件设置的变量，函数和类，反之亦然。在函数或类中定义的变量不受此影响。</p>
+<h2 id="前缀一切"><a href="#前缀一切" class="headerlink" title="前缀一切"></a>前缀一切</h2><p>所有变量，函数和类都应以唯一标识符为前缀。前缀可防止其他插件覆盖您的变量并意外调用您的函数和类。它也会阻止你做同样的事情。</p>
+<h2 id="检查现有实现"><a href="#检查现有实现" class="headerlink" title="检查现有实现"></a>检查现有实现</h2><p>PHP提供了许多函数来验证变量，函数，类和常量的存在。如果实体存在，所有这些都将返回true。</p>
+<ul>
+<li>变量：  isset()  （包括数组，对象等）</li>
+<li>函数：  function_exists()</li>
+<li>类：  class_exists()</li>
+<li>常量：defined()</li>
+</ul>
+<h2 id="OOP面向对象"><a href="#OOP面向对象" class="headerlink" title="OOP面向对象"></a>OOP面向对象</h2><p>解决命名冲突问题的一种更简单的方法是使用类来获取插件的代码。</p>
+<p>您仍然需要检查是否已经使用了您想要的类的名称，但其余的将由PHP处理。</p>
+<p>示例：</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line"><span class="hljs-keyword">if</span> ( !class_exists( <span class="hljs-string">'WPOrg_Plugin'</span> ) ) &#123;</span><br><span class="line">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WPOrg_Plugin</span></span></span><br><span class="line"><span class="hljs-class">    </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">            register_setting( <span class="hljs-string">'wporg_settings'</span>, <span class="hljs-string">'wporg_option_foo'</span> );</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_foo</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> get_option( <span class="hljs-string">'wporg_option_foo'</span> );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    WPOrg_Plugin::init();</span><br><span class="line">    WPOrg_Plugin::get_foo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="目录结构："><a href="#目录结构：" class="headerlink" title="目录结构："></a>目录结构：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/plugin-name</span><br><span class="line">     plugin-name.php //插件主文件，必须和文件夹名保持一致</span><br><span class="line">     uninstall.php //卸载插件时自动运行的脚本</span><br><span class="line">     /languages //国际化语言包</span><br><span class="line">     /includes //其他功能脚本</span><br><span class="line">     /admin</span><br><span class="line">          /js</span><br><span class="line">          /css</span><br><span class="line">          /images</span><br><span class="line">     /public</span><br><span class="line">          /js</span><br><span class="line">          /css</span><br><span class="line">          /images</span><br></pre></td></tr></table></figure>
+<h2 id="条件加载"><a href="#条件加载" class="headerlink" title="条件加载"></a>条件加载</h2><p>将管理代码与公共代码分开是有帮助的。使用条件is_admin()。</p>
+<p>示例：<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line"><span class="hljs-keyword">if</span> ( is_admin() ) &#123;</span><br><span class="line">    <span class="hljs-comment">// we are in admin mode</span></span><br><span class="line">    <span class="hljs-keyword">require_once</span>( dirname( <span class="hljs-keyword">__FILE__</span> ) . <span class="hljs-string">'/admin/plugin-name-admin.php'</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="文件结构参考"><a href="#文件结构参考" class="headerlink" title="文件结构参考"></a>文件结构参考</h2><ul>
+<li><a href="https://github.com/GaryJones/move-floating-social-bar-in-genesis/blob/master/move-floating-social-bar-in-genesis.php" target="_blank" rel="noopener">单个插件文件，包含函数</a></li>
+<li><a href="https://github.com/norcross/wp-comment-notes/blob/master/wp-comment-notes.php" target="_blank" rel="noopener">单个插件文件，包含类，实例化对象和可选功能</a></li>
+<li><a href="https://github.com/DevinVinson/WordPress-Plugin-Boilerplate" target="_blank" rel="noopener">主插件文件，然后是一个或多个类文件</a></li>
+</ul>
+<h2 id="参考模板"><a href="#参考模板" class="headerlink" title="参考模板"></a>参考模板</h2><p>对于您编写的每个新插件，您可能希望从样板开始，而不是从头开始。使用样板的一个优点是在您自己的插件之间保持一致。如果使用他们熟悉的样板，使用模板也可以让其他人更容易为您的代码做出贡献。</p>
+<p>这些也可作为不同但可比较的架构的进一步示例。</p>
+<ul>
+<li><a href="https://github.com/DevinVinson/WordPress-Plugin-Boilerplate" target="_blank" rel="noopener">WordPress插件Boilerplate</a></li>
+</ul>
+<h4 id="注：本篇，完全是由官方文档翻译而来，描述了一个好的插件的最佳实践。该用什么样的目录结构，什么时候该做一些权限的判定，甚至Github上提供了一些可参考的模板，以防我们的代码写出来像坨屎一样。我也希望自己写出来的插件，且不说功能如何，最起码不被喷This-is-shit-所以你看到，我们现在花一些功夫来从头梳理，流程。真正开发流程中遇到的问题，我会在后边的时候提到。"><a href="#注：本篇，完全是由官方文档翻译而来，描述了一个好的插件的最佳实践。该用什么样的目录结构，什么时候该做一些权限的判定，甚至Github上提供了一些可参考的模板，以防我们的代码写出来像坨屎一样。我也希望自己写出来的插件，且不说功能如何，最起码不被喷This-is-shit-所以你看到，我们现在花一些功夫来从头梳理，流程。真正开发流程中遇到的问题，我会在后边的时候提到。" class="headerlink" title="注：本篇，完全是由官方文档翻译而来，描述了一个好的插件的最佳实践。该用什么样的目录结构，什么时候该做一些权限的判定，甚至Github上提供了一些可参考的模板，以防我们的代码写出来像坨屎一样。我也希望自己写出来的插件，且不说功能如何，最起码不被喷This is shit .所以你看到，我们现在花一些功夫来从头梳理，流程。真正开发流程中遇到的问题，我会在后边的时候提到。"></a>注：本篇，完全是由官方文档翻译而来，描述了一个好的插件的最佳实践。该用什么样的目录结构，什么时候该做一些权限的判定，甚至Github上提供了一些可参考的模板，以防我们的代码写出来像坨屎一样。我也希望自己写出来的插件，且不说功能如何，最起码不被喷<code>This is shit .</code>所以你看到，我们现在花一些功夫来从头梳理，流程。真正开发流程中遇到的问题，我会在后边的时候提到。</h4>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/posts/5344.html" class="image is-7by1">
+            <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发流程梳理">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-21T08:32:49.000Z">2019-05-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 927 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/5344.html">wordpress插件开发流程梳理</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="1-声明一个插件"><a href="#1-声明一个插件" class="headerlink" title="1.声明一个插件"></a>1.声明一个插件</h3><blockquote>
+<p>首先我们必须明白，wordpress的插件可以是单文件，也可以是多文件，css/html都不是必须的，以下举例暂且在单文件模式下</p>
+</blockquote>
+<p>比如我们要创建一个名为 <code>hellophp</code>的插件，那我们就需要在<code>wp-content/plugins</code>目录下新建<code>hellophp</code>文件夹和<code>hellophp.php</code>文件，但是这还是不能让系统识别这个插件。插件的主文件名要和目录一致。</p>
+<p>在wordpress中，要让系统识别一个插件，首先要做的就是，声明一个DOCBLOCK(文档块)</p>
+<p>示例：</p>
+<p><code>wp-content/plugins/hellophp/hellophp.php</code></p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * Plugin Name: hellophp</span></span><br><span class="line"><span class="hljs-comment"> * Plugin URI:  https://example.com/plugins/the-basics/</span></span><br><span class="line"><span class="hljs-comment"> * Description: Basic WordPress Plugin Header Comment</span></span><br><span class="line"><span class="hljs-comment"> * Version:     0.0.0</span></span><br><span class="line"><span class="hljs-comment"> * Author:      WordPress.org</span></span><br><span class="line"><span class="hljs-comment"> * Author URI:  https://author.example.com/</span></span><br><span class="line"><span class="hljs-comment"> * License:     GPL2</span></span><br><span class="line"><span class="hljs-comment"> * License URI: https://www.gnu.org/licenses/gpl-2.0.html</span></span><br><span class="line"><span class="hljs-comment"> * Text Domain: wporg</span></span><br><span class="line"><span class="hljs-comment"> * Domain Path: /languages</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"></span><br><span class="line"> <span class="hljs-comment">//完整的示例是这样，但是除了Plugin Name其他都不是必须的</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-初始化插件"><a href="#2-初始化插件" class="headerlink" title="2.初始化插件"></a>2.初始化插件</h3><ul>
+<li><p>wordpress-hook</p>
+<ul>
+<li>register_activation_hook( <strong>FILE</strong>, ‘pluginprefix_function_to_run’ ); //启用插件时的钩子</li>
+<li>register_deactivation_hook( <strong>FILE</strong>, ‘pluginprefix_function_to_run’ );//停用插件时的钩子</li>
+</ul>
+</li>
+</ul>
+<p>示例：</p>
+<p>示例摘自官方文档，启动插件钩子最常见的用途之一是当插件注册自定义帖子类型时刷新WordPress永久链接。这摆脱了令人讨厌的404错误。</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//启用插件时的处理</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pluginprefix_setup_post_type</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// register the "book" custom post type</span></span><br><span class="line">    register_post_type( <span class="hljs-string">'book'</span>, [<span class="hljs-string">'public'</span> =&gt; <span class="hljs-string">'true'</span>] );</span><br><span class="line">&#125;</span><br><span class="line">add_action( <span class="hljs-string">'init'</span>, <span class="hljs-string">'pluginprefix_setup_post_type'</span> );</span><br><span class="line"> </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pluginprefix_install</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// trigger our function that registers the custom post type</span></span><br><span class="line">    pluginprefix_setup_post_type();</span><br><span class="line"> </span><br><span class="line">    <span class="hljs-comment">// clear the permalinks after the post type has been registered</span></span><br><span class="line">    flush_rewrite_rules();</span><br><span class="line">&#125;</span><br><span class="line">register_activation_hook( <span class="hljs-keyword">__FILE__</span>, <span class="hljs-string">'pluginprefix_install'</span> );</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//停用插件时的处理</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pluginprefix_deactivation</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// unregister the post type, so the rules are no longer in memory</span></span><br><span class="line">    unregister_post_type( <span class="hljs-string">'book'</span> );</span><br><span class="line">    <span class="hljs-comment">// clear the permalinks to remove our post type's rules from the database</span></span><br><span class="line">    flush_rewrite_rules();</span><br><span class="line">&#125;</span><br><span class="line">register_deactivation_hook( <span class="hljs-keyword">__FILE__</span>, <span class="hljs-string">'pluginprefix_deactivation'</span> );</span><br></pre></td></tr></table></figure>
+<p>如果您不熟悉注册自定义帖子类型，请不要担心 - 稍后将对此进行介绍。使用这个例子只是因为它很常见。</p>
+<p>注：这部分看不懂也没关系，这两个钩子也并不是必须的，如果你要做一些必要的前置工作，比如说启用插件时，创建一个新的数据表，初始化一些变量之类的前置操作来保证插件的正常运行，可以使用这个钩子，如果没有这样的操作，这个钩子不用也可以。</p>
+<h3 id="3-插件的卸载"><a href="#3-插件的卸载" class="headerlink" title="3.插件的卸载"></a>3.插件的卸载</h3><p>从站点卸载插件时，您的插件可能需要进行一些清理。</p>
+<p>如果用户已停用插件，则会认为已卸载插件，然后单击WordPress管理中的删除链接。</p>
+<p>卸载插件时，您需要清除插件和/或其他数据库实体（如表）的任何插件选项和/或设置。</p>
+<p>卸载插件有两种方法：</p>
+<ul>
+<li><p>系统的钩子函数</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">register_uninstall_hook(<span class="hljs-keyword">__FILE__</span>, <span class="hljs-string">'pluginprefix_function_to_run'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义卸载脚本<code>uninstall.php</code></p>
+</li>
+</ul>
+<p>你需要在你插件的根目录创建一个<code>uninstall.php</code>文件</p>
+<p>示例：</p>
+<p>示例脚本演示了一个删除自定义表的清理工作。</p>
+<figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// if uninstall.php is not called by WordPress, die</span></span><br><span class="line"><span class="hljs-comment">// 防止误操作直接访问该文件</span></span><br><span class="line"><span class="hljs-keyword">if</span> (!defined(<span class="hljs-string">'WP_UNINSTALL_PLUGIN'</span>)) &#123;</span><br><span class="line">    <span class="hljs-keyword">die</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">$option_name = <span class="hljs-string">'wporg_option'</span>;</span><br><span class="line"> </span><br><span class="line"> <span class="hljs-comment">//这两行是删除插件的一些附加配置，后边我会继续说这个</span></span><br><span class="line">delete_option($option_name);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// for site options in Multisite</span></span><br><span class="line">delete_site_option($option_name);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// drop a custom database table</span></span><br><span class="line"><span class="hljs-keyword">global</span> $wpdb;</span><br><span class="line">$wpdb-&gt;query(<span class="hljs-string">"DROP TABLE IF EXISTS &#123;$wpdb-&gt;prefix&#125;mytable"</span>);</span><br></pre></td></tr></table></figure>
+<p>这是wordpress插件开发流程梳理的第一篇，就先这样，后续会继续梳理。本文的示例和描述，大部分来自官方文档。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+</div>
+                
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/./images/logo.jpg" alt="好人二狗">
+                    
+                    <p class="is-size-4 is-block">
+                        好人二狗
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        一个PHPer的成长史
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>北京 朝阳</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        36
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        26
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/LuhangRui">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/LuhangRui">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/关于我/">
+            <span class="level-start">
+                <span class="level-item">关于我</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/厚积薄发/">
+            <span class="level-start">
+                <span class="level-item">厚积薄发</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">12</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/有点意思/">
+            <span class="level-start">
+                <span class="level-item">有点意思</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/爬坑日常/">
+            <span class="level-start">
+                <span class="level-item">爬坑日常</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">19</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/CI/" style="font-size: 10px;">CI</a> <a href="/tags/Curl/" style="font-size: 10px;">Curl</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-text3/" style="font-size: 10px;">Sublime text3</a> <a href="/tags/abbrlink/" style="font-size: 10px;">abbrlink</a> <a href="/tags/cmder/" style="font-size: 10px;">cmder</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laydate/" style="font-size: 10px;">laydate</a> <a href="/tags/layer/" style="font-size: 10px;">layer</a> <a href="/tags/layui/" style="font-size: 13.33px;">layui</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/vagrant/" style="font-size: 13.33px;">vagrant</a> <a href="/tags/wordpress/" style="font-size: 16.67px;">wordpress</a> <a href="/tags/优雅/" style="font-size: 10px;">优雅</a> <a href="/tags/年终总结/" style="font-size: 10px;">年终总结</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="/tags/微信支付/" style="font-size: 13.33px;">微信支付</a> <a href="/tags/数据导出/" style="font-size: 10px;">数据导出</a> <a href="/tags/数组排序/" style="font-size: 10px;">数组排序</a> <a href="/tags/数组筛选/" style="font-size: 10px;">数组筛选</a> <a href="/tags/身份证号/" style="font-size: 10px;">身份证号</a>
+    </div>
+</div>
+
+    
+    
+        <div class="card card-transparent is-hidden-widescreen">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/posts/33698.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/excel.jpg" alt="大批量数据导出/前端导出数据实践">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T11:43:42.000Z">2020-04-21</time></div>
+                    <a href="/posts/33698.html" class="has-link-black-ter is-size-6">大批量数据导出/前端导出数据实践</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/46867.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/card.jpg" alt="根据身份证获取所在省份对照表">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T07:14:51.000Z">2020-04-03</time></div>
+                    <a href="/posts/46867.html" class="has-link-black-ter is-size-6">根据身份证获取所在省份对照表</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/26716.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux服务器文件传输利器lrzsz">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T07:37:45.000Z">2019-12-05</time></div>
+                    <a href="/posts/26716.html" class="has-link-black-ter is-size-6">linux服务器文件传输利器lrzsz</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/57345.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="Mysql不同版本cast/truncate函数对浮点型的处理">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T05:35:48.000Z">2019-10-28</time></div>
+                    <a href="/posts/57345.html" class="has-link-black-ter is-size-6">Mysql不同版本cast/truncate函数对浮点型的处理</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/18296.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time></div>
+                    <a href="/posts/18296.html" class="has-link-black-ter is-size-6">wordpress插件开发从创建一个新的菜单开始</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/CI/">
+                        <span class="level-start">
+                            <span class="level-item">CI</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Curl/">
+                        <span class="level-start">
+                            <span class="level-item">Curl</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Javascript/">
+                        <span class="level-start">
+                            <span class="level-item">Javascript</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Sublime-text3/">
+                        <span class="level-start">
+                            <span class="level-item">Sublime text3</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/abbrlink/">
+                        <span class="level-start">
+                            <span class="level-item">abbrlink</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/cmder/">
+                        <span class="level-start">
+                            <span class="level-item">cmder</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/fun/">
+                        <span class="level-start">
+                            <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/laydate/">
+                        <span class="level-start">
+                            <span class="level-item">laydate</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layer/">
+                        <span class="level-start">
+                            <span class="level-item">layer</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layui/">
+                        <span class="level-start">
+                            <span class="level-item">layui</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/linux/">
+                        <span class="level-start">
+                            <span class="level-item">linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/mysql/">
+                        <span class="level-start">
+                            <span class="level-item">mysql</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">4</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/vagrant/">
+                        <span class="level-start">
+                            <span class="level-item">vagrant</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/wordpress/">
+                        <span class="level-start">
+                            <span class="level-item">wordpress</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/优雅/">
+                        <span class="level-start">
+                            <span class="level-item">优雅</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/年终总结/">
+                        <span class="level-start">
+                            <span class="level-item">年终总结</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信/">
+                        <span class="level-start">
+                            <span class="level-item">微信</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信开发/">
+                        <span class="level-start">
+                            <span class="level-item">微信开发</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信支付/">
+                        <span class="level-start">
+                            <span class="level-item">微信支付</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数据导出/">
+                        <span class="level-start">
+                            <span class="level-item">数据导出</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组排序/">
+                        <span class="level-start">
+                            <span class="level-item">数组排序</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组筛选/">
+                        <span class="level-start">
+                            <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/身份证号/">
+                        <span class="level-start">
+                            <span class="level-item">身份证号</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/posts/33698.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/excel.jpg" alt="大批量数据导出/前端导出数据实践">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-21T11:43:42.000Z">2020-04-21</time></div>
+                    <a href="/posts/33698.html" class="has-link-black-ter is-size-6">大批量数据导出/前端导出数据实践</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/46867.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/card.jpg" alt="根据身份证获取所在省份对照表">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-03T07:14:51.000Z">2020-04-03</time></div>
+                    <a href="/posts/46867.html" class="has-link-black-ter is-size-6">根据身份证获取所在省份对照表</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/26716.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/linux.jpg" alt="linux服务器文件传输利器lrzsz">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T07:37:45.000Z">2019-12-05</time></div>
+                    <a href="/posts/26716.html" class="has-link-black-ter is-size-6">linux服务器文件传输利器lrzsz</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/57345.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/mysql.jpg" alt="Mysql不同版本cast/truncate函数对浮点型的处理">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T05:35:48.000Z">2019-10-28</time></div>
+                    <a href="/posts/57345.html" class="has-link-black-ter is-size-6">Mysql不同版本cast/truncate函数对浮点型的处理</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/爬坑日常/">爬坑日常</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/posts/18296.html" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/postsimages/wordpress.jpg" alt="wordpress插件开发从创建一个新的菜单开始">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-10T06:14:57.000Z">2019-06-10</time></div>
+                    <a href="/posts/18296.html" class="has-link-black-ter is-size-6">wordpress插件开发从创建一个新的菜单开始</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/厚积薄发/">厚积薄发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/CI/">
+                        <span class="level-start">
+                            <span class="level-item">CI</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Curl/">
+                        <span class="level-start">
+                            <span class="level-item">Curl</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Javascript/">
+                        <span class="level-start">
+                            <span class="level-item">Javascript</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/PHP/">
+                        <span class="level-start">
+                            <span class="level-item">PHP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Sublime-text3/">
+                        <span class="level-start">
+                            <span class="level-item">Sublime text3</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/abbrlink/">
+                        <span class="level-start">
+                            <span class="level-item">abbrlink</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/cmder/">
+                        <span class="level-start">
+                            <span class="level-item">cmder</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/fun/">
+                        <span class="level-start">
+                            <span class="level-item">fun</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/laydate/">
+                        <span class="level-start">
+                            <span class="level-item">laydate</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layer/">
+                        <span class="level-start">
+                            <span class="level-item">layer</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/layui/">
+                        <span class="level-start">
+                            <span class="level-item">layui</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/linux/">
+                        <span class="level-start">
+                            <span class="level-item">linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/mysql/">
+                        <span class="level-start">
+                            <span class="level-item">mysql</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">4</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/vagrant/">
+                        <span class="level-start">
+                            <span class="level-item">vagrant</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/wordpress/">
+                        <span class="level-start">
+                            <span class="level-item">wordpress</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/优雅/">
+                        <span class="level-start">
+                            <span class="level-item">优雅</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/年终总结/">
+                        <span class="level-start">
+                            <span class="level-item">年终总结</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信/">
+                        <span class="level-start">
+                            <span class="level-item">微信</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信开发/">
+                        <span class="level-start">
+                            <span class="level-item">微信开发</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/微信支付/">
+                        <span class="level-start">
+                            <span class="level-item">微信支付</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数据导出/">
+                        <span class="level-start">
+                            <span class="level-item">数据导出</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组排序/">
+                        <span class="level-start">
+                            <span class="level-item">数组排序</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/数组筛选/">
+                        <span class="level-start">
+                            <span class="level-item">数组筛选</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/身份证号/">
+                        <span class="level-start">
+                            <span class="level-item">身份证号</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="一个PHPer的成长之旅" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy;<a href="http://www.beian.miit.gov.cn/">京ICP备19000965号</a>
+                </p>
+                <p class="is-size-7">
+                &copy; 2020 Er Dog&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ygbhf/clicklove/clicklove.js"></script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
